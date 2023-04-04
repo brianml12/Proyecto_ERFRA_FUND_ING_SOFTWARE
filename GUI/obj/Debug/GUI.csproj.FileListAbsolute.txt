@@ -1,0 +1,84 @@
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\GUI.exe.config
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\GUI.exe
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\GUI.pdb
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.exe
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.pdb
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\PlaceholderTextBox.dll
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.dll
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.pdb
+C:\Users\Lenovo\Documents\Proyectos Visual Studio\software_erfra\GUI\obj\Debug\GUI.csproj.CopyComplete
+F:\software_erfra\GUI\bin\Debug\GUI.exe.config
+F:\software_erfra\GUI\bin\Debug\GUI.exe
+F:\software_erfra\GUI\bin\Debug\GUI.pdb
+F:\software_erfra\GUI\bin\Debug\PlaceholderTextBox.dll
+F:\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.dll
+F:\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.pdb
+F:\software_erfra\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+F:\software_erfra\GUI\obj\Debug\GUI.frmLogin.resources
+F:\software_erfra\GUI\obj\Debug\GUI.Properties.Resources.resources
+F:\software_erfra\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+F:\software_erfra\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+F:\software_erfra\GUI\obj\Debug\GUI.csproj.CopyComplete
+F:\software_erfra\GUI\obj\Debug\GUI.exe
+F:\software_erfra\GUI\obj\Debug\GUI.pdb
+D:\software_erfra\GUI\bin\Debug\GUI.exe.config
+D:\software_erfra\GUI\bin\Debug\GUI.exe
+D:\software_erfra\GUI\bin\Debug\GUI.pdb
+D:\software_erfra\GUI\bin\Debug\PlaceholderTextBox.dll
+D:\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.dll
+D:\software_erfra\GUI\bin\Debug\Windows.Forms.HintTextBox.pdb
+D:\software_erfra\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\software_erfra\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\software_erfra\GUI\obj\Debug\GUI.frmLogin.resources
+D:\software_erfra\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\software_erfra\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\software_erfra\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\software_erfra\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\software_erfra\GUI\obj\Debug\GUI.exe
+D:\software_erfra\GUI\obj\Debug\GUI.pdb
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\GUI.exe.config
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\GUI.exe
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\GUI.pdb
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\PlaceholderTextBox.dll
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\Windows.Forms.HintTextBox.dll
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\bin\Debug\Windows.Forms.HintTextBox.pdb
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.frmLogin.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.exe
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.pdb
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.frmSolicitudes.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.frmAgregarSolicitudes.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.frmModificarSolicitudes.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.frmComprobante.resources
+D:\DOCUMENTOS\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\GUI\obj\Debug\GUI.MessageBox.CustomMessageBox.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\GUI.exe.config
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\GUI.exe
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\GUI.pdb
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\PlaceholderTextBox.dll
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\Windows.Forms.HintTextBox.dll
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\bin\Debug\Windows.Forms.HintTextBox.pdb
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmComprobante.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmModificarSolicitudes.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmAgregarSolicitudes.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmSolicitudes.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.MessageBox.CustomMessageBox.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.exe
+C:\Users\USUARIO\source\repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.pdb
