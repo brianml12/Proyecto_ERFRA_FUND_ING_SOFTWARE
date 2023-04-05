@@ -42,9 +42,44 @@ namespace GUI
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
+        public void activarMano(object sender, EventArgs e) {
+            Cursor = Cursors.Hand;
+        }
 
+        public void desactivarMano(object sender, EventArgs e) {
+            Cursor = Cursors.Default;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e) {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(respuesta == DialogResult.Yes) {
+                frmLogin frm = new frmLogin();
+                frm.Show();
+                this.Close();
+            }
+        }
+
+        private void frmAdministrador_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN SALIR
+            btnSalir.MouseHover += new EventHandler(this.activarMano);
+            btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
+            btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN VENTAS
+            btnVentas.MouseHover += new EventHandler(this.activarMano);
+            btnVentas.MouseMove += new MouseEventHandler(this.activarMano);
+            btnVentas.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN MATERIA PRIMA
+            btnMateriaPrima.MouseHover += new EventHandler(this.activarMano);
+            btnMateriaPrima.MouseMove += new MouseEventHandler(this.activarMano);
+            btnMateriaPrima.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN CERRAR SESIÓN
+            btnCerrarSesion.MouseHover += new EventHandler(this.activarMano);
+            btnCerrarSesion.MouseMove += new MouseEventHandler(this.activarMano);
+            btnCerrarSesion.MouseLeave += new EventHandler(this.desactivarMano);
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
         }
     }
 }

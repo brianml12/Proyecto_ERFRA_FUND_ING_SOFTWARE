@@ -1,5 +1,4 @@
-﻿using GUI.MessageBox;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,8 +55,6 @@ namespace GUI {
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            CustomMessage.MostrarMensaje(
-                "¿Estás seguro que deseas modificar la información de la solicitud?");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

@@ -47,7 +47,7 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            this.Close();
+            Application.Exit();
         }
 
         private void frmLogin_Load(object sender, EventArgs e) {
@@ -63,6 +63,17 @@ namespace GUI {
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
             btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN VER
+            btnVer.MouseHover += new EventHandler(this.activarMano);
+            btnVer.MouseMove += new MouseEventHandler(this.activarMano);
+            btnVer.MouseLeave += new EventHandler(this.desactivarMano);
+        }
+
+        private void lnkRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRegistro frm = new frmRegistro();
+            frm.Show();
+            this.Close();
         }
     }
 }

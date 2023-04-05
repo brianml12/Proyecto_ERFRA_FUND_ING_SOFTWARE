@@ -105,13 +105,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageBox\CustomMessage.cs" />
-    <Compile Include="MessageBox\CustomMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageBox\CustomMessageBox.Designer.cs">
-      <DependentUpon>CustomMessageBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdministrador.resx">
@@ -137,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageBox\CustomMessageBox.resx">
-      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,9 +174,6 @@
     <None Include="Resources\llave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ojo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\flecha-pequena-izquierda %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -212,12 +199,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\agregar-usuario1.png" />
     <Content Include="Resources\avion-de-papel.png" />
     <Content Include="Resources\bosquejo %281%29.png" />
     <Content Include="Resources\bosquejo.png" />
     <Content Include="Resources\busqueda %281%29.png" />
     <Content Include="Resources\caja-abierta-llena %281%29.png" />
     <Content Include="Resources\caja-abierta-llena.png" />
+    <None Include="Resources\usuario1.png" />
     <None Include="Resources\camiseta-de-manga-corta %284%29.png" />
     <None Include="Resources\camiseta-de-manga-corta %283%29.png" />
     <None Include="Resources\camiseta-de-manga-corta %282%29.png" />
@@ -229,6 +218,8 @@
     <Content Include="Resources\disco.png" />
     <Content Include="Resources\documento.png" />
     <Content Include="Resources\mas %282%29.png" />
+    <None Include="Resources\ojo-cruzado.png" />
+    <None Include="Resources\ojo.png" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\trash.png" />
   </ItemGroup>
