@@ -157,9 +157,6 @@
     <None Include="Resources\llave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ojo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\flecha-pequena-izquierda %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +179,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-cruzado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

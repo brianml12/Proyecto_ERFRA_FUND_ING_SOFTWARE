@@ -63,6 +63,10 @@ namespace GUI {
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
             btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN OJITO
+            btnVer.MouseHover += new EventHandler(this.activarMano);
+            btnVer.MouseMove += new MouseEventHandler(this.activarMano);
+            btnVer.MouseLeave += new EventHandler(this.desactivarMano);
         }
     }
 }
