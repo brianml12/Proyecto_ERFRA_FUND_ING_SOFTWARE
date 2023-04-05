@@ -57,11 +57,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrador.Designer.cs">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmComprobante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmComprobante.Designer.cs">
       <DependentUpon>frmComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleado.Designer.cs">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModificarSolicitudes.cs">
       <SubType>Form</SubType>
@@ -74,6 +86,12 @@
     </Compile>
     <Compile Include="frmAgregarSolicitudes.Designer.cs">
       <DependentUpon>frmAgregarSolicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSolicitudes.cs">
       <SubType>Form</SubType>
@@ -96,14 +114,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdministrador.resx">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmComprobante.resx">
       <DependentUpon>frmComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarSolicitudes.resx">
       <DependentUpon>frmModificarSolicitudes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarSolicitudes.resx">
       <DependentUpon>frmAgregarSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitudes.resx">
       <DependentUpon>frmSolicitudes.cs</DependentUpon>
@@ -157,6 +184,9 @@
     <None Include="Resources\llave.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\flecha-pequena-izquierda %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -181,13 +211,26 @@
     <None Include="Resources\imprimir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ojo1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ojo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ojo-cruzado.png" />
+    <Content Include="Resources\agregar-usuario.png" />
+    <Content Include="Resources\avion-de-papel.png" />
+    <Content Include="Resources\bosquejo %281%29.png" />
+    <Content Include="Resources\bosquejo.png" />
+    <Content Include="Resources\busqueda %281%29.png" />
+    <Content Include="Resources\caja-abierta-llena %281%29.png" />
+    <Content Include="Resources\caja-abierta-llena.png" />
+    <None Include="Resources\camiseta-de-manga-corta %284%29.png" />
+    <None Include="Resources\camiseta-de-manga-corta %283%29.png" />
+    <None Include="Resources\camiseta-de-manga-corta %282%29.png" />
+    <None Include="Resources\camiseta-de-manga-corta %281%29.png" />
+    <None Include="Resources\camiseta-de-manga-corta.png" />
+    <Content Include="Resources\carrito-de-compras %281%29.png" />
+    <Content Include="Resources\carrito-de-compras.png" />
+    <Content Include="Resources\check.png" />
+    <Content Include="Resources\disco.png" />
+    <Content Include="Resources\documento.png" />
+    <Content Include="Resources\mas %282%29.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\trash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

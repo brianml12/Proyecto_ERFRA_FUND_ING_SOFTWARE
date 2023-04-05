@@ -49,6 +49,8 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
+            frmEmpleado empleados = new frmEmpleado();
+            empleados.Show();
             this.Close();
         }
 

@@ -9,14 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI {
-    public partial class frmLogin : Form {
-        public frmLogin() {
+namespace GUI
+{
+    public partial class frmAdministrador : Form
+    {
+        public frmAdministrador()
+        {
             InitializeComponent();
-        
         }
 
-        protected override void OnPaint(PaintEventArgs e) {
+        protected override void OnPaint(PaintEventArgs e)
+        {
             base.OnPaint(e);
 
             // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
@@ -33,36 +36,15 @@ namespace GUI {
 
             // Dibuja el borde en el objeto Graphics del evento Paint.
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
-            using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
+            using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2))
+            {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
         }
 
-        public void activarMano(object sender, EventArgs e) {
-            Cursor = Cursors.Hand;
-        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
 
-        public void desactivarMano(object sender, EventArgs e) {
-            Cursor = Cursors.Default;
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e) {
-            this.Close();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e) {
-            // ANIMACIÓN BOTÓN INICIAR
-            btnIniciar.MouseHover += new EventHandler(this.activarMano);
-            btnIniciar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnIniciar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN VER
-            btnVer.MouseHover += new EventHandler(this.activarMano);
-            btnVer.MouseMove += new MouseEventHandler(this.activarMano);
-            btnVer.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN SALIR
-            btnSalir.MouseHover += new EventHandler(this.activarMano);
-            btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
-            btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
         }
     }
 }
