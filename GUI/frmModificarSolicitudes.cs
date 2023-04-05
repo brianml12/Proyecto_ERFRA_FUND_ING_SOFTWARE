@@ -13,7 +13,6 @@ namespace GUI {
     public partial class frmModificarSolicitudes : Form {
         public frmModificarSolicitudes() {
             InitializeComponent();
-        
         }
 
         protected override void OnPaint(PaintEventArgs e) {
@@ -50,23 +49,39 @@ namespace GUI {
             this.Close();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
+        private void btnCancelar_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
+        private void btnRegresar_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
+        private void btnModificar_Click(object sender, EventArgs e) {
             //Mostrar Messagebox
+        }
+
+        private void frmModificarSolicitudes_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN SALIR
+            btnSalir.MouseHover += new EventHandler(this.activarMano);
+            btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
+            btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ATRÁS
+            btnAtras.MouseHover += new EventHandler(this.activarMano);
+            btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN MODIFICAR
+            btnModificar.MouseHover += new EventHandler(this.activarMano);
+            btnModificar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnModificar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ELIMINAR
+            btnCancelar.MouseHover += new EventHandler(this.activarMano);
+            btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
         }
     }
 }

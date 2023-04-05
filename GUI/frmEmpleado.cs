@@ -68,7 +68,7 @@ namespace GUI
         {
             frmSolicitudes solicitudes = new frmSolicitudes();
             solicitudes.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void frmEmpleado_Load(object sender, EventArgs e)

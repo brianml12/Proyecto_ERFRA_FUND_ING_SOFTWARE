@@ -14,7 +14,6 @@ namespace GUI {
     public partial class frmSolicitudes : Form {
         public frmSolicitudes() {
             InitializeComponent();
-        
         }
 
         protected override void OnPaint(PaintEventArgs e) {
@@ -53,12 +52,14 @@ namespace GUI {
             this.Close();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
+        private void btnAtras_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
+        private void btnInsertar_Click(object sender, EventArgs e) {
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e) {
             frmModificarSolicitudes frm = new frmModificarSolicitudes();
             frm.ShowDialog();
         }
@@ -67,5 +68,34 @@ namespace GUI {
         {
             //Mostrar messagebox
         }
+
+        private void frmSolicitudes_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN SALIR
+            btnSalir.MouseHover += new EventHandler(this.activarMano);
+            btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
+            btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ATRÁS
+            btnAtras.MouseHover += new EventHandler(this.activarMano);
+            btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN BUSCAR
+            btnBuscar.MouseHover += new EventHandler(this.activarMano);
+            btnBuscar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnBuscar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN INSERTAR
+            btnInsertar.MouseHover += new EventHandler(this.activarMano);
+            btnInsertar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnInsertar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN MODIFICAR
+            btnModificar.MouseHover += new EventHandler(this.activarMano);
+            btnModificar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnModificar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ELIMINAR
+            btnEliminar.MouseHover += new EventHandler(this.activarMano);
+            btnEliminar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnEliminar.MouseLeave += new EventHandler(this.desactivarMano);
+        }
+
+        
     }
 }

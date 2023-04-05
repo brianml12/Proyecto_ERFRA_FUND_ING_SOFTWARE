@@ -103,6 +103,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap busqueda__1_ {
+            get {
+                object obj = ResourceManager.GetObject("busqueda (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caja_abierta_llena__1_ {
             get {
                 object obj = ResourceManager.GetObject("caja-abierta-llena (1)", resourceCulture);
@@ -226,6 +236,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap flecha_pequena_izquierda__1_ {
             get {
                 object obj = ResourceManager.GetObject("flecha-pequena-izquierda (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_pequena_izquierda1 {
+            get {
+                object obj = ResourceManager.GetObject("flecha-pequena-izquierda1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -204,6 +204,7 @@
     <Content Include="Resources\bosquejo %281%29.png" />
     <Content Include="Resources\bosquejo.png" />
     <Content Include="Resources\busqueda %281%29.png" />
+    <None Include="Resources\busqueda %281%291.png" />
     <Content Include="Resources\caja-abierta-llena %281%29.png" />
     <Content Include="Resources\caja-abierta-llena.png" />
     <None Include="Resources\usuario1.png" />
@@ -217,6 +218,7 @@
     <Content Include="Resources\check.png" />
     <Content Include="Resources\disco.png" />
     <Content Include="Resources\documento.png" />
+    <None Include="Resources\flecha-pequena-izquierda1.png" />
     <Content Include="Resources\mas %282%29.png" />
     <None Include="Resources\ojo-cruzado.png" />
     <None Include="Resources\ojo.png" />
