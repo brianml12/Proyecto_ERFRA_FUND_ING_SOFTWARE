@@ -49,5 +49,28 @@ namespace GUI {
         private void btnSalir_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void frmAgregarSolicitudes_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN SALIR
+            btnSalir.MouseHover += new EventHandler(this.activarMano);
+            btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
+            btnSalir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ATRÁS
+            btnAtras.MouseHover += new EventHandler(this.activarMano);
+            btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN INSERTAR
+            btnInsertar.MouseHover += new EventHandler(this.activarMano);
+            btnInsertar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnInsertar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ELIMINAR
+            btnCancelar.MouseHover += new EventHandler(this.activarMano);
+            btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
+        }
     }
 }

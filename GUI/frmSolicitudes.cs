@@ -57,6 +57,7 @@ namespace GUI {
         }
 
         private void btnInsertar_Click(object sender, EventArgs e) {
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
