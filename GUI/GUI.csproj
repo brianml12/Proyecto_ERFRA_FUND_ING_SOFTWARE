@@ -63,6 +63,18 @@
     <Compile Include="frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarProveedor.Designer.cs">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarMaterial.Designer.cs">
+      <DependentUpon>frmModificarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +151,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarProveedor.resx">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarMaterial.resx">
+      <DependentUpon>frmModificarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>

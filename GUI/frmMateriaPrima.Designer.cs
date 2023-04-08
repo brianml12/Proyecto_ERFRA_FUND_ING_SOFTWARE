@@ -101,7 +101,7 @@
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
-            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
@@ -207,7 +207,7 @@
             this.btnAtras.Location = new System.Drawing.Point(27, 76);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 20;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
@@ -219,7 +219,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(387, 76);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(32, 30);
-            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
@@ -232,7 +232,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(552, 421);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(150, 35);
-            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "  Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,7 +249,7 @@
             this.btnModificar.Location = new System.Drawing.Point(316, 421);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(150, 35);
-            this.btnModificar.TabIndex = 17;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "  Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,7 +266,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(85, 421);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(150, 35);
-            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "  Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

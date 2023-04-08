@@ -101,7 +101,7 @@
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(270, 30);
-            this.txtProducto.TabIndex = 20;
+            this.txtProducto.TabIndex = 1;
             this.txtProducto.Text = "Producto";
             this.txtProducto.TextForeColor = System.Drawing.Color.Black;
             this.txtProducto.Value = "";
@@ -117,7 +117,7 @@
             this.txtCliente.Multiline = true;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(270, 30);
-            this.txtCliente.TabIndex = 21;
+            this.txtCliente.TabIndex = 2;
             this.txtCliente.Text = "Cliente";
             this.txtCliente.TextForeColor = System.Drawing.Color.Black;
             this.txtCliente.Value = "";
@@ -133,7 +133,7 @@
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(270, 30);
-            this.txtCantidad.TabIndex = 22;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextForeColor = System.Drawing.Color.Black;
             this.txtCantidad.Value = "";
@@ -148,7 +148,7 @@
             this.btnModificar.Location = new System.Drawing.Point(49, 263);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 35);
-            this.btnModificar.TabIndex = 24;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "  Guardar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,7 +165,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(233, 263);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +180,7 @@
             this.btnAtras.Location = new System.Drawing.Point(16, 66);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 25;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

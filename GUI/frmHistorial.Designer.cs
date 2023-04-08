@@ -94,7 +94,7 @@
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
-            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
@@ -107,7 +107,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(387, 76);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(32, 30);
-            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnAtras
@@ -118,7 +118,7 @@
             this.btnAtras.Location = new System.Drawing.Point(27, 76);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 20;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

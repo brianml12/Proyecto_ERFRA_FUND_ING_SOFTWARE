@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmAgregarMaterial : Form {
-        public frmAgregarMaterial() {
+    public partial class frmAgregarProveedor : Form {
+        public frmAgregarProveedor() {
             InitializeComponent();
         
         }
@@ -47,8 +47,6 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            frmMateriaPrima frm = new frmMateriaPrima();
-            frm.Show();
             this.Close();
         }
 
@@ -69,14 +67,6 @@ namespace GUI {
             btnCancelar.MouseHover += new EventHandler(this.activarMano);
             btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
             btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN AGREGAR PROVEEDOR
-            btnAgregarProveedor.MouseHover += new EventHandler(this.activarMano);
-            btnAgregarProveedor.MouseMove += new MouseEventHandler(this.activarMano);
-            btnAgregarProveedor.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN ELIMINAR PROVEEDOR
-            btnEliminarProveedor.MouseHover += new EventHandler(this.activarMano);
-            btnEliminarProveedor.MouseMove += new MouseEventHandler(this.activarMano);
-            btnEliminarProveedor.MouseLeave += new EventHandler(this.desactivarMano);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) {
@@ -89,12 +79,7 @@ namespace GUI {
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
-            MessageBox.Show("Material guardado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnAgregarProveedor_Click(object sender, EventArgs e) {
-            frmAgregarProveedor frm = new frmAgregarProveedor();
-            frm.ShowDialog();
+            MessageBox.Show("Proveedor guardado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

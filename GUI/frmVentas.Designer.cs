@@ -97,7 +97,7 @@
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
-            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar por Folio";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
@@ -170,7 +170,7 @@
             this.btnHistorial.Location = new System.Drawing.Point(527, 71);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(175, 35);
-            this.btnHistorial.TabIndex = 21;
+            this.btnHistorial.TabIndex = 3;
             this.btnHistorial.Text = "  Historial de ventas";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +185,7 @@
             this.btnAtras.Location = new System.Drawing.Point(27, 76);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 20;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
@@ -197,7 +197,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(387, 76);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(32, 30);
-            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
@@ -210,7 +210,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(552, 421);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 35);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "  Cancelar venta";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,7 +227,7 @@
             this.btnModificar.Location = new System.Drawing.Point(316, 421);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(150, 35);
-            this.btnModificar.TabIndex = 17;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "  Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -244,7 +244,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(85, 421);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(150, 35);
-            this.btnFinalizar.TabIndex = 7;
+            this.btnFinalizar.TabIndex = 4;
             this.btnFinalizar.Text = "  Finalizar venta";
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

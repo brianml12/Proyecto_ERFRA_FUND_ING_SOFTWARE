@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmAgregarMaterial
+    partial class frmModificarMaterial
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,9 +70,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.Size = new System.Drawing.Size(174, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Agregar Material";
+            this.label1.Text = "Modificar Material";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSalir
@@ -95,9 +95,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(70, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(95, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Agregar";
+            this.label2.Text = "Modificar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtClave
@@ -292,28 +292,29 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnGuardar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
-            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(47, 432);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 35);
-            this.btnAgregar.TabIndex = 11;
-            this.btnAgregar.Text = "  Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
+            this.btnGuardar.Image = global::GUI.Properties.Resources.disco;
+            this.btnGuardar.Location = new System.Drawing.Point(56, 432);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(130, 35);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.Text = "  Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // frmAgregarMaterial
+            // frmModificarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 500);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminarProveedor);
             this.Controls.Add(this.btnAgregarProveedor);
             this.Controls.Add(this.label4);
@@ -330,10 +331,9 @@
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAgregarMaterial";
+            this.Name = "frmModificarMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarMaterial";
             this.Load += new System.EventHandler(this.frmAgregarSolicitudes_Load);
@@ -349,7 +349,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label2;
         private Windows.Forms.HintTextBox txtClave;
@@ -366,5 +365,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregarProveedor;
         private System.Windows.Forms.Button btnEliminarProveedor;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

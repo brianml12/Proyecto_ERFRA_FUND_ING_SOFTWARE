@@ -93,7 +93,7 @@
             this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
-            this.cboPrenda.TabIndex = 24;
+            this.cboPrenda.TabIndex = 2;
             this.cboPrenda.Text = "Genero";
             // 
             // txtPrecioU
@@ -107,7 +107,7 @@
             this.txtPrecioU.Multiline = true;
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
-            this.txtPrecioU.TabIndex = 25;
+            this.txtPrecioU.TabIndex = 0;
             this.txtPrecioU.Text = "Nombre";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
             this.txtPrecioU.Value = "";
@@ -123,7 +123,7 @@
             this.hintTextBox1.Multiline = true;
             this.hintTextBox1.Name = "hintTextBox1";
             this.hintTextBox1.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox1.TabIndex = 26;
+            this.hintTextBox1.TabIndex = 1;
             this.hintTextBox1.Text = "Apellidos";
             this.hintTextBox1.TextForeColor = System.Drawing.Color.Black;
             this.hintTextBox1.Value = "";
@@ -139,7 +139,7 @@
             this.hintTextBox2.Multiline = true;
             this.hintTextBox2.Name = "hintTextBox2";
             this.hintTextBox2.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox2.TabIndex = 27;
+            this.hintTextBox2.TabIndex = 3;
             this.hintTextBox2.Text = "Correo";
             this.hintTextBox2.TextForeColor = System.Drawing.Color.Black;
             this.hintTextBox2.Value = "";
@@ -155,7 +155,7 @@
             this.hintTextBox3.Multiline = true;
             this.hintTextBox3.Name = "hintTextBox3";
             this.hintTextBox3.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox3.TabIndex = 28;
+            this.hintTextBox3.TabIndex = 4;
             this.hintTextBox3.Text = "Usuario";
             this.hintTextBox3.TextForeColor = System.Drawing.Color.Black;
             this.hintTextBox3.Value = "";
@@ -171,7 +171,7 @@
             this.hintTextBox4.Multiline = true;
             this.hintTextBox4.Name = "hintTextBox4";
             this.hintTextBox4.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox4.TabIndex = 29;
+            this.hintTextBox4.TabIndex = 5;
             this.hintTextBox4.Text = "Contraseña";
             this.hintTextBox4.TextForeColor = System.Drawing.Color.Black;
             this.hintTextBox4.Value = "";
@@ -187,7 +187,7 @@
             this.hintTextBox5.Multiline = true;
             this.hintTextBox5.Name = "hintTextBox5";
             this.hintTextBox5.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox5.TabIndex = 30;
+            this.hintTextBox5.TabIndex = 7;
             this.hintTextBox5.Text = "Confirmar contraseña";
             this.hintTextBox5.TextForeColor = System.Drawing.Color.Black;
             this.hintTextBox5.Value = "";
@@ -202,7 +202,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(270, 28);
-            this.comboBox1.TabIndex = 31;
+            this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Rol";
             // 
             // btnVer2
@@ -213,7 +213,7 @@
             this.btnVer2.Location = new System.Drawing.Point(334, 279);
             this.btnVer2.Name = "btnVer2";
             this.btnVer2.Size = new System.Drawing.Size(30, 30);
-            this.btnVer2.TabIndex = 35;
+            this.btnVer2.TabIndex = 8;
             this.btnVer2.UseVisualStyleBackColor = true;
             // 
             // btnVer1
@@ -224,7 +224,7 @@
             this.btnVer1.Location = new System.Drawing.Point(334, 243);
             this.btnVer1.Name = "btnVer1";
             this.btnVer1.Size = new System.Drawing.Size(30, 30);
-            this.btnVer1.TabIndex = 34;
+            this.btnVer1.TabIndex = 6;
             this.btnVer1.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
@@ -237,7 +237,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(234, 379);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
-            this.btnCancelar.TabIndex = 33;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -254,7 +254,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(44, 379);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(130, 35);
-            this.btnRegistrar.TabIndex = 32;
+            this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = " Registrarse";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

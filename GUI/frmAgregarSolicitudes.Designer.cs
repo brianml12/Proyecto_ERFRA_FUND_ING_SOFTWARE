@@ -92,7 +92,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(246, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -109,7 +109,7 @@
             this.btnInsertar.Location = new System.Drawing.Point(53, 338);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(130, 35);
-            this.btnInsertar.TabIndex = 7;
+            this.btnInsertar.TabIndex = 6;
             this.btnInsertar.Text = "  Insertar";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsertar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -138,7 +138,7 @@
             this.txtPrecioU.Multiline = true;
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
-            this.txtPrecioU.TabIndex = 19;
+            this.txtPrecioU.TabIndex = 2;
             this.txtPrecioU.Text = "Precio Unitario";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
             this.txtPrecioU.Value = "";
@@ -154,7 +154,7 @@
             this.txtLote.Multiline = true;
             this.txtLote.Name = "txtLote";
             this.txtLote.Size = new System.Drawing.Size(270, 30);
-            this.txtLote.TabIndex = 20;
+            this.txtLote.TabIndex = 3;
             this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
             this.txtLote.Value = "";
@@ -170,7 +170,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(270, 30);
-            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.TabIndex = 4;
             this.txtDescripcion.Text = "Descripción";
             this.txtDescripcion.TextForeColor = System.Drawing.Color.Black;
             this.txtDescripcion.Value = "";
@@ -186,7 +186,7 @@
             this.txtImporte.Multiline = true;
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(270, 30);
-            this.txtImporte.TabIndex = 22;
+            this.txtImporte.TabIndex = 5;
             this.txtImporte.Text = "Importe";
             this.txtImporte.TextForeColor = System.Drawing.Color.Black;
             this.txtImporte.Value = "";
@@ -201,7 +201,7 @@
             this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
-            this.cboPrenda.TabIndex = 23;
+            this.cboPrenda.TabIndex = 1;
             this.cboPrenda.Text = "Prenda";
             // 
             // pbPorcentaje
@@ -232,7 +232,7 @@
             this.btnAtras.Location = new System.Drawing.Point(16, 65);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 26;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

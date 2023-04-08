@@ -77,12 +77,14 @@ namespace GUI {
         }
 
         private void btnIniciar_Click(object sender, EventArgs e) {
-            if(txtUser.Text.Equals("admin") && txtPassword.Text.Equals("password")) {
+            if(txtUser.Text.Equals("admin") && txtPassword.Text.Equals("purocolageno")) {
+                MessageBox.Show("Bienvenido usuario admin", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmAdministrador frm = new frmAdministrador();
                 frm.Show();
                 this.Close();
             }
-            else if(txtUser.Text.Equals("empleado") && txtPassword.Text.Equals("password")) {
+            else if(txtUser.Text.Equals("empleado") && txtPassword.Text.Equals("purocolageno")) {
+                MessageBox.Show("Bienvenido usuario empleado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmEmpleado frm = new frmEmpleado();
                 frm.Show();
                 this.Close();

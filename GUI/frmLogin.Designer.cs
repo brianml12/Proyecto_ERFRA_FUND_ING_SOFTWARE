@@ -90,7 +90,7 @@
             this.btnIniciar.Location = new System.Drawing.Point(132, 250);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(150, 35);
-            this.btnIniciar.TabIndex = 7;
+            this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -102,7 +102,7 @@
             this.lnkRegistrarse.Location = new System.Drawing.Point(34, 308);
             this.lnkRegistrarse.Name = "lnkRegistrarse";
             this.lnkRegistrarse.Size = new System.Drawing.Size(84, 18);
-            this.lnkRegistrarse.TabIndex = 8;
+            this.lnkRegistrarse.TabIndex = 4;
             this.lnkRegistrarse.TabStop = true;
             this.lnkRegistrarse.Text = "Registrarse";
             this.lnkRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkRegistrarse_LinkClicked);
@@ -118,7 +118,7 @@
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(171, 30);
-            this.txtUser.TabIndex = 11;
+            this.txtUser.TabIndex = 0;
             this.txtUser.Text = "Usuario";
             this.txtUser.TextForeColor = System.Drawing.Color.Black;
             this.txtUser.Value = "";
@@ -135,7 +135,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(171, 30);
-            this.txtPassword.TabIndex = 12;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.TextForeColor = System.Drawing.Color.Black;
             this.txtPassword.Value = "";
             // 
@@ -158,7 +158,7 @@
             this.btnVer.Location = new System.Drawing.Point(311, 181);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(30, 30);
-            this.btnVer.TabIndex = 14;
+            this.btnVer.TabIndex = 2;
             this.btnVer.UseVisualStyleBackColor = true;
             // 
             // pictureBox2

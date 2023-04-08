@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecioU = new Windows.Forms.HintTextBox(this.components);
             this.txtLote = new Windows.Forms.HintTextBox(this.components);
@@ -40,7 +41,6 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,19 @@
             this.label1.Text = "Modificar Solicitud";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::GUI.Properties.Resources._16;
+            this.btnSalir.Location = new System.Drawing.Point(367, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -90,7 +103,8 @@
             this.txtPrecioU.Multiline = true;
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
-            this.txtPrecioU.TabIndex = 19;
+            this.txtPrecioU.TabIndex = 2;
+            this.txtPrecioU.Text = "Precio Unitario";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
             this.txtPrecioU.Value = "";
             // 
@@ -105,7 +119,8 @@
             this.txtLote.Multiline = true;
             this.txtLote.Name = "txtLote";
             this.txtLote.Size = new System.Drawing.Size(270, 30);
-            this.txtLote.TabIndex = 20;
+            this.txtLote.TabIndex = 3;
+            this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
             this.txtLote.Value = "";
             // 
@@ -120,7 +135,8 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(270, 30);
-            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.TabIndex = 4;
+            this.txtDescripcion.Text = "Descripción";
             this.txtDescripcion.TextForeColor = System.Drawing.Color.Black;
             this.txtDescripcion.Value = "";
             // 
@@ -135,7 +151,8 @@
             this.txtImporte.Multiline = true;
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(270, 30);
-            this.txtImporte.TabIndex = 22;
+            this.txtImporte.TabIndex = 5;
+            this.txtImporte.Text = "Importe";
             this.txtImporte.TextForeColor = System.Drawing.Color.Black;
             this.txtImporte.Value = "";
             // 
@@ -149,7 +166,7 @@
             this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
-            this.cboPrenda.TabIndex = 23;
+            this.cboPrenda.TabIndex = 1;
             // 
             // btnAtras
             // 
@@ -159,7 +176,7 @@
             this.btnAtras.Location = new System.Drawing.Point(16, 66);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 25;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
@@ -173,7 +190,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(51, 327);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(130, 35);
-            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "  Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -190,25 +207,12 @@
             this.btnCancelar.Location = new System.Drawing.Point(235, 327);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(367, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmModificarSolicitudes
             // 

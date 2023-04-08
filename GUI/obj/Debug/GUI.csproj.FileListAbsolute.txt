@@ -132,3 +132,5 @@ C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmHistorial.resources
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmAgregarMaterial.resources
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmMateriaPrima.resources
+C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmAgregarProveedor.resources
+C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmModificarMaterial.resources

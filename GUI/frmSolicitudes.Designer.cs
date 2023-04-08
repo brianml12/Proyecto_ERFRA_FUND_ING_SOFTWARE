@@ -96,7 +96,7 @@
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
-            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
@@ -175,7 +175,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(491, 359);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 35);
-            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "  Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -192,7 +192,7 @@
             this.btnModificar.Location = new System.Drawing.Point(289, 359);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 35);
-            this.btnModificar.TabIndex = 17;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "  Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,7 +209,7 @@
             this.btnInsertar.Location = new System.Drawing.Point(85, 359);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(130, 35);
-            this.btnInsertar.TabIndex = 7;
+            this.btnInsertar.TabIndex = 3;
             this.btnInsertar.Text = "  Insertar";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsertar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -224,7 +224,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(387, 76);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(32, 30);
-            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnAtras
@@ -235,7 +235,7 @@
             this.btnAtras.Location = new System.Drawing.Point(27, 76);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 20;
+            this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

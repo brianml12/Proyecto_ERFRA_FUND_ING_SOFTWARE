@@ -9,12 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
-{
-    public partial class frmAdministrador : Form
-    {
-        public frmAdministrador()
-        {
+namespace GUI {
+    public partial class frmAdministrador : Form {
+        public frmAdministrador() {
             InitializeComponent();
         }
 
@@ -85,6 +82,12 @@ namespace GUI
         private void btnVentas_Click(object sender, EventArgs e) {
             frmVentas frm = new frmVentas();
             frm.Tag = "admin";
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnMateriaPrima_Click(object sender, EventArgs e) {
+            frmMateriaPrima frm = new frmMateriaPrima();
             frm.Show();
             this.Close();
         }

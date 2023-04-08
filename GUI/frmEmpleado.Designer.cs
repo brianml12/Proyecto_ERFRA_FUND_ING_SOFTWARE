@@ -84,7 +84,7 @@
             this.btnSolicitudes.Margin = new System.Windows.Forms.Padding(2);
             this.btnSolicitudes.Name = "btnSolicitudes";
             this.btnSolicitudes.Size = new System.Drawing.Size(81, 74);
-            this.btnSolicitudes.TabIndex = 4;
+            this.btnSolicitudes.TabIndex = 1;
             this.btnSolicitudes.UseVisualStyleBackColor = true;
             this.btnSolicitudes.Click += new System.EventHandler(this.btnSolicitudes_Click);
             // 
@@ -97,7 +97,7 @@
             this.btnVentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(81, 74);
-            this.btnVentas.TabIndex = 3;
+            this.btnVentas.TabIndex = 0;
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(168, 252);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(160, 35);
-            this.btnCerrarSesion.TabIndex = 35;
+            this.btnCerrarSesion.TabIndex = 2;
             this.btnCerrarSesion.Text = "  Cerrar Sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

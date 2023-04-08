@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmAgregarMaterial : Form {
-        public frmAgregarMaterial() {
+    public partial class frmModificarMaterial : Form {
+        public frmModificarMaterial() {
             InitializeComponent();
         
         }
@@ -61,10 +61,10 @@ namespace GUI {
             btnAtras.MouseHover += new EventHandler(this.activarMano);
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN INSERTAR
-            btnAgregar.MouseHover += new EventHandler(this.activarMano);
-            btnAgregar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnAgregar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN GUARDAR
+            btnGuardar.MouseHover += new EventHandler(this.activarMano);
+            btnGuardar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnGuardar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN ELIMINAR
             btnCancelar.MouseHover += new EventHandler(this.activarMano);
             btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
@@ -88,8 +88,11 @@ namespace GUI {
             btnSalir_Click(this, new EventArgs());
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e) {
-            MessageBox.Show("Material guardado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void btnGuardar_Click(object sender, EventArgs e) {
+            DialogResult respuesta = MessageBox.Show("¿Desea guardar los cambios?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(respuesta == DialogResult.Yes) {
+                // MODIFICAR MATERIAL
+            }
         }
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e) {
