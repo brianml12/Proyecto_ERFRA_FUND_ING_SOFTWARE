@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmVentas : Form {
-        public frmVentas() {
+    public partial class frmAgregarMaterial : Form {
+        public frmAgregarMaterial() {
             InitializeComponent();
+        
         }
 
         protected override void OnPaint(PaintEventArgs e) {
@@ -46,35 +47,10 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            if (this.Tag.Equals("empleado")) {
-                frmEmpleado frm = new frmEmpleado();
-                frm.Show();
-                this.Close();
-            }
-            else if (this.Tag.Equals("admin")){
-                frmAdministrador frm = new frmAdministrador();
-                frm.Show();
-                this.Close();
-            }
+            this.Close();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e) {
-            btnSalir_Click(this, new EventArgs());
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e) {
-            frmModificarVentas frm = new frmModificarVentas();
-            frm.ShowDialog();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea cancelar la venta seleccionada?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(respuesta == DialogResult.Yes) {
-                // BORRAR SOLICITUD
-            }
-        }
-
-        private void frmSolicitudes_Load(object sender, EventArgs e) {
+        private void frmAgregarSolicitudes_Load(object sender, EventArgs e) {
             // ANIMACIÓN BOTÓN SALIR
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
@@ -83,33 +59,23 @@ namespace GUI {
             btnAtras.MouseHover += new EventHandler(this.activarMano);
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN BUSCAR
-            btnBuscar.MouseHover += new EventHandler(this.activarMano);
-            btnBuscar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnBuscar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN FINALIZAR
-            btnFinalizar.MouseHover += new EventHandler(this.activarMano);
-            btnFinalizar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnFinalizar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN MODIFICAR
-            btnModificar.MouseHover += new EventHandler(this.activarMano);
-            btnModificar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnModificar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN INSERTAR
+            btnAgregar.MouseHover += new EventHandler(this.activarMano);
+            btnAgregar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAgregar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN ELIMINAR
             btnCancelar.MouseHover += new EventHandler(this.activarMano);
             btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
             btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN HISTORIAL
-            btnHistorial.MouseHover += new EventHandler(this.activarMano);
-            btnHistorial.MouseMove += new MouseEventHandler(this.activarMano);
-            btnHistorial.MouseLeave += new EventHandler(this.desactivarMano);
         }
 
-        private void btnHistorial_Click(object sender, EventArgs e) {
-            frmHistorial frm = new frmHistorial();
-            frm.Tag = this.Tag;
-            frm.Show();
-            this.Close();
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            btnSalir_Click(this, new EventArgs());
         }
     }
 }

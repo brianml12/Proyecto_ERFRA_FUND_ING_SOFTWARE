@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmVentas
+    partial class frmMateriaPrima
     {
         /// <summary>
         /// Required designer variable.
@@ -34,18 +34,22 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Productos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHistorial = new System.Windows.Forms.Button();
+            this.TipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DireccionProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CorreoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             this.SuspendLayout();
@@ -68,9 +72,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.Size = new System.Drawing.Size(137, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Ventas";
+            this.label1.Text = "Materia Prima";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSalir
@@ -92,13 +96,13 @@
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintColor = System.Drawing.Color.Gray;
-            this.txtBuscar.HintValue = "Buscar por Folio";
+            this.txtBuscar.HintValue = "Buscar";
             this.txtBuscar.Location = new System.Drawing.Point(85, 76);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
             this.txtBuscar.TabIndex = 12;
-            this.txtBuscar.Text = "Buscar por Folio";
+            this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
             // 
@@ -108,12 +112,17 @@
             this.dgvSolicitudes.AllowUserToDeleteRows = false;
             this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Folio,
-            this.Productos,
+            this.Clave,
+            this.Material,
+            this.Color,
             this.Cantidad,
-            this.Cliente,
-            this.Total,
-            this.Status});
+            this.TipoMaterial,
+            this.FechaEntrada,
+            this.FechaSalida,
+            this.Proveedor,
+            this.DireccionProveedor,
+            this.TelefonoProveedor,
+            this.CorreoProveedor});
             this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvSolicitudes.Location = new System.Drawing.Point(85, 126);
             this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
@@ -124,17 +133,23 @@
             this.dgvSolicitudes.Size = new System.Drawing.Size(617, 260);
             this.dgvSolicitudes.TabIndex = 16;
             // 
-            // Folio
+            // Clave
             // 
-            this.Folio.HeaderText = "Folio";
-            this.Folio.Name = "Folio";
-            this.Folio.ReadOnly = true;
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            this.Clave.ReadOnly = true;
             // 
-            // Productos
+            // Material
             // 
-            this.Productos.HeaderText = "Productos";
-            this.Productos.Name = "Productos";
-            this.Productos.ReadOnly = true;
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.ReadOnly = true;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
             // 
             // Cantidad
             // 
@@ -142,40 +157,47 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
-            // Cliente
+            // TipoMaterial
             // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
+            this.TipoMaterial.HeaderText = "Tipo de Material";
+            this.TipoMaterial.Name = "TipoMaterial";
+            this.TipoMaterial.ReadOnly = true;
             // 
-            // Total
+            // FechaEntrada
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
+            this.FechaEntrada.HeaderText = "Fecha de entrada";
+            this.FechaEntrada.Name = "FechaEntrada";
+            this.FechaEntrada.ReadOnly = true;
             // 
-            // Status
+            // FechaSalida
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.FechaSalida.HeaderText = "Fecha de Salida";
+            this.FechaSalida.Name = "FechaSalida";
+            this.FechaSalida.ReadOnly = true;
             // 
-            // btnHistorial
+            // Proveedor
             // 
-            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(188)))), ((int)(((byte)(249)))));
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(16)))), ((int)(((byte)(172)))));
-            this.btnHistorial.Image = global::GUI.Properties.Resources.documento;
-            this.btnHistorial.Location = new System.Drawing.Point(527, 71);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(175, 35);
-            this.btnHistorial.TabIndex = 21;
-            this.btnHistorial.Text = "  Historial de ventas";
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            // 
+            // DireccionProveedor
+            // 
+            this.DireccionProveedor.HeaderText = "Direccion Proveedor";
+            this.DireccionProveedor.Name = "DireccionProveedor";
+            this.DireccionProveedor.ReadOnly = true;
+            // 
+            // TelefonoProveedor
+            // 
+            this.TelefonoProveedor.HeaderText = "Telefono Proveedor";
+            this.TelefonoProveedor.Name = "TelefonoProveedor";
+            this.TelefonoProveedor.ReadOnly = true;
+            // 
+            // CorreoProveedor
+            // 
+            this.CorreoProveedor.HeaderText = "Correo Proveedor";
+            this.CorreoProveedor.Name = "CorreoProveedor";
+            this.CorreoProveedor.ReadOnly = true;
             // 
             // btnAtras
             // 
@@ -200,22 +222,22 @@
             this.btnBuscar.TabIndex = 19;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // btnEliminar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.btnCancelar.Image = global::GUI.Properties.Resources.trash;
-            this.btnCancelar.Location = new System.Drawing.Point(552, 421);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 35);
-            this.btnCancelar.TabIndex = 18;
-            this.btnCancelar.Text = "  Cancelar venta";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.btnEliminar.Image = global::GUI.Properties.Resources.trash;
+            this.btnEliminar.Location = new System.Drawing.Point(552, 421);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
+            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.Text = "  Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -234,40 +256,40 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnFinalizar
+            // btnAgregar
             // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
-            this.btnFinalizar.Image = global::GUI.Properties.Resources.check;
-            this.btnFinalizar.Location = new System.Drawing.Point(85, 421);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(150, 35);
-            this.btnFinalizar.TabIndex = 7;
-            this.btnFinalizar.Text = "  Finalizar venta";
-            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFinalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
+            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
+            this.btnAgregar.Location = new System.Drawing.Point(85, 421);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(150, 35);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "  Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // frmVentas
+            // frmMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 500);
-            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgvSolicitudes);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.btnFinalizar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmVentas";
+            this.Name = "frmMateriaPrima";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmVentas";
+            this.Text = "frmMateriaPrima";
             this.Load += new System.EventHandler(this.frmSolicitudes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -282,19 +304,23 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Button btnAgregar;
         private Windows.Forms.HintTextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvSolicitudes;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button btnHistorial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaSalida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DireccionProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoProveedor;
     }
 }

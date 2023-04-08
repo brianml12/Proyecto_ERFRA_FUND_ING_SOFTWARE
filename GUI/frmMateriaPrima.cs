@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmVentas : Form {
-        public frmVentas() {
+    public partial class frmMateriaPrima : Form {
+        public frmMateriaPrima() {
             InitializeComponent();
         }
 
@@ -68,9 +68,9 @@ namespace GUI {
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea cancelar la venta seleccionada?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult respuesta = MessageBox.Show("¿Desea eliminar el material seleccionado?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(respuesta == DialogResult.Yes) {
-                // BORRAR SOLICITUD
+                // BORRAR MATERIAL
             }
         }
 
@@ -87,29 +87,23 @@ namespace GUI {
             btnBuscar.MouseHover += new EventHandler(this.activarMano);
             btnBuscar.MouseMove += new MouseEventHandler(this.activarMano);
             btnBuscar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN FINALIZAR
-            btnFinalizar.MouseHover += new EventHandler(this.activarMano);
-            btnFinalizar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnFinalizar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN AGREGAR
+            btnAgregar.MouseHover += new EventHandler(this.activarMano);
+            btnAgregar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAgregar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN MODIFICAR
             btnModificar.MouseHover += new EventHandler(this.activarMano);
             btnModificar.MouseMove += new MouseEventHandler(this.activarMano);
             btnModificar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN ELIMINAR
-            btnCancelar.MouseHover += new EventHandler(this.activarMano);
-            btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN HISTORIAL
-            btnHistorial.MouseHover += new EventHandler(this.activarMano);
-            btnHistorial.MouseMove += new MouseEventHandler(this.activarMano);
-            btnHistorial.MouseLeave += new EventHandler(this.desactivarMano);
+            btnEliminar.MouseHover += new EventHandler(this.activarMano);
+            btnEliminar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnEliminar.MouseLeave += new EventHandler(this.desactivarMano);
         }
 
-        private void btnHistorial_Click(object sender, EventArgs e) {
-            frmHistorial frm = new frmHistorial();
-            frm.Tag = this.Tag;
-            frm.Show();
-            this.Close();
+        private void btnAgregar_Click(object sender, EventArgs e) {
+            frmAgregarMaterial frm = new frmAgregarMaterial();
+            frm.ShowDialog();
         }
     }
 }
