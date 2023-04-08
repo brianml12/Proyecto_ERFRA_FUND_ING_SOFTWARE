@@ -127,3 +127,6 @@ C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.exe
 C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.pdb
+C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmVentas.resources
+C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmModificarVentas.resources
+C:\Users\Lenovo\Source\Repos\Proyecto_ERFRA_FUND_ING_SOFTWARE\GUI\obj\Debug\GUI.frmHistorial.resources

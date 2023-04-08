@@ -81,5 +81,12 @@ namespace GUI
         private void btnCerrarSesion_Click(object sender, EventArgs e) {
             btnSalir_Click(this, new EventArgs());
         }
+
+        private void btnVentas_Click(object sender, EventArgs e) {
+            frmVentas frm = new frmVentas();
+            frm.Tag = "admin";
+            frm.Show();
+            this.Close();
+        }
     }
 }

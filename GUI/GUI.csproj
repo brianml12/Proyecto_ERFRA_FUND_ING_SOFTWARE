@@ -75,6 +75,12 @@
     <Compile Include="frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarVentas.Designer.cs">
+      <DependentUpon>frmModificarVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificarSolicitudes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,18 @@
     </Compile>
     <Compile Include="frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorial.Designer.cs">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSolicitudes.cs">
       <SubType>Form</SubType>
@@ -116,6 +134,9 @@
     <EmbeddedResource Include="frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarVentas.resx">
+      <DependentUpon>frmModificarVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModificarSolicitudes.resx">
       <DependentUpon>frmModificarSolicitudes.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorial.resx">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitudes.resx">
       <DependentUpon>frmSolicitudes.cs</DependentUpon>
@@ -216,9 +243,12 @@
     <Content Include="Resources\carrito-de-compras %281%29.png" />
     <Content Include="Resources\carrito-de-compras.png" />
     <Content Include="Resources\check.png" />
+    <None Include="Resources\check1.png" />
     <Content Include="Resources\disco.png" />
+    <None Include="Resources\disco1.png" />
     <Content Include="Resources\documento.png" />
     <None Include="Resources\flecha-pequena-izquierda1.png" />
+    <None Include="Resources\documento1.png" />
     <Content Include="Resources\mas %282%29.png" />
     <None Include="Resources\ojo-cruzado.png" />
     <None Include="Resources\ojo.png" />

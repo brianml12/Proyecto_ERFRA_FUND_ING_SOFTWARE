@@ -198,7 +198,7 @@
             this.cboPrenda.FormattingEnabled = true;
             this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cboPrenda.Location = new System.Drawing.Point(74, 115);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
             this.cboPrenda.TabIndex = 23;
@@ -207,12 +207,11 @@
             // pbPorcentaje
             // 
             this.pbPorcentaje.Location = new System.Drawing.Point(74, 302);
-            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(2);
             this.pbPorcentaje.Name = "pbPorcentaje";
             this.pbPorcentaje.Size = new System.Drawing.Size(247, 19);
             this.pbPorcentaje.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbPorcentaje.TabIndex = 24;
-            this.pbPorcentaje.Value = 25;
             // 
             // lblPorcentaje
             // 
@@ -221,9 +220,8 @@
             this.lblPorcentaje.ForeColor = System.Drawing.Color.Black;
             this.lblPorcentaje.Location = new System.Drawing.Point(326, 303);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(37, 18);
+            this.lblPorcentaje.Size = new System.Drawing.Size(0, 18);
             this.lblPorcentaje.TabIndex = 25;
-            this.lblPorcentaje.Text = "25%";
             this.lblPorcentaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAtras
@@ -236,6 +234,7 @@
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
             this.btnAtras.TabIndex = 26;
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmAgregarSolicitudes
             // 

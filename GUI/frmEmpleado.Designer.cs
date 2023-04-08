@@ -99,6 +99,7 @@
             this.btnVentas.Size = new System.Drawing.Size(81, 74);
             this.btnVentas.TabIndex = 3;
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // label2
             // 

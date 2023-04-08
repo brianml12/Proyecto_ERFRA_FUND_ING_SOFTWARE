@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecioU = new Windows.Forms.HintTextBox(this.components);
             this.txtLote = new Windows.Forms.HintTextBox(this.components);
             this.txtDescripcion = new Windows.Forms.HintTextBox(this.components);
             this.txtImporte = new Windows.Forms.HintTextBox(this.components);
             this.cboPrenda = new System.Windows.Forms.ComboBox();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,19 +67,6 @@
             this.label1.Text = "Modificar Solicitud";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(367, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -104,7 +91,6 @@
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
             this.txtPrecioU.TabIndex = 19;
-            this.txtPrecioU.Text = "Precio Unitario";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
             this.txtPrecioU.Value = "";
             // 
@@ -120,7 +106,6 @@
             this.txtLote.Name = "txtLote";
             this.txtLote.Size = new System.Drawing.Size(270, 30);
             this.txtLote.TabIndex = 20;
-            this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
             this.txtLote.Value = "";
             // 
@@ -136,7 +121,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(270, 30);
             this.txtDescripcion.TabIndex = 21;
-            this.txtDescripcion.Text = "Descripción";
             this.txtDescripcion.TextForeColor = System.Drawing.Color.Black;
             this.txtDescripcion.Value = "";
             // 
@@ -152,7 +136,6 @@
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(270, 30);
             this.txtImporte.TabIndex = 22;
-            this.txtImporte.Text = "Importe";
             this.txtImporte.TextForeColor = System.Drawing.Color.Black;
             this.txtImporte.Value = "";
             // 
@@ -163,28 +146,39 @@
             this.cboPrenda.FormattingEnabled = true;
             this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cboPrenda.Location = new System.Drawing.Point(74, 120);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
             this.cboPrenda.TabIndex = 23;
-            this.cboPrenda.Text = "Prenda";
             // 
-            // btnModificar
+            // btnAtras
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
-            this.btnModificar.Image = global::GUI.Properties.Resources.edit;
-            this.btnModificar.Location = new System.Drawing.Point(51, 327);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(130, 35);
-            this.btnModificar.TabIndex = 24;
-            this.btnModificar.Text = "  Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
+            this.btnAtras.Location = new System.Drawing.Point(16, 66);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.TabIndex = 25;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
+            this.btnGuardar.Image = global::GUI.Properties.Resources.disco;
+            this.btnGuardar.Location = new System.Drawing.Point(51, 327);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(130, 35);
+            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.Text = "  Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -203,17 +197,18 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAtras
+            // btnSalir
             // 
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(16, 66);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 25;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::GUI.Properties.Resources._16;
+            this.btnSalir.Location = new System.Drawing.Point(367, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmModificarSolicitudes
             // 
@@ -221,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 414);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboPrenda);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.txtDescripcion);
@@ -254,7 +249,7 @@
         private Windows.Forms.HintTextBox txtDescripcion;
         private Windows.Forms.HintTextBox txtImporte;
         private System.Windows.Forms.ComboBox cboPrenda;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
     }
 }

@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmModificarSolicitudes : Form {
-        public frmModificarSolicitudes() {
+    public partial class frmModificarVentas : Form {
+        public frmModificarVentas() {
             InitializeComponent();
         }
 
@@ -60,7 +60,7 @@ namespace GUI {
         private void btnModificar_Click(object sender, EventArgs e) {
             DialogResult respuesta = MessageBox.Show("¿Desea guardar los cambios?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(respuesta == DialogResult.Yes) {
-                // MODIFICAR SOLICITUD
+                // MODIFICAR VENTA
             }
         }
 
@@ -74,9 +74,9 @@ namespace GUI {
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN MODIFICAR
-            btnGuardar.MouseHover += new EventHandler(this.activarMano);
-            btnGuardar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnGuardar.MouseLeave += new EventHandler(this.desactivarMano);
+            btnModificar.MouseHover += new EventHandler(this.activarMano);
+            btnModificar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnModificar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN ELIMINAR
             btnCancelar.MouseHover += new EventHandler(this.activarMano);
             btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);

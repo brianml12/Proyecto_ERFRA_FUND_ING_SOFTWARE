@@ -75,5 +75,24 @@ namespace GUI {
             frm.Show();
             this.Close();
         }
+
+        private void btnIniciar_Click(object sender, EventArgs e) {
+            if(txtUser.Text.Equals("admin") && txtPassword.Text.Equals("password")) {
+                frmAdministrador frm = new frmAdministrador();
+                frm.Show();
+                this.Close();
+            }
+            else if(txtUser.Text.Equals("empleado") && txtPassword.Text.Equals("password")) {
+                frmEmpleado frm = new frmEmpleado();
+                frm.Show();
+                this.Close();
+            }
+            else {
+                MessageBox.Show("en algo andas mal vale...", "aguas cuidao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUser.Text = "";
+                txtPassword.Text = "";
+            }
+            
+        }
     }
 }

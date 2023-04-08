@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -72,6 +72,19 @@
             this.label1.Text = "Solicitudes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::GUI.Properties.Resources._16;
+            this.btnSalir.Location = new System.Drawing.Point(656, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // txtBuscar
             // 
             this.txtBuscar.EnterToTab = false;
@@ -84,11 +97,14 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(290, 30);
             this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
             // 
             // dgvSolicitudes
             // 
+            this.dgvSolicitudes.AllowUserToAddRows = false;
+            this.dgvSolicitudes.AllowUserToDeleteRows = false;
             this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -97,11 +113,13 @@
             this.Lote,
             this.Descripcion,
             this.Importe});
+            this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvSolicitudes.Location = new System.Drawing.Point(85, 126);
-            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.RowHeadersWidth = 51;
             this.dgvSolicitudes.RowTemplate.Height = 24;
+            this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSolicitudes.Size = new System.Drawing.Size(536, 199);
             this.dgvSolicitudes.TabIndex = 16;
             // 
@@ -197,19 +215,6 @@
             this.btnInsertar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsertar.UseVisualStyleBackColor = false;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(656, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnBuscar
             // 

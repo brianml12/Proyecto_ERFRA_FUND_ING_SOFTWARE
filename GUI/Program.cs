@@ -13,10 +13,11 @@ namespace GUI
         /// </summary>
         [STAThread]
         static void Main()
+
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmEmpleado frm = new frmEmpleado();
+            frmLogin frm = new frmLogin();
             frm.Show();
             Application.Run();
         }

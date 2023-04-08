@@ -67,9 +67,16 @@ namespace GUI {
             btnCancelar.MouseHover += new EventHandler(this.activarMano);
             btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
             btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACION BARRA
+            lblPorcentaje.Text = pbPorcentaje.Value+"%";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
             btnSalir_Click(this, new EventArgs());
         }
     }

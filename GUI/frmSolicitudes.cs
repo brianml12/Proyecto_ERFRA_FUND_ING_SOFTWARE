@@ -7,7 +7,6 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace GUI {
@@ -57,7 +56,8 @@ namespace GUI {
         }
 
         private void btnInsertar_Click(object sender, EventArgs e) {
-
+            frmAgregarSolicitudes frm = new frmAgregarSolicitudes();
+            frm.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
@@ -65,9 +65,11 @@ namespace GUI {
             frm.ShowDialog();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //Mostrar messagebox
+        private void btnEliminar_Click(object sender, EventArgs e) {
+            DialogResult respuesta = MessageBox.Show("¿Desea eliminar la solicitud seleccionada?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(respuesta == DialogResult.Yes) {
+                // BORRAR SOLICITUD
+            }
         }
 
         private void frmSolicitudes_Load(object sender, EventArgs e) {

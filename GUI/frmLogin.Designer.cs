@@ -93,6 +93,7 @@
             this.btnIniciar.TabIndex = 7;
             this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // lnkRegistrarse
             // 

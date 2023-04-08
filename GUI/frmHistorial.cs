@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI {
-    public partial class frmModificarSolicitudes : Form {
-        public frmModificarSolicitudes() {
+    public partial class frmHistorial : Form {
+        public frmHistorial() {
             InitializeComponent();
         }
 
@@ -46,25 +46,34 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
+            frmVentas frm = new frmVentas();
+            frm.Tag = this.Tag;
+            frm.Show();
             this.Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e) {
-            this.Close();
+        private void btnAtras_Click(object sender, EventArgs e) {
+            btnSalir_Click(this, new EventArgs());
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e) {
-            this.Close();
+        private void btnInsertar_Click(object sender, EventArgs e) {
+            frmAgregarSolicitudes frm = new frmAgregarSolicitudes();
+            frm.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea guardar los cambios?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            frmModificarSolicitudes frm = new frmModificarSolicitudes();
+            frm.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e) {
+            DialogResult respuesta = MessageBox.Show("¿Desea eliminar la solicitud seleccionada?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(respuesta == DialogResult.Yes) {
-                // MODIFICAR SOLICITUD
+                // BORRAR SOLICITUD
             }
         }
 
-        private void frmModificarSolicitudes_Load(object sender, EventArgs e) {
+        private void frmSolicitudes_Load(object sender, EventArgs e) {
             // ANIMACIÓN BOTÓN SALIR
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
@@ -73,18 +82,13 @@ namespace GUI {
             btnAtras.MouseHover += new EventHandler(this.activarMano);
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN MODIFICAR
-            btnGuardar.MouseHover += new EventHandler(this.activarMano);
-            btnGuardar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnGuardar.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN ELIMINAR
-            btnCancelar.MouseHover += new EventHandler(this.activarMano);
-            btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
-            btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN BUSCAR
+            btnBuscar.MouseHover += new EventHandler(this.activarMano);
+            btnBuscar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnBuscar.MouseLeave += new EventHandler(this.desactivarMano);
+            
         }
 
-        private void btnAtras_Click(object sender, EventArgs e) {
-            btnSalir_Click(this, new EventArgs());
-        }
+        
     }
 }
