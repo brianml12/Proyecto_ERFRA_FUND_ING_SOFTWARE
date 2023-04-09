@@ -59,8 +59,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 50);
+            this.panel1.Size = new System.Drawing.Size(556, 62);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -68,9 +69,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.Size = new System.Drawing.Size(207, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Agregar Material";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,9 +83,10 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(367, 0);
+            this.btnSalir.Location = new System.Drawing.Point(489, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -93,9 +96,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(70, 71);
+            this.label2.Location = new System.Drawing.Point(93, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(106, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Agregar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,10 +111,10 @@
             this.txtClave.ForeColor = System.Drawing.Color.Gray;
             this.txtClave.HintColor = System.Drawing.Color.Gray;
             this.txtClave.HintValue = "Clave Material";
-            this.txtClave.Location = new System.Drawing.Point(74, 125);
-            this.txtClave.Multiline = true;
+            this.txtClave.Location = new System.Drawing.Point(99, 154);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(270, 30);
+            this.txtClave.Size = new System.Drawing.Size(359, 32);
             this.txtClave.TabIndex = 1;
             this.txtClave.Text = "Clave Material";
             this.txtClave.TextForeColor = System.Drawing.Color.Black;
@@ -123,10 +127,10 @@
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
             this.txtNombre.HintColor = System.Drawing.Color.Gray;
             this.txtNombre.HintValue = "Nombre de Material";
-            this.txtNombre.Location = new System.Drawing.Point(74, 161);
-            this.txtNombre.Multiline = true;
+            this.txtNombre.Location = new System.Drawing.Point(99, 198);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(270, 30);
+            this.txtNombre.Size = new System.Drawing.Size(359, 32);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.Text = "Nombre de Material";
             this.txtNombre.TextForeColor = System.Drawing.Color.Black;
@@ -138,10 +142,10 @@
             this.cboProveedor.ForeColor = System.Drawing.Color.Gray;
             this.cboProveedor.FormattingEnabled = true;
             this.cboProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cboProveedor.Location = new System.Drawing.Point(74, 357);
-            this.cboProveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.cboProveedor.Location = new System.Drawing.Point(99, 439);
+            this.cboProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(194, 28);
+            this.cboProveedor.Size = new System.Drawing.Size(257, 33);
             this.cboProveedor.TabIndex = 8;
             this.cboProveedor.Text = "Proveedor";
             // 
@@ -150,9 +154,10 @@
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.ForeColor = System.Drawing.Color.Black;
-            this.lblPorcentaje.Location = new System.Drawing.Point(326, 303);
+            this.lblPorcentaje.Location = new System.Drawing.Point(435, 373);
+            this.lblPorcentaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(0, 18);
+            this.lblPorcentaje.Size = new System.Drawing.Size(0, 22);
             this.lblPorcentaje.TabIndex = 25;
             this.lblPorcentaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -163,10 +168,10 @@
             this.txtColor.ForeColor = System.Drawing.Color.Gray;
             this.txtColor.HintColor = System.Drawing.Color.Gray;
             this.txtColor.HintValue = "Color";
-            this.txtColor.Location = new System.Drawing.Point(74, 197);
-            this.txtColor.Multiline = true;
+            this.txtColor.Location = new System.Drawing.Point(99, 242);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(270, 30);
+            this.txtColor.Size = new System.Drawing.Size(359, 32);
             this.txtColor.TabIndex = 3;
             this.txtColor.Text = "Color";
             this.txtColor.TextForeColor = System.Drawing.Color.Black;
@@ -179,10 +184,10 @@
             this.txtCantidad.ForeColor = System.Drawing.Color.Gray;
             this.txtCantidad.HintColor = System.Drawing.Color.Gray;
             this.txtCantidad.HintValue = "Cantidad";
-            this.txtCantidad.Location = new System.Drawing.Point(73, 233);
-            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Location = new System.Drawing.Point(97, 287);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(270, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(359, 32);
             this.txtCantidad.TabIndex = 4;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextForeColor = System.Drawing.Color.Black;
@@ -195,10 +200,10 @@
             this.txtTipoMaterial.ForeColor = System.Drawing.Color.Gray;
             this.txtTipoMaterial.HintColor = System.Drawing.Color.Gray;
             this.txtTipoMaterial.HintValue = "Tipo de Material";
-            this.txtTipoMaterial.Location = new System.Drawing.Point(73, 269);
-            this.txtTipoMaterial.Multiline = true;
+            this.txtTipoMaterial.Location = new System.Drawing.Point(97, 331);
+            this.txtTipoMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTipoMaterial.Name = "txtTipoMaterial";
-            this.txtTipoMaterial.Size = new System.Drawing.Size(270, 30);
+            this.txtTipoMaterial.Size = new System.Drawing.Size(359, 32);
             this.txtTipoMaterial.TabIndex = 5;
             this.txtTipoMaterial.Text = "Tipo de Material";
             this.txtTipoMaterial.TextForeColor = System.Drawing.Color.Black;
@@ -207,26 +212,29 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(190, 306);
+            this.dateTimePicker1.Location = new System.Drawing.Point(253, 377);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(203, 22);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(190, 332);
+            this.dateTimePicker2.Location = new System.Drawing.Point(253, 409);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(204, 22);
             this.dateTimePicker2.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 308);
+            this.label3.Location = new System.Drawing.Point(95, 379);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 16);
+            this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 32;
             this.label3.Text = "Fecha de entrada";
             // 
@@ -234,9 +242,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(71, 331);
+            this.label4.Location = new System.Drawing.Point(95, 407);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 16);
+            this.label4.Size = new System.Drawing.Size(127, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Fecha de salida";
             // 
@@ -245,9 +254,10 @@
             this.btnEliminarProveedor.FlatAppearance.BorderSize = 0;
             this.btnEliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarProveedor.Image = global::GUI.Properties.Resources.basura__1_;
-            this.btnEliminarProveedor.Location = new System.Drawing.Point(312, 358);
+            this.btnEliminarProveedor.Location = new System.Drawing.Point(416, 441);
+            this.btnEliminarProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarProveedor.Name = "btnEliminarProveedor";
-            this.btnEliminarProveedor.Size = new System.Drawing.Size(32, 30);
+            this.btnEliminarProveedor.Size = new System.Drawing.Size(43, 37);
             this.btnEliminarProveedor.TabIndex = 10;
             this.btnEliminarProveedor.UseVisualStyleBackColor = true;
             // 
@@ -256,9 +266,10 @@
             this.btnAgregarProveedor.FlatAppearance.BorderSize = 0;
             this.btnAgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProveedor.Image = global::GUI.Properties.Resources.agregar_usuario__1_;
-            this.btnAgregarProveedor.Location = new System.Drawing.Point(278, 357);
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(371, 439);
+            this.btnAgregarProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarProveedor.Name = "btnAgregarProveedor";
-            this.btnAgregarProveedor.Size = new System.Drawing.Size(32, 30);
+            this.btnAgregarProveedor.Size = new System.Drawing.Size(43, 37);
             this.btnAgregarProveedor.TabIndex = 9;
             this.btnAgregarProveedor.UseVisualStyleBackColor = true;
             this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
@@ -268,9 +279,10 @@
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(16, 65);
+            this.btnAtras.Location = new System.Drawing.Point(21, 80);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -282,9 +294,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.x__4_;
-            this.btnCancelar.Location = new System.Drawing.Point(240, 432);
+            this.btnCancelar.Location = new System.Drawing.Point(320, 532);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,9 +312,10 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(47, 432);
+            this.btnAgregar.Location = new System.Drawing.Point(63, 532);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(173, 43);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "  Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,9 +325,9 @@
             // 
             // frmAgregarMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 500);
+            this.ClientSize = new System.Drawing.Size(556, 615);
             this.Controls.Add(this.btnEliminarProveedor);
             this.Controls.Add(this.btnAgregarProveedor);
             this.Controls.Add(this.label4);
@@ -333,6 +347,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAgregarMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarMaterial";
