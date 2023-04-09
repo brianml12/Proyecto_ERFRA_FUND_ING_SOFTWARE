@@ -1,0 +1,6 @@
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\bin\Debug\Datos.dll
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\bin\Debug\Datos.pdb
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\obj\Debug\Datos.dll
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-1\Datos\obj\Debug\Datos.pdb
