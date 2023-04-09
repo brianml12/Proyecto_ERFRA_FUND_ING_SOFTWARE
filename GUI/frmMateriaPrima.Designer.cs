@@ -61,8 +61,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 50);
+            this.panel1.Size = new System.Drawing.Size(1033, 62);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -70,9 +71,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 24);
+            this.label1.Size = new System.Drawing.Size(175, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Materia Prima";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,9 +85,10 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(725, 0);
+            this.btnSalir.Location = new System.Drawing.Point(966, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -97,10 +100,10 @@
             this.txtBuscar.ForeColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintValue = "Buscar";
-            this.txtBuscar.Location = new System.Drawing.Point(85, 76);
-            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Location = new System.Drawing.Point(113, 94);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(290, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(385, 32);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
@@ -124,89 +127,112 @@
             this.TelefonoProveedor,
             this.CorreoProveedor});
             this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvSolicitudes.Location = new System.Drawing.Point(85, 126);
-            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSolicitudes.Location = new System.Drawing.Point(113, 155);
+            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.RowHeadersWidth = 51;
             this.dgvSolicitudes.RowTemplate.Height = 24;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(617, 260);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(823, 320);
             this.dgvSolicitudes.TabIndex = 16;
             // 
             // Clave
             // 
             this.Clave.HeaderText = "Clave";
+            this.Clave.MinimumWidth = 6;
             this.Clave.Name = "Clave";
             this.Clave.ReadOnly = true;
+            this.Clave.Width = 125;
             // 
             // Material
             // 
             this.Material.HeaderText = "Material";
+            this.Material.MinimumWidth = 6;
             this.Material.Name = "Material";
             this.Material.ReadOnly = true;
+            this.Material.Width = 125;
             // 
             // Color
             // 
             this.Color.HeaderText = "Color";
+            this.Color.MinimumWidth = 6;
             this.Color.Name = "Color";
             this.Color.ReadOnly = true;
+            this.Color.Width = 125;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // TipoMaterial
             // 
             this.TipoMaterial.HeaderText = "Tipo de Material";
+            this.TipoMaterial.MinimumWidth = 6;
             this.TipoMaterial.Name = "TipoMaterial";
             this.TipoMaterial.ReadOnly = true;
+            this.TipoMaterial.Width = 125;
             // 
             // FechaEntrada
             // 
             this.FechaEntrada.HeaderText = "Fecha de entrada";
+            this.FechaEntrada.MinimumWidth = 6;
             this.FechaEntrada.Name = "FechaEntrada";
             this.FechaEntrada.ReadOnly = true;
+            this.FechaEntrada.Width = 125;
             // 
             // FechaSalida
             // 
             this.FechaSalida.HeaderText = "Fecha de Salida";
+            this.FechaSalida.MinimumWidth = 6;
             this.FechaSalida.Name = "FechaSalida";
             this.FechaSalida.ReadOnly = true;
+            this.FechaSalida.Width = 125;
             // 
             // Proveedor
             // 
             this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.MinimumWidth = 6;
             this.Proveedor.Name = "Proveedor";
             this.Proveedor.ReadOnly = true;
+            this.Proveedor.Width = 125;
             // 
             // DireccionProveedor
             // 
             this.DireccionProveedor.HeaderText = "Direccion Proveedor";
+            this.DireccionProveedor.MinimumWidth = 6;
             this.DireccionProveedor.Name = "DireccionProveedor";
             this.DireccionProveedor.ReadOnly = true;
+            this.DireccionProveedor.Width = 125;
             // 
             // TelefonoProveedor
             // 
             this.TelefonoProveedor.HeaderText = "Telefono Proveedor";
+            this.TelefonoProveedor.MinimumWidth = 6;
             this.TelefonoProveedor.Name = "TelefonoProveedor";
             this.TelefonoProveedor.ReadOnly = true;
+            this.TelefonoProveedor.Width = 125;
             // 
             // CorreoProveedor
             // 
             this.CorreoProveedor.HeaderText = "Correo Proveedor";
+            this.CorreoProveedor.MinimumWidth = 6;
             this.CorreoProveedor.Name = "CorreoProveedor";
             this.CorreoProveedor.ReadOnly = true;
+            this.CorreoProveedor.Width = 125;
             // 
             // btnAtras
             // 
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(27, 76);
+            this.btnAtras.Location = new System.Drawing.Point(36, 94);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -216,9 +242,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::GUI.Properties.Resources.busqueda;
-            this.btnBuscar.Location = new System.Drawing.Point(387, 76);
+            this.btnBuscar.Location = new System.Drawing.Point(516, 94);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(43, 37);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -229,9 +256,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnEliminar.Image = global::GUI.Properties.Resources.trash;
-            this.btnEliminar.Location = new System.Drawing.Point(552, 421);
+            this.btnEliminar.Location = new System.Drawing.Point(736, 518);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(200, 43);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "  Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -246,9 +274,10 @@
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
             this.btnModificar.Image = global::GUI.Properties.Resources.edit;
-            this.btnModificar.Location = new System.Drawing.Point(316, 421);
+            this.btnModificar.Location = new System.Drawing.Point(421, 518);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(150, 35);
+            this.btnModificar.Size = new System.Drawing.Size(200, 43);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "  Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -263,9 +292,10 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(85, 421);
+            this.btnAgregar.Location = new System.Drawing.Point(113, 518);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(150, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(200, 43);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "  Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -275,9 +305,9 @@
             // 
             // frmMateriaPrima
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 500);
+            this.ClientSize = new System.Drawing.Size(1033, 615);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -287,6 +317,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMateriaPrima";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMateriaPrima";

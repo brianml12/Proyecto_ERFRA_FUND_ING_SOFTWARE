@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 50);
+            this.panel1.Size = new System.Drawing.Size(556, 62);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -62,9 +63,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 24);
+            this.label1.Size = new System.Drawing.Size(215, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Agregar Solicitud";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,9 +77,10 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(367, 0);
+            this.btnSalir.Location = new System.Drawing.Point(489, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -89,9 +92,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.x__4_;
-            this.btnCancelar.Location = new System.Drawing.Point(246, 338);
+            this.btnCancelar.Location = new System.Drawing.Point(328, 416);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,9 +110,10 @@
             this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnInsertar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnInsertar.Location = new System.Drawing.Point(53, 338);
+            this.btnInsertar.Location = new System.Drawing.Point(71, 416);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(130, 35);
+            this.btnInsertar.Size = new System.Drawing.Size(173, 43);
             this.btnInsertar.TabIndex = 6;
             this.btnInsertar.Text = "  Insertar";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,9 +125,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(70, 71);
+            this.label2.Location = new System.Drawing.Point(93, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(106, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Agregar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,14 +140,15 @@
             this.txtPrecioU.ForeColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintValue = "Precio Unitario";
-            this.txtPrecioU.Location = new System.Drawing.Point(74, 148);
-            this.txtPrecioU.Multiline = true;
+            this.txtPrecioU.Location = new System.Drawing.Point(99, 182);
+            this.txtPrecioU.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioU.Name = "txtPrecioU";
-            this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
+            this.txtPrecioU.Size = new System.Drawing.Size(359, 32);
             this.txtPrecioU.TabIndex = 2;
             this.txtPrecioU.Text = "Precio Unitario";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
             this.txtPrecioU.Value = "";
+            this.txtPrecioU.TextChanged += new System.EventHandler(this.txtPrecioU_TextChanged);
             // 
             // txtLote
             // 
@@ -150,14 +157,15 @@
             this.txtLote.ForeColor = System.Drawing.Color.Gray;
             this.txtLote.HintColor = System.Drawing.Color.Gray;
             this.txtLote.HintValue = "Lote";
-            this.txtLote.Location = new System.Drawing.Point(74, 184);
-            this.txtLote.Multiline = true;
+            this.txtLote.Location = new System.Drawing.Point(99, 226);
+            this.txtLote.Margin = new System.Windows.Forms.Padding(4);
             this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(270, 30);
+            this.txtLote.Size = new System.Drawing.Size(359, 32);
             this.txtLote.TabIndex = 3;
             this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
             this.txtLote.Value = "";
+            this.txtLote.TextChanged += new System.EventHandler(this.txtLote_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -166,14 +174,15 @@
             this.txtDescripcion.ForeColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintValue = "Descripción";
-            this.txtDescripcion.Location = new System.Drawing.Point(74, 219);
-            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Location = new System.Drawing.Point(99, 270);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(270, 30);
+            this.txtDescripcion.Size = new System.Drawing.Size(359, 32);
             this.txtDescripcion.TabIndex = 4;
             this.txtDescripcion.Text = "Descripción";
             this.txtDescripcion.TextForeColor = System.Drawing.Color.Black;
             this.txtDescripcion.Value = "";
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // txtImporte
             // 
@@ -182,34 +191,36 @@
             this.txtImporte.ForeColor = System.Drawing.Color.Gray;
             this.txtImporte.HintColor = System.Drawing.Color.Gray;
             this.txtImporte.HintValue = "Importe";
-            this.txtImporte.Location = new System.Drawing.Point(74, 255);
-            this.txtImporte.Multiline = true;
+            this.txtImporte.Location = new System.Drawing.Point(99, 314);
+            this.txtImporte.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(270, 30);
+            this.txtImporte.Size = new System.Drawing.Size(359, 32);
             this.txtImporte.TabIndex = 5;
             this.txtImporte.Text = "Importe";
             this.txtImporte.TextForeColor = System.Drawing.Color.Black;
             this.txtImporte.Value = "";
+            this.txtImporte.TextChanged += new System.EventHandler(this.txtImporte_TextChanged);
             // 
             // cboPrenda
             // 
+            this.cboPrenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
             this.cboPrenda.ForeColor = System.Drawing.Color.Gray;
             this.cboPrenda.FormattingEnabled = true;
             this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cboPrenda.Location = new System.Drawing.Point(74, 115);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
+            this.cboPrenda.Location = new System.Drawing.Point(99, 142);
+            this.cboPrenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboPrenda.Name = "cboPrenda";
-            this.cboPrenda.Size = new System.Drawing.Size(270, 28);
+            this.cboPrenda.Size = new System.Drawing.Size(359, 33);
             this.cboPrenda.TabIndex = 1;
-            this.cboPrenda.Text = "Prenda";
+            this.cboPrenda.TextChanged += new System.EventHandler(this.cboPrenda_TextChanged);
             // 
             // pbPorcentaje
             // 
-            this.pbPorcentaje.Location = new System.Drawing.Point(74, 302);
-            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(2);
+            this.pbPorcentaje.Location = new System.Drawing.Point(99, 372);
+            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbPorcentaje.Name = "pbPorcentaje";
-            this.pbPorcentaje.Size = new System.Drawing.Size(247, 19);
+            this.pbPorcentaje.Size = new System.Drawing.Size(329, 23);
             this.pbPorcentaje.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbPorcentaje.TabIndex = 24;
             // 
@@ -218,9 +229,10 @@
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.ForeColor = System.Drawing.Color.Black;
-            this.lblPorcentaje.Location = new System.Drawing.Point(326, 303);
+            this.lblPorcentaje.Location = new System.Drawing.Point(435, 373);
+            this.lblPorcentaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(0, 18);
+            this.lblPorcentaje.Size = new System.Drawing.Size(0, 22);
             this.lblPorcentaje.TabIndex = 25;
             this.lblPorcentaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -229,18 +241,19 @@
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(16, 65);
+            this.btnAtras.Location = new System.Drawing.Point(21, 80);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmAgregarSolicitudes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 414);
+            this.ClientSize = new System.Drawing.Size(556, 510);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblPorcentaje);
             this.Controls.Add(this.pbPorcentaje);
@@ -254,6 +267,7 @@
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgregarSolicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarSolicitudes";

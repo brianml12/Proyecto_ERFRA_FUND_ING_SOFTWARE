@@ -295,5 +295,11 @@
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\trash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{88A59620-4C8B-4187-92B2-0B762D8C4AC9}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

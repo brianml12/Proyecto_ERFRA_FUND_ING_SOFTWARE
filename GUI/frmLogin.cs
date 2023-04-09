@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,8 @@ namespace GUI {
             InitializeComponent();
         
         }
-
+        //Objeto para acceder al DAOLogin.
+        DAOLogin log = new DAOLogin();
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
 
@@ -95,6 +97,12 @@ namespace GUI {
                 txtPassword.Text = "";
             }
             
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            bool status = log.VerPassword(txtPassword.UseSystemPasswordChar);
+            txtPassword.UseSystemPasswordChar = status;
         }
     }
 }

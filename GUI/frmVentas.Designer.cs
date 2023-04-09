@@ -57,8 +57,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 50);
+            this.panel1.Size = new System.Drawing.Size(1033, 62);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -66,9 +67,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ventas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,9 +81,10 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(725, 0);
+            this.btnSalir.Location = new System.Drawing.Point(966, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -93,10 +96,10 @@
             this.txtBuscar.ForeColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintValue = "Buscar por Folio";
-            this.txtBuscar.Location = new System.Drawing.Point(85, 76);
-            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Location = new System.Drawing.Point(113, 94);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(290, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(385, 32);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar por Folio";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
@@ -115,50 +118,62 @@
             this.Total,
             this.Status});
             this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvSolicitudes.Location = new System.Drawing.Point(85, 126);
-            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSolicitudes.Location = new System.Drawing.Point(113, 155);
+            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.RowHeadersWidth = 51;
             this.dgvSolicitudes.RowTemplate.Height = 24;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(617, 260);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(823, 320);
             this.dgvSolicitudes.TabIndex = 16;
             // 
             // Folio
             // 
             this.Folio.HeaderText = "Folio";
+            this.Folio.MinimumWidth = 6;
             this.Folio.Name = "Folio";
             this.Folio.ReadOnly = true;
+            this.Folio.Width = 125;
             // 
             // Productos
             // 
             this.Productos.HeaderText = "Productos";
+            this.Productos.MinimumWidth = 6;
             this.Productos.Name = "Productos";
             this.Productos.ReadOnly = true;
+            this.Productos.Width = 125;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // Cliente
             // 
             this.Cliente.HeaderText = "Cliente";
+            this.Cliente.MinimumWidth = 6;
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 125;
             // 
             // Total
             // 
             this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
+            this.Total.Width = 125;
             // 
             // Status
             // 
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Width = 125;
             // 
             // btnHistorial
             // 
@@ -167,9 +182,10 @@
             this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(16)))), ((int)(((byte)(172)))));
             this.btnHistorial.Image = global::GUI.Properties.Resources.documento;
-            this.btnHistorial.Location = new System.Drawing.Point(527, 71);
+            this.btnHistorial.Location = new System.Drawing.Point(703, 87);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(175, 35);
+            this.btnHistorial.Size = new System.Drawing.Size(233, 43);
             this.btnHistorial.TabIndex = 3;
             this.btnHistorial.Text = "  Historial de ventas";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,9 +198,10 @@
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(27, 76);
+            this.btnAtras.Location = new System.Drawing.Point(36, 94);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -194,9 +211,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::GUI.Properties.Resources.busqueda;
-            this.btnBuscar.Location = new System.Drawing.Point(387, 76);
+            this.btnBuscar.Location = new System.Drawing.Point(516, 94);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(43, 37);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -207,9 +225,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.trash;
-            this.btnCancelar.Location = new System.Drawing.Point(552, 421);
+            this.btnCancelar.Location = new System.Drawing.Point(736, 518);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(200, 43);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "  Cancelar venta";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,9 +243,10 @@
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
             this.btnModificar.Image = global::GUI.Properties.Resources.edit;
-            this.btnModificar.Location = new System.Drawing.Point(316, 421);
+            this.btnModificar.Location = new System.Drawing.Point(421, 518);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(150, 35);
+            this.btnModificar.Size = new System.Drawing.Size(200, 43);
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "  Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,9 +261,10 @@
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnFinalizar.Image = global::GUI.Properties.Resources.check;
-            this.btnFinalizar.Location = new System.Drawing.Point(85, 421);
+            this.btnFinalizar.Location = new System.Drawing.Point(113, 518);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(150, 35);
+            this.btnFinalizar.Size = new System.Drawing.Size(200, 43);
             this.btnFinalizar.TabIndex = 4;
             this.btnFinalizar.Text = "  Finalizar venta";
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,9 +273,9 @@
             // 
             // frmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 500);
+            this.ClientSize = new System.Drawing.Size(1033, 615);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnBuscar);
@@ -265,6 +286,7 @@
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentas";

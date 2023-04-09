@@ -51,8 +51,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 50);
+            this.panel1.Size = new System.Drawing.Size(556, 62);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -60,9 +61,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
+            this.label1.Size = new System.Drawing.Size(230, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Modificar Solicitud";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,9 +75,10 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(367, 0);
+            this.btnSalir.Location = new System.Drawing.Point(489, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -85,9 +88,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(70, 72);
+            this.label2.Location = new System.Drawing.Point(93, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 24);
+            this.label2.Size = new System.Drawing.Size(121, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Modificar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +103,10 @@
             this.txtPrecioU.ForeColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintValue = "Precio Unitario";
-            this.txtPrecioU.Location = new System.Drawing.Point(74, 154);
-            this.txtPrecioU.Multiline = true;
+            this.txtPrecioU.Location = new System.Drawing.Point(99, 190);
+            this.txtPrecioU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrecioU.Name = "txtPrecioU";
-            this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
+            this.txtPrecioU.Size = new System.Drawing.Size(359, 32);
             this.txtPrecioU.TabIndex = 2;
             this.txtPrecioU.Text = "Precio Unitario";
             this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
@@ -115,10 +119,10 @@
             this.txtLote.ForeColor = System.Drawing.Color.Gray;
             this.txtLote.HintColor = System.Drawing.Color.Gray;
             this.txtLote.HintValue = "Lote";
-            this.txtLote.Location = new System.Drawing.Point(74, 189);
-            this.txtLote.Multiline = true;
+            this.txtLote.Location = new System.Drawing.Point(99, 233);
+            this.txtLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(270, 30);
+            this.txtLote.Size = new System.Drawing.Size(359, 32);
             this.txtLote.TabIndex = 3;
             this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
@@ -131,10 +135,10 @@
             this.txtDescripcion.ForeColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintValue = "Descripción";
-            this.txtDescripcion.Location = new System.Drawing.Point(74, 225);
-            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Location = new System.Drawing.Point(99, 277);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(270, 30);
+            this.txtDescripcion.Size = new System.Drawing.Size(359, 32);
             this.txtDescripcion.TabIndex = 4;
             this.txtDescripcion.Text = "Descripción";
             this.txtDescripcion.TextForeColor = System.Drawing.Color.Black;
@@ -147,10 +151,10 @@
             this.txtImporte.ForeColor = System.Drawing.Color.Gray;
             this.txtImporte.HintColor = System.Drawing.Color.Gray;
             this.txtImporte.HintValue = "Importe";
-            this.txtImporte.Location = new System.Drawing.Point(74, 261);
-            this.txtImporte.Multiline = true;
+            this.txtImporte.Location = new System.Drawing.Point(99, 321);
+            this.txtImporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(270, 30);
+            this.txtImporte.Size = new System.Drawing.Size(359, 32);
             this.txtImporte.TabIndex = 5;
             this.txtImporte.Text = "Importe";
             this.txtImporte.TextForeColor = System.Drawing.Color.Black;
@@ -162,10 +166,10 @@
             this.cboPrenda.ForeColor = System.Drawing.Color.Gray;
             this.cboPrenda.FormattingEnabled = true;
             this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cboPrenda.Location = new System.Drawing.Point(74, 120);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
+            this.cboPrenda.Location = new System.Drawing.Point(99, 148);
+            this.cboPrenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboPrenda.Name = "cboPrenda";
-            this.cboPrenda.Size = new System.Drawing.Size(270, 28);
+            this.cboPrenda.Size = new System.Drawing.Size(359, 33);
             this.cboPrenda.TabIndex = 1;
             // 
             // btnAtras
@@ -173,9 +177,10 @@
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(16, 66);
+            this.btnAtras.Location = new System.Drawing.Point(21, 81);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -187,9 +192,10 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
             this.btnGuardar.Image = global::GUI.Properties.Resources.disco;
-            this.btnGuardar.Location = new System.Drawing.Point(51, 327);
+            this.btnGuardar.Location = new System.Drawing.Point(68, 402);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 35);
+            this.btnGuardar.Size = new System.Drawing.Size(173, 43);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "  Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -204,9 +210,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.x__4_;
-            this.btnCancelar.Location = new System.Drawing.Point(235, 327);
+            this.btnCancelar.Location = new System.Drawing.Point(313, 402);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,9 +223,9 @@
             // 
             // frmModificarSolicitudes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 414);
+            this.ClientSize = new System.Drawing.Size(556, 510);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboPrenda);
@@ -230,6 +237,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmModificarSolicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificarSolicitudes";

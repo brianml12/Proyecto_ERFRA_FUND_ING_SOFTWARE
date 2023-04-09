@@ -32,19 +32,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cboPrenda = new System.Windows.Forms.ComboBox();
-            this.txtPrecioU = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox1 = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox2 = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox3 = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox4 = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox5 = new Windows.Forms.HintTextBox(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new Windows.Forms.HintTextBox(this.components);
+            this.txtApellido = new Windows.Forms.HintTextBox(this.components);
+            this.txtCorreo = new Windows.Forms.HintTextBox(this.components);
+            this.txtUsuario = new Windows.Forms.HintTextBox(this.components);
+            this.txtContraseña = new Windows.Forms.HintTextBox(this.components);
+            this.txtConfirmacion = new Windows.Forms.HintTextBox(this.components);
+            this.cboRol = new System.Windows.Forms.ComboBox();
             this.btnVer2 = new System.Windows.Forms.Button();
             this.btnVer1 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,8 +56,9 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 50);
+            this.panel1.Size = new System.Drawing.Size(543, 62);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -63,9 +66,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
+            this.label1.Size = new System.Drawing.Size(112, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Registro";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,156 +80,165 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
-            this.btnSalir.Location = new System.Drawing.Point(357, 0);
+            this.btnSalir.Location = new System.Drawing.Point(476, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cboPrenda
+            // cboSexo
             // 
-            this.cboPrenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.cboPrenda.ForeColor = System.Drawing.Color.Gray;
-            this.cboPrenda.FormattingEnabled = true;
-            this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.cboPrenda.Location = new System.Drawing.Point(58, 140);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
-            this.cboPrenda.Name = "cboPrenda";
-            this.cboPrenda.Size = new System.Drawing.Size(270, 28);
-            this.cboPrenda.TabIndex = 2;
-            this.cboPrenda.Text = "Genero";
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.cboSexo.ForeColor = System.Drawing.Color.Gray;
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.cboSexo.Location = new System.Drawing.Point(77, 172);
+            this.cboSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(359, 33);
+            this.cboSexo.TabIndex = 2;
             // 
-            // txtPrecioU
+            // txtNombre
             // 
-            this.txtPrecioU.EnterToTab = false;
-            this.txtPrecioU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioU.ForeColor = System.Drawing.Color.Gray;
-            this.txtPrecioU.HintColor = System.Drawing.Color.Gray;
-            this.txtPrecioU.HintValue = "Nombre";
-            this.txtPrecioU.Location = new System.Drawing.Point(58, 69);
-            this.txtPrecioU.Multiline = true;
-            this.txtPrecioU.Name = "txtPrecioU";
-            this.txtPrecioU.Size = new System.Drawing.Size(270, 30);
-            this.txtPrecioU.TabIndex = 0;
-            this.txtPrecioU.Text = "Nombre";
-            this.txtPrecioU.TextForeColor = System.Drawing.Color.Black;
-            this.txtPrecioU.Value = "";
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.EnterToTab = false;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Gray;
+            this.txtNombre.HintColor = System.Drawing.Color.Gray;
+            this.txtNombre.HintValue = "Nombre";
+            this.txtNombre.Location = new System.Drawing.Point(77, 85);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(359, 32);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.Text = "Nombre";
+            this.txtNombre.TextForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Value = "";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombreTextChanged);
             // 
-            // hintTextBox1
+            // txtApellido
             // 
-            this.hintTextBox1.EnterToTab = false;
-            this.hintTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox1.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox1.HintValue = "Apellidos";
-            this.hintTextBox1.Location = new System.Drawing.Point(58, 105);
-            this.hintTextBox1.Multiline = true;
-            this.hintTextBox1.Name = "hintTextBox1";
-            this.hintTextBox1.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox1.TabIndex = 1;
-            this.hintTextBox1.Text = "Apellidos";
-            this.hintTextBox1.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox1.Value = "";
+            this.txtApellido.EnterToTab = false;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.ForeColor = System.Drawing.Color.Gray;
+            this.txtApellido.HintColor = System.Drawing.Color.Gray;
+            this.txtApellido.HintValue = "Apellido";
+            this.txtApellido.Location = new System.Drawing.Point(77, 129);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(359, 32);
+            this.txtApellido.TabIndex = 1;
+            this.txtApellido.Text = "Apellido";
+            this.txtApellido.TextForeColor = System.Drawing.Color.Black;
+            this.txtApellido.Value = "";
             // 
-            // hintTextBox2
+            // txtCorreo
             // 
-            this.hintTextBox2.EnterToTab = false;
-            this.hintTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox2.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox2.HintValue = "Correo";
-            this.hintTextBox2.Location = new System.Drawing.Point(58, 172);
-            this.hintTextBox2.Multiline = true;
-            this.hintTextBox2.Name = "hintTextBox2";
-            this.hintTextBox2.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox2.TabIndex = 3;
-            this.hintTextBox2.Text = "Correo";
-            this.hintTextBox2.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox2.Value = "";
+            this.txtCorreo.EnterToTab = false;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
+            this.txtCorreo.HintColor = System.Drawing.Color.Gray;
+            this.txtCorreo.HintValue = "Correo";
+            this.txtCorreo.Location = new System.Drawing.Point(77, 212);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(359, 32);
+            this.txtCorreo.TabIndex = 3;
+            this.txtCorreo.Text = "Correo";
+            this.txtCorreo.TextForeColor = System.Drawing.Color.Black;
+            this.txtCorreo.Value = "";
             // 
-            // hintTextBox3
+            // txtUsuario
             // 
-            this.hintTextBox3.EnterToTab = false;
-            this.hintTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox3.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox3.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox3.HintValue = "Usuario";
-            this.hintTextBox3.Location = new System.Drawing.Point(58, 208);
-            this.hintTextBox3.Multiline = true;
-            this.hintTextBox3.Name = "hintTextBox3";
-            this.hintTextBox3.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox3.TabIndex = 4;
-            this.hintTextBox3.Text = "Usuario";
-            this.hintTextBox3.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox3.Value = "";
+            this.txtUsuario.EnterToTab = false;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsuario.HintColor = System.Drawing.Color.Gray;
+            this.txtUsuario.HintValue = "Usuario";
+            this.txtUsuario.Location = new System.Drawing.Point(77, 256);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(359, 32);
+            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.Text = "Usuario";
+            this.txtUsuario.TextForeColor = System.Drawing.Color.Black;
+            this.txtUsuario.Value = "";
             // 
-            // hintTextBox4
+            // txtContraseña
             // 
-            this.hintTextBox4.EnterToTab = false;
-            this.hintTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox4.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox4.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox4.HintValue = "Contraseña";
-            this.hintTextBox4.Location = new System.Drawing.Point(58, 244);
-            this.hintTextBox4.Multiline = true;
-            this.hintTextBox4.Name = "hintTextBox4";
-            this.hintTextBox4.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox4.TabIndex = 5;
-            this.hintTextBox4.Text = "Contraseña";
-            this.hintTextBox4.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox4.Value = "";
+            this.txtContraseña.EnterToTab = false;
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.Color.Gray;
+            this.txtContraseña.HintColor = System.Drawing.Color.Gray;
+            this.txtContraseña.HintValue = "Contraseña";
+            this.txtContraseña.Location = new System.Drawing.Point(77, 300);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(359, 32);
+            this.txtContraseña.TabIndex = 5;
+            this.txtContraseña.Text = "Contraseña";
+            this.txtContraseña.TextForeColor = System.Drawing.Color.Black;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.Value = "";
             // 
-            // hintTextBox5
+            // txtConfirmacion
             // 
-            this.hintTextBox5.EnterToTab = false;
-            this.hintTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox5.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox5.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox5.HintValue = "Confirmar contraseña";
-            this.hintTextBox5.Location = new System.Drawing.Point(58, 280);
-            this.hintTextBox5.Multiline = true;
-            this.hintTextBox5.Name = "hintTextBox5";
-            this.hintTextBox5.Size = new System.Drawing.Size(270, 30);
-            this.hintTextBox5.TabIndex = 7;
-            this.hintTextBox5.Text = "Confirmar contraseña";
-            this.hintTextBox5.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox5.Value = "";
+            this.txtConfirmacion.EnterToTab = false;
+            this.txtConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmacion.ForeColor = System.Drawing.Color.Gray;
+            this.txtConfirmacion.HintColor = System.Drawing.Color.Gray;
+            this.txtConfirmacion.HintValue = "Confirmar contraseña";
+            this.txtConfirmacion.Location = new System.Drawing.Point(77, 345);
+            this.txtConfirmacion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmacion.Name = "txtConfirmacion";
+            this.txtConfirmacion.Size = new System.Drawing.Size(359, 32);
+            this.txtConfirmacion.TabIndex = 7;
+            this.txtConfirmacion.Text = "Confirmar contraseña";
+            this.txtConfirmacion.TextForeColor = System.Drawing.Color.Black;
+            this.txtConfirmacion.UseSystemPasswordChar = true;
+            this.txtConfirmacion.Value = "";
             // 
-            // comboBox1
+            // cboRol
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.comboBox1.Location = new System.Drawing.Point(58, 314);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(270, 28);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Rol";
+            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.cboRol.ForeColor = System.Drawing.Color.Gray;
+            this.cboRol.FormattingEnabled = true;
+            this.cboRol.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.cboRol.Location = new System.Drawing.Point(77, 386);
+            this.cboRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboRol.Name = "cboRol";
+            this.cboRol.Size = new System.Drawing.Size(359, 33);
+            this.cboRol.TabIndex = 9;
             // 
             // btnVer2
             // 
             this.btnVer2.FlatAppearance.BorderSize = 0;
             this.btnVer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVer2.Image = global::GUI.Properties.Resources.ojo;
-            this.btnVer2.Location = new System.Drawing.Point(334, 279);
+            this.btnVer2.Location = new System.Drawing.Point(464, 340);
+            this.btnVer2.Margin = new System.Windows.Forms.Padding(4);
             this.btnVer2.Name = "btnVer2";
-            this.btnVer2.Size = new System.Drawing.Size(30, 30);
+            this.btnVer2.Size = new System.Drawing.Size(40, 37);
             this.btnVer2.TabIndex = 8;
             this.btnVer2.UseVisualStyleBackColor = true;
+            this.btnVer2.Click += new System.EventHandler(this.btnVer2_Click);
             // 
             // btnVer1
             // 
             this.btnVer1.FlatAppearance.BorderSize = 0;
             this.btnVer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVer1.Image = global::GUI.Properties.Resources.ojo;
-            this.btnVer1.Location = new System.Drawing.Point(334, 243);
+            this.btnVer1.Location = new System.Drawing.Point(464, 295);
+            this.btnVer1.Margin = new System.Windows.Forms.Padding(4);
             this.btnVer1.Name = "btnVer1";
-            this.btnVer1.Size = new System.Drawing.Size(30, 30);
+            this.btnVer1.Size = new System.Drawing.Size(40, 37);
             this.btnVer1.TabIndex = 6;
             this.btnVer1.UseVisualStyleBackColor = true;
+            this.btnVer1.Click += new System.EventHandler(this.btnVer1_Click);
             // 
             // btnCancelar
             // 
@@ -234,9 +247,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.x__4_;
-            this.btnCancelar.Location = new System.Drawing.Point(234, 379);
+            this.btnCancelar.Location = new System.Drawing.Point(312, 466);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,41 +265,49 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnRegistrar.Image = global::GUI.Properties.Resources.agregar_usuario;
-            this.btnRegistrar.Location = new System.Drawing.Point(44, 379);
+            this.btnRegistrar.Location = new System.Drawing.Point(59, 466);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(130, 35);
+            this.btnRegistrar.Size = new System.Drawing.Size(173, 43);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = " Registrarse";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // epError
+            // 
+            this.epError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epError.ContainerControl = this;
             // 
             // frmRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 446);
+            this.ClientSize = new System.Drawing.Size(543, 549);
             this.Controls.Add(this.btnVer2);
             this.Controls.Add(this.btnVer1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.hintTextBox5);
-            this.Controls.Add(this.hintTextBox4);
-            this.Controls.Add(this.hintTextBox3);
-            this.Controls.Add(this.hintTextBox2);
-            this.Controls.Add(this.hintTextBox1);
-            this.Controls.Add(this.txtPrecioU);
-            this.Controls.Add(this.cboPrenda);
+            this.Controls.Add(this.cboRol);
+            this.Controls.Add(this.txtConfirmacion);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.cboSexo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistro";
             this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,17 +318,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox cboPrenda;
-        private Windows.Forms.HintTextBox txtPrecioU;
-        private Windows.Forms.HintTextBox hintTextBox1;
-        private Windows.Forms.HintTextBox hintTextBox2;
-        private Windows.Forms.HintTextBox hintTextBox3;
-        private Windows.Forms.HintTextBox hintTextBox4;
-        private Windows.Forms.HintTextBox hintTextBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboSexo;
+        private Windows.Forms.HintTextBox txtNombre;
+        private Windows.Forms.HintTextBox txtApellido;
+        private Windows.Forms.HintTextBox txtCorreo;
+        private Windows.Forms.HintTextBox txtUsuario;
+        private Windows.Forms.HintTextBox txtContraseña;
+        private Windows.Forms.HintTextBox txtConfirmacion;
+        private System.Windows.Forms.ComboBox cboRol;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnVer1;
         private System.Windows.Forms.Button btnVer2;
+        private System.Windows.Forms.ErrorProvider epError;
     }
 }

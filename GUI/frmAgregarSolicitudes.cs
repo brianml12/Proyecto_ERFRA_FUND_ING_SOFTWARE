@@ -8,13 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
 
 namespace GUI {
     public partial class frmAgregarSolicitudes : Form {
         public frmAgregarSolicitudes() {
             InitializeComponent();
-        
+            cboPrenda.Items.Add("Playera");
+            cboPrenda.Items.Add("Sueter");
+            cboPrenda.Items.Add("Pantalon");
+            cboPrenda.Items.Add("Uniforme");
+            cboPrenda.Items.Add("Short");
+            cboPrenda.Items.Add("Falda");
+
         }
+        //Objeto para el aumento de la barra de progreso.
+        DAOAgregar_Solicitudes proc = new DAOAgregar_Solicitudes();
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
@@ -78,6 +87,37 @@ namespace GUI {
         private void btnAtras_Click(object sender, EventArgs e)
         {
             btnSalir_Click(this, new EventArgs());
+        }
+
+        private void cboPrenda_TextChanged(object sender, EventArgs e)
+        {
+            lblPorcentaje.Text = proc.progresoPR(cboPrenda.Text) + "%";
+            pbPorcentaje.Value = Int16.Parse(proc.progresoPR(cboPrenda.Text));
+        }
+
+        private void txtPrecioU_TextChanged(object sender, EventArgs e)
+        {
+            lblPorcentaje.Text  = proc.progresoPU(txtPrecioU.Text) + "%";
+            pbPorcentaje.Value = Int16.Parse(proc.progresoPU(txtPrecioU.Text));
+            }
+        
+
+        private void txtLote_TextChanged(object sender, EventArgs e)
+        {
+            lblPorcentaje.Text = proc.progresoL(txtLote.Text) + "%";
+            pbPorcentaje.Value = Int16.Parse(proc.progresoL(txtLote.Text));
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            lblPorcentaje.Text = proc.progresoD(txtDescripcion.Text) + "%";
+            pbPorcentaje.Value = Int16.Parse(proc.progresoD(txtDescripcion.Text));
+        }
+
+        private void txtImporte_TextChanged(object sender, EventArgs e)
+        {
+            lblPorcentaje.Text = proc.progresoI(txtImporte.Text) + "%";
+            pbPorcentaje.Value = Int16.Parse(proc.progresoI(txtImporte.Text));
         }
     }
 }

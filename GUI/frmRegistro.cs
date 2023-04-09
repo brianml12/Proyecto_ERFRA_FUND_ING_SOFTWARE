@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
 
 namespace GUI
 {
@@ -17,7 +19,16 @@ namespace GUI
         public frmRegistro()
         {
             InitializeComponent();
+            cboSexo.Items.Add("Hombre");
+            cboSexo.Items.Add("Mujer");
+            cboSexo.Items.Add("Otro");
+            cboSexo.SelectedIndex = 0;
+            cboRol.Items.Add("Empleado");
+            cboRol.Items.Add("Administrador");
+            cboRol.SelectedIndex = 0;
         }
+        //Objeto para acceder al DAORegistro.
+        DAORegistro reg = new DAORegistro();
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -83,6 +94,50 @@ namespace GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             btnSalir_Click(this, new EventArgs());
+        }
+
+        private void txtNombreTextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            bool EN = reg.validacionNombres(txtNombre.Text);
+            if (EN == false) epError.SetError(txtNombre, "Ingrese un nombre valido.");
+            else epError.SetError(txtNombre, null);
+
+            bool EA = reg.validacionNombres(txtApellido.Text);
+            if (EA == false) epError.SetError(txtApellido, "Ingrese un apellido valido.");
+            else epError.SetError(txtApellido, null);
+
+            bool ECO = reg.validacionCorreo(txtCorreo.Text);
+            if (ECO == false) epError.SetError(txtCorreo, "Ingrese un correo valido.");
+            else epError.SetError(txtCorreo, null);
+
+            bool EU = reg.validacionTexto(txtUsuario.Text);
+            if (EU == false) epError.SetError(txtUsuario, "Ingrese un nombre de usuario valido.");
+            else epError.SetError(txtUsuario, null);
+
+            bool EC = reg.validacionTexto(txtContraseña.Text);
+            if (EC == false) epError.SetError(txtContraseña, "Ingrese una contraseña valida.");
+            else epError.SetError(txtContraseña, null);
+
+            bool ECC = reg.validacionConfirmacion(txtContraseña.Text, txtConfirmacion.Text);
+            if (ECC == false) epError.SetError(txtConfirmacion, "Escriba bien su contraseña.");
+            else epError.SetError(txtConfirmacion, null);
+        }
+
+        private void btnVer1_Click(object sender, EventArgs e)
+        {
+            bool status = reg.VerPassword(txtContraseña.UseSystemPasswordChar);
+            txtContraseña.UseSystemPasswordChar = status;
+        }
+
+        private void btnVer2_Click(object sender, EventArgs e)
+        {
+            bool status = reg.VerPassword(txtConfirmacion.UseSystemPasswordChar);
+            txtConfirmacion.UseSystemPasswordChar = status;
         }
     }
 }
