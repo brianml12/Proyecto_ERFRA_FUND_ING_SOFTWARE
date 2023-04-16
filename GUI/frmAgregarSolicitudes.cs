@@ -210,6 +210,7 @@ namespace GUI
                         if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon")) proc.Eliminacion(txtDescripcion.Text.ToLower(), Int16.Parse(txtLote.Text));
                         frmComprobante comp = new frmComprobante();
                         comp.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -225,15 +226,7 @@ namespace GUI
         }
 
         //Boton para probar el comprobante
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DAOSolicitudes sol = new DAOSolicitudes();
-            sol.Asignacion(cboPrenda.Text, txtCliente.Text, txtLote.Text, txtDescripcion.Text, txtPrecioU.Text, Int32.Parse(txtPrecioU.Text) * Int32.Parse(txtLote.Text) + "", txtImporte.Text);
-            if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon")) proc.Eliminacion(txtDescripcion.Text.ToLower(), Int16.Parse(txtLote.Text));
-            frmComprobante comp = new frmComprobante();
-            comp.Show();
-            this.Hide();
-        }
+        
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {

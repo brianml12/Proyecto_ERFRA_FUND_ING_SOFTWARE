@@ -45,7 +45,6 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.txtCliente = new Windows.Forms.HintTextBox(this.components);
             this.ErrorCampos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).BeginInit();
             this.SuspendLayout();
@@ -276,22 +275,11 @@
             this.ErrorCampos.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ErrorCampos.ContainerControl = this;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(452, 425);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 31);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Envio";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmAgregarSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 571);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblPorcentaje);
@@ -337,6 +325,5 @@
         private System.Windows.Forms.Button btnAtras;
         private Windows.Forms.HintTextBox txtCliente;
         private System.Windows.Forms.ErrorProvider ErrorCampos;
-        private System.Windows.Forms.Button button1;
     }
 }

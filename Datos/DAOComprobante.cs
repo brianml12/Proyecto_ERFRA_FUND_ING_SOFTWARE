@@ -50,12 +50,6 @@ namespace Datos
             objParrafo2.Range.Text = "-------------------------------------------------------";
             objParrafo2.Range.InsertParagraphAfter();
 
-            objWord.Paragraph objParrafo3 = objDocumento.Content.Paragraphs.Add(Type.Missing);
-            objParrafo3.Range.Font.Size = 16;
-            objParrafo3.Range.Font.Color = objWord.WdColor.wdColorDarkBlue;
-            objParrafo3.Range.Text = "ID:……………………………..";
-            objParrafo3.Range.InsertParagraphAfter();
-
             objWord.Paragraph objParrafo4 = objDocumento.Content.Paragraphs.Add(Type.Missing);
             objParrafo4.Range.Font.Size = 16;
             objParrafo4.Range.Font.Color = objWord.WdColor.wdColorDarkBlue;

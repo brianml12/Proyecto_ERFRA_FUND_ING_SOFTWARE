@@ -49,12 +49,16 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            this.Close();
+            frmSolicitudes sol = new frmSolicitudes();
+            sol.Show();
+            this.Hide();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmSolicitudes sol = new frmSolicitudes();
+            sol.Show();
+            this.Hide();
         }
 
         private void MePa()
@@ -65,6 +69,9 @@ namespace GUI {
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             comp.Imprimir();
+            frmSolicitudes sol=new frmSolicitudes();
+            sol.Show();
+            this.Hide();
         }
     }
 }

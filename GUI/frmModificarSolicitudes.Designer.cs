@@ -109,6 +109,7 @@
             this.txtPrecioU.Location = new System.Drawing.Point(99, 233);
             this.txtPrecioU.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioU.Name = "txtPrecioU";
+            this.txtPrecioU.ReadOnly = true;
             this.txtPrecioU.Size = new System.Drawing.Size(359, 32);
             this.txtPrecioU.TabIndex = 2;
             this.txtPrecioU.Text = "Precio Unitario";
@@ -165,6 +166,7 @@
             // 
             // cboPrenda
             // 
+            this.cboPrenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
             this.cboPrenda.ForeColor = System.Drawing.Color.Gray;
             this.cboPrenda.FormattingEnabled = true;
@@ -174,6 +176,7 @@
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(359, 33);
             this.cboPrenda.TabIndex = 1;
+            this.cboPrenda.TextChanged += new System.EventHandler(this.cboPrenda_TextChanged);
             // 
             // btnAtras
             // 

@@ -23,11 +23,11 @@ namespace GUI {
             cboPrenda.Items.Add("Short");
             cboPrenda.Items.Add("Falda");
         }
-
+        DAOBarraProgreso proc = new DAOBarraProgreso();
         public frmModificarSolicitudes(List<Object> campos) : this()
         {
             IDSolicitud = int.Parse(campos[0].ToString());
-            cboPrenda.SelectedItem = int.Parse(campos[1].ToString());
+            //cboPrenda.SelectedItem = int.Parse(campos[1].ToString());
             txtCliente.Text = campos[2].ToString();
             txtPrecioU.Text = campos[3].ToString();
             txtLote.Text = campos[4].ToString();
@@ -162,17 +162,20 @@ namespace GUI {
                     if (new DAOSolicitudes().modificar(objSolicitud))
                     {
                         MessageBox.Show("Solicitud modificada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        btnSalir_Click(this, new EventArgs());
+                        //btnSalir_Click(this, new EventArgs());
 
-                        
-                        //MODIFICAR COMPROBANTE (ARREGLALO XAVIS) 
+
+                        //MODIFICAR COMPROBANTE (ARREGLALO XAVIS
 
                         //PARTE DE VARIABLES GLOBALES (NO MOVER NI MODIFICAR).
-                        //DAOSolicitudes sol = new DAOSolicitudes();
-                        //sol.Asignacion(cboPrenda.Text, txtCliente.Text, txtLote.Text, txtDescripcion.Text, txtPrecioU.Text, Int32.Parse(txtPrecioU.Text) * Int32.Parse(txtLote.Text) + "", txtImporte.Text);
-                        //if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon"), Int16.Parse(txtLote.Text);
-                        //frmComprobante comp = new frmComprobante();
-                        //comp.Show();
+                        //Asignar valor a variables globales.
+                        DAOSolicitudes sol = new DAOSolicitudes();
+                        sol.Asignacion(cboPrenda.Text, txtCliente.Text, txtLote.Text, txtDescripcion.Text, txtPrecioU.Text, Int32.Parse(txtPrecioU.Text) * Int32.Parse(txtLote.Text) + "", txtImporte.Text);
+                        if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon")) proc.Eliminacion(txtDescripcion.Text.ToLower(), Int16.Parse(txtLote.Text));
+                        //Mandar a comprobante
+                        frmComprobante comp = new frmComprobante();
+                        comp.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -208,6 +211,11 @@ namespace GUI {
 
         private void btnAtras_Click(object sender, EventArgs e) {
             btnSalir_Click(this, new EventArgs());
+        }
+
+        private void cboPrenda_TextChanged(object sender, EventArgs e)
+        {
+            txtPrecioU.Text = proc.PrecioUnitario(cboPrenda.Text);
         }
     }
 }
