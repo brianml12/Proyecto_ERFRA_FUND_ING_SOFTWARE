@@ -228,5 +228,10 @@ namespace Datos
                 Datos.VariablesGlobales.Total = resta + "";
             }
         }
+
+        public String Seguro(int PU, int cantidad)
+        {
+            return (PU*cantidad)/2+"";
+        }
     }
 }

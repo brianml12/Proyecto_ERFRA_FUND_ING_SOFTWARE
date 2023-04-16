@@ -56,6 +56,12 @@ namespace Datos
             objParrafo4.Range.Text = "Prenda:…………………….." + Datos.VariablesGlobales.Prenda;
             objParrafo4.Range.InsertParagraphAfter();
 
+            objWord.Paragraph objParrafo5 = objDocumento.Content.Paragraphs.Add(Type.Missing);
+            objParrafo5.Range.Font.Size = 16;
+            objParrafo5.Range.Font.Color = objWord.WdColor.wdColorDarkBlue;
+            objParrafo5.Range.Text = "Nombre del cliente:….." + Datos.VariablesGlobales.Cliente;
+            objParrafo5.Range.InsertParagraphAfter();
+
             objWord.Paragraph objParrafo6 = objDocumento.Content.Paragraphs.Add(Type.Missing);
             objParrafo6.Range.Font.Size = 16;
             objParrafo6.Range.Font.Color = objWord.WdColor.wdColorDarkBlue;

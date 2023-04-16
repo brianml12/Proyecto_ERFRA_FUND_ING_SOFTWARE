@@ -43,6 +43,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtCliente = new Windows.Forms.HintTextBox(this.components);
             this.ErrorCampos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +132,7 @@
             this.txtLote.Text = "Lote";
             this.txtLote.TextForeColor = System.Drawing.Color.Black;
             this.txtLote.Value = "";
+            this.txtLote.TextChanged += new System.EventHandler(this.txtLote_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -158,6 +160,7 @@
             this.txtImporte.Location = new System.Drawing.Point(99, 364);
             this.txtImporte.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporte.Name = "txtImporte";
+            this.txtImporte.ReadOnly = true;
             this.txtImporte.Size = new System.Drawing.Size(359, 32);
             this.txtImporte.TabIndex = 5;
             this.txtImporte.Text = "Importe";
@@ -248,11 +251,22 @@
             this.ErrorCampos.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ErrorCampos.ContainerControl = this;
             // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(466, 363);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(89, 32);
+            this.btnCalcular.TabIndex = 9;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
             // frmModificarSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 510);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
@@ -294,5 +308,6 @@
         private System.Windows.Forms.Button btnAtras;
         private Windows.Forms.HintTextBox txtCliente;
         private System.Windows.Forms.ErrorProvider ErrorCampos;
+        private System.Windows.Forms.Button btnCalcular;
     }
 }
