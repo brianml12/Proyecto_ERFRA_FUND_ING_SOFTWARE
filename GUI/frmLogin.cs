@@ -98,7 +98,8 @@ namespace GUI {
                 {
                     case "Administrador":
                         objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
-                        VariablesGlobales.NombreUsuario = objEmpleado.NombreUsuario;  //
+                        VariablesGlobales.NombreUsuarioLogeado = objEmpleado.NombreUsuario;
+                        VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
                         MessageBox.Show("Bienvenido usuario ADMINISTRADOR " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmAdministrador frmAdmin = new frmAdministrador();
                         frmAdmin.Show();
@@ -106,7 +107,8 @@ namespace GUI {
                         break;
                     case "Empleado":
                         objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
-                        VariablesGlobales.NombreUsuario = objEmpleado.Nombre;  //
+                        VariablesGlobales.NombreUsuarioLogeado = objEmpleado.Nombre;
+                        VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
                         MessageBox.Show("Bienvenido usuario EMPLEADO " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmEmpleado frmEmpleado = new frmEmpleado();
                         frmEmpleado.Show();

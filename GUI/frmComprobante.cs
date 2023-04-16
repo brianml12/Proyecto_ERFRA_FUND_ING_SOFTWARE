@@ -8,14 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
 
 namespace GUI {
     public partial class frmComprobante : Form {
         public frmComprobante() {
             InitializeComponent();
-        
+            MePa();
         }
-
+        //Objeto para usar datos.
+        DAOComprobante comp = new DAOComprobante();
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
 
@@ -53,6 +55,16 @@ namespace GUI {
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MePa()
+        {
+            htxtPrevista.Text=comp.Generar();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            comp.Imprimir();
         }
     }
 }

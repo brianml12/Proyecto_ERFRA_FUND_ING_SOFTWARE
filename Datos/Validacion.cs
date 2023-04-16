@@ -9,6 +9,26 @@ namespace Datos
 {
     public class Validacion
     {
+        public bool esNumero(string input)
+        {
+            Regex expresion = new Regex("^[0-9]+([.][0-9]+)?$");
+            if (expresion.IsMatch(input)) return true;
+            else return false;
+        }
+        public bool esNumeroEntero(string input)
+        {
+            Regex expresion = new Regex(@"\A[0-9]+\Z");
+            if (expresion.IsMatch(input)) return true;
+            else return false;
+        }
+
+        public bool esNumeroDecimal(string input)
+        {
+            Regex expresion = new Regex(@"\A[0-9]+[.]*[0-9]+\Z");
+            if (expresion.IsMatch(input)) return true;
+            else return false;
+        }
+
         public bool validacionNombres(String nombre)
         {
             Regex regex = new Regex(@"[A-Za-z]+");

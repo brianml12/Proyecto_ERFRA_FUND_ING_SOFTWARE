@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Datos;
+using Modelos;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +14,51 @@ using System.Windows.Forms;
 
 namespace GUI {
     public partial class frmModificarMaterial : Form {
+        int IDMaterial;
+
         public frmModificarMaterial() {
             InitializeComponent();
-        
+        }
+
+        public frmModificarMaterial(List<Object> campos) : this()
+        {
+            this.cargarProveedores();
+            IDMaterial = int.Parse(campos[0].ToString());
+            txtCodigoMaterial.Text = campos[1].ToString();
+            txtNombre.Text = campos[2].ToString();
+            txtColor.Text = campos[3].ToString();
+            txtCantidad.Text = campos[4].ToString();
+            txtTipoMaterial.Text = campos[5].ToString();
+            dateTimePicker1.Text = campos[6].ToString();
+            cboProveedor.SelectedValue = int.Parse(campos[7].ToString());
+        }
+
+        public frmModificarMaterial(int id_material) : this()
+        {
+            try
+            {
+                IDMaterial = id_material;
+                this.cargarProveedores();
+                Material objMaterial = new DAOMateriaPrima().obtenerUno(IDMaterial);
+                txtUsuario.Text = VariablesGlobales.NombreUsuarioLogeado;
+                txtCodigoMaterial.Text = objMaterial.CodigoMaterial;
+                txtNombre.Text = objMaterial.NombreMaterial;
+                txtColor.Text = objMaterial.ColorMaterial;
+                txtCantidad.Text = objMaterial.CantidadMaterial.ToString();
+                txtTipoMaterial.Text = objMaterial.TipoMaterial;
+                dateTimePicker1.Text = objMaterial.FechaEntrada;
+                cboProveedor.SelectedValue = objMaterial.IdProveedor;
+            }
+            catch
+            {
+            }
+        }
+
+        public void cargarProveedores()
+        {
+            cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
+            cboProveedor.DisplayMember = "NombreProveedor";
+            cboProveedor.ValueMember = "IdProveedor";
         }
 
         protected override void OnPaint(PaintEventArgs e) {
@@ -52,7 +97,8 @@ namespace GUI {
             this.Close();
         }
 
-        private void frmAgregarSolicitudes_Load(object sender, EventArgs e) {
+        private void frmAgregarMaterial_Load(object sender, EventArgs e) {
+            txtUsuario.Text = VariablesGlobales.NombreUsuarioLogeado;
             // ANIMACIÓN BOTÓN SALIR
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
@@ -61,7 +107,7 @@ namespace GUI {
             btnAtras.MouseHover += new EventHandler(this.activarMano);
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN GUARDAR
+            // ANIMACIÓN BOTÓN INSERTAR
             btnGuardar.MouseHover += new EventHandler(this.activarMano);
             btnGuardar.MouseMove += new MouseEventHandler(this.activarMano);
             btnGuardar.MouseLeave += new EventHandler(this.desactivarMano);
@@ -73,10 +119,6 @@ namespace GUI {
             btnAgregarProveedor.MouseHover += new EventHandler(this.activarMano);
             btnAgregarProveedor.MouseMove += new MouseEventHandler(this.activarMano);
             btnAgregarProveedor.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN ELIMINAR PROVEEDOR
-            btnEliminarProveedor.MouseHover += new EventHandler(this.activarMano);
-            btnEliminarProveedor.MouseMove += new MouseEventHandler(this.activarMano);
-            btnEliminarProveedor.MouseLeave += new EventHandler(this.desactivarMano);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) {
@@ -88,16 +130,84 @@ namespace GUI {
             btnSalir_Click(this, new EventArgs());
         }
 
+        public bool camposVacios()
+        {
+            if (txtCodigoMaterial.Text.Equals(txtCodigoMaterial.HintValue)) return true;
+            else if (txtNombre.Text.Equals(txtNombre.HintValue)) return true;
+            else if (txtColor.Text.Equals(txtColor.HintValue)) return true;
+            else if (txtCantidad.Text.Equals(txtCantidad.HintValue)) return true;
+            else if (txtTipoMaterial.Text.Equals(txtTipoMaterial.HintValue)) return true;
+            else return false;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea guardar los cambios?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(respuesta == DialogResult.Yes) {
-                // MODIFICAR MATERIAL
+            try
+            {
+                if (camposVacios())
+                {
+                    MessageBox.Show("Rellene todos los campos para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    Material objMaterial = new Material();
+                    objMaterial.IdMaterial = IDMaterial;
+                    objMaterial.CodigoMaterial = txtCodigoMaterial.Text;
+                    objMaterial.NombreMaterial = txtNombre.Text;
+                    objMaterial.ColorMaterial = txtColor.Text;
+                    objMaterial.CantidadMaterial = int.Parse(txtCantidad.Text);
+                    objMaterial.TipoMaterial = txtTipoMaterial.Text;
+                    objMaterial.FechaEntrada = dateTimePicker1.Text;
+                    objMaterial.IdProveedor = int.Parse(cboProveedor.SelectedValue.ToString());
+                    objMaterial.IdUsuario = VariablesGlobales.IdUsuarioLogeado;
+                    if (new DAOMateriaPrima().modificar(objMaterial))
+                    {
+                        MessageBox.Show("Material modificado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnSalir_Click(this, new EventArgs());
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo modificar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en el ingreso de datos. Verifique de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e) {
-            frmAgregarProveedor frm = new frmAgregarProveedor();
-            frm.ShowDialog();
+            List<Object> campos = new List<Object>();
+            campos.Add(IDMaterial);
+            campos.Add(txtCodigoMaterial.Text);
+            campos.Add(txtNombre.Text);
+            campos.Add(txtColor.Text);
+            campos.Add(txtCantidad.Text);
+            campos.Add(txtTipoMaterial.Text);
+            campos.Add(dateTimePicker1.Text);
+            campos.Add(cboProveedor.SelectedValue.ToString());
+            frmAgregarProveedor frm = new frmAgregarProveedor(campos);
+            frm.Tag = "Modificar";
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnEliminarProveedor_Click(object sender, EventArgs e)
+        {
+            DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (ans == DialogResult.Yes)
+            {
+                if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true)
+                {
+                    MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.cargarProveedores();
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

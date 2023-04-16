@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class DAOAgregar_Solicitudes
+    public class DAOBarraProgreso
     {
         //Variables para la barra de progreso
         int total = 0;
@@ -15,28 +15,35 @@ namespace Datos
         int campo3 = 0;
         int campo4 = 0;
         int campo5 = 0;
+        int campo6 = 0;
+        int Playera = 100;
+        int Sueter = 200;
+        int Pantalon = 150;
+        int Uniforme = 450;
+        int Short = 80;
+        int Falda = 150;
 
         public String progresoPR(String texto)
         {
-            if (texto.Equals(""))
+            if (texto.Equals("Prenda"))
             {
                 if (campo1 != 0)
                 {
-                    campo1 = campo1 - 20;
-                    total = total - 20;
+                    campo1 = campo1 - 40;
+                    total = total - 40;
                     return total + "";
                 }
                 return total + "";
             }
             else
             {
-                if (texto.Equals("Prenda"))
+                if (texto.Equals(""))
                 {
                     return total + "";
                 }
-                else if (campo1 != 20)
+                else if (campo1 != 40)
                 {
-                    campo1 = campo1 + 20;
+                    campo1 = campo1 + 40;
                     total = total + campo1;
                     return total + "";
                 }
@@ -133,8 +140,8 @@ namespace Datos
             {
                 if (campo5 != 0)
                 {
-                    campo5 = campo5 - 20;
-                    total = total - 20;
+                    campo5 = campo5 - 10;
+                    total = total - 10;
                     return total + "";
                 }
                 return total + "";
@@ -145,13 +152,80 @@ namespace Datos
                 {
                     return total + "";
                 }
-                else if (campo5 != 20)
+                else if (campo5 != 10)
                 {
-                    campo5 = campo5 + 20;
+                    campo5 = campo5 + 10;
                     total = total + campo5;
                     return total + "";
                 }
                 return total + "";
+            }
+        }
+
+        public String PrecioUnitario(String prenda)
+        {
+            if (prenda.Equals("Playera")) return Playera + "";
+            else if (prenda.Equals("Sueter")) return Sueter + "";
+            else if (prenda.Equals("Pantalon")) return Pantalon + "";
+            else if (prenda.Equals("Uniforme")) return Uniforme + "";
+            else if (prenda.Equals("Short")) return Short + "";
+            else if (prenda.Equals("Falda")) return Falda + "";
+            else return "Precio Unitario";
+        }
+
+        public String progresoC(String texto)
+        {
+            if (texto.Equals(""))
+            {
+                if (campo6 != 0)
+                {
+                    campo6 = campo6 - 10;
+                    total = total - 10;
+                    return total + "";
+                }
+                return total + "";
+            }
+            else
+            {
+                if (texto.Equals("Nombre del cliente"))
+                {
+                    return total + "";
+                }
+                else if (campo6 != 10)
+                {
+                    campo6 = campo6 + 10;
+                    total = total + campo6;
+                    return total + "";
+                }
+                return total + "";
+            }
+        }
+
+        public void Eliminacion(String texto, int lote)
+        {
+            if(texto.Equals("sin falda"))
+            {
+                int descuento = Falda * lote;
+                int resta = Int16.Parse(Datos.VariablesGlobales.Total) - descuento;
+                Datos.VariablesGlobales.Total = resta + "";
+            }
+            else if (texto.Equals("sin playera"))
+            {
+                int descuento = Playera * lote;
+                int resta = Int16.Parse(Datos.VariablesGlobales.Total) - descuento;
+                Datos.VariablesGlobales.Total = resta + "";
+            }
+            else if (texto.Equals("sin pantalon"))
+            {
+                int descuento = Pantalon * lote;
+                int resta = Int16.Parse(Datos.VariablesGlobales.Total) - descuento;
+                Datos.VariablesGlobales.Total = resta + "";
+            }
+            else if (texto.Equals("sin sueter"))
+            {
+                int descuento = Sueter * lote;
+                int resta = Int16.Parse(Datos.VariablesGlobales.Total) - descuento;
+                Datos.VariablesGlobales.Total = resta + "";
             }
         }
     }

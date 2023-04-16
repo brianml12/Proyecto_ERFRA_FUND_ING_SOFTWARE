@@ -41,7 +41,10 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtCliente = new Windows.Forms.HintTextBox(this.components);
+            this.ErrorCampos = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,7 +54,7 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(556, 62);
             this.panel1.TabIndex = 0;
@@ -76,7 +79,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
             this.btnSalir.Location = new System.Drawing.Point(489, 0);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
@@ -103,8 +106,8 @@
             this.txtPrecioU.ForeColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintColor = System.Drawing.Color.Gray;
             this.txtPrecioU.HintValue = "Precio Unitario";
-            this.txtPrecioU.Location = new System.Drawing.Point(99, 190);
-            this.txtPrecioU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecioU.Location = new System.Drawing.Point(99, 233);
+            this.txtPrecioU.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(359, 32);
             this.txtPrecioU.TabIndex = 2;
@@ -119,8 +122,8 @@
             this.txtLote.ForeColor = System.Drawing.Color.Gray;
             this.txtLote.HintColor = System.Drawing.Color.Gray;
             this.txtLote.HintValue = "Lote";
-            this.txtLote.Location = new System.Drawing.Point(99, 233);
-            this.txtLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLote.Location = new System.Drawing.Point(99, 276);
+            this.txtLote.Margin = new System.Windows.Forms.Padding(4);
             this.txtLote.Name = "txtLote";
             this.txtLote.Size = new System.Drawing.Size(359, 32);
             this.txtLote.TabIndex = 3;
@@ -135,8 +138,8 @@
             this.txtDescripcion.ForeColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintColor = System.Drawing.Color.Gray;
             this.txtDescripcion.HintValue = "Descripción";
-            this.txtDescripcion.Location = new System.Drawing.Point(99, 277);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Location = new System.Drawing.Point(99, 320);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(359, 32);
             this.txtDescripcion.TabIndex = 4;
@@ -151,8 +154,8 @@
             this.txtImporte.ForeColor = System.Drawing.Color.Gray;
             this.txtImporte.HintColor = System.Drawing.Color.Gray;
             this.txtImporte.HintValue = "Importe";
-            this.txtImporte.Location = new System.Drawing.Point(99, 321);
-            this.txtImporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImporte.Location = new System.Drawing.Point(99, 364);
+            this.txtImporte.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(359, 32);
             this.txtImporte.TabIndex = 5;
@@ -178,7 +181,7 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
             this.btnAtras.Location = new System.Drawing.Point(21, 81);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
@@ -192,8 +195,8 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
             this.btnGuardar.Image = global::GUI.Properties.Resources.disco;
-            this.btnGuardar.Location = new System.Drawing.Point(68, 402);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(68, 439);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(173, 43);
             this.btnGuardar.TabIndex = 6;
@@ -210,8 +213,8 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnCancelar.Image = global::GUI.Properties.Resources.x__4_;
-            this.btnCancelar.Location = new System.Drawing.Point(313, 402);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(313, 439);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 7;
@@ -221,11 +224,33 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtCliente
+            // 
+            this.txtCliente.EnterToTab = false;
+            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.ForeColor = System.Drawing.Color.Gray;
+            this.txtCliente.HintColor = System.Drawing.Color.Gray;
+            this.txtCliente.HintValue = "Nombre del cliente";
+            this.txtCliente.Location = new System.Drawing.Point(99, 191);
+            this.txtCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(359, 32);
+            this.txtCliente.TabIndex = 8;
+            this.txtCliente.Text = "Nombre del cliente";
+            this.txtCliente.TextForeColor = System.Drawing.Color.Black;
+            this.txtCliente.Value = "";
+            // 
+            // ErrorCampos
+            // 
+            this.ErrorCampos.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ErrorCampos.ContainerControl = this;
+            // 
             // frmModificarSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 510);
+            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboPrenda);
@@ -237,13 +262,14 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmModificarSolicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificarSolicitudes";
             this.Load += new System.EventHandler(this.frmModificarSolicitudes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +289,7 @@
         private System.Windows.Forms.ComboBox cboPrenda;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
+        private Windows.Forms.HintTextBox txtCliente;
+        private System.Windows.Forms.ErrorProvider ErrorCampos;
     }
 }

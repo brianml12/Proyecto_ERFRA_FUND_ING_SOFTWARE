@@ -20,6 +20,7 @@ namespace GUI {
         public void cargarTabla()
         {
             dgvMateriaPrima.DataSource = new DAOMateriaPrima().obtenerTodos();
+            dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
             dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
             dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
         }
@@ -59,15 +60,41 @@ namespace GUI {
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
-            frmModificarMaterial frm = new frmModificarMaterial();
-            frm.Show();
-            this.Close();
+            if (dgvMateriaPrima.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int id_m = int.Parse(dgvMateriaPrima.SelectedRows[0].Cells[0].Value.ToString());
+                frmModificarMaterial frm = new frmModificarMaterial(id_m);
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea eliminar el material seleccionado?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(respuesta == DialogResult.Yes) {
-                // BORRAR MATERIAL
+            if (dgvMateriaPrima.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int id_m = int.Parse(dgvMateriaPrima.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (ans == DialogResult.Yes)
+                {
+                    if (new DAOMateriaPrima().eliminar(id_m))
+                    {
+                        MessageBox.Show("Material eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarTabla();
+                        //btnSalir_Click(this, new EventArgs());
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo eliminar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 
@@ -102,6 +129,14 @@ namespace GUI {
             frmAgregarMaterial frm = new frmAgregarMaterial();
             frm.Show();
             this.Close();
+        }
+
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgvMateriaPrima.DataSource = new DAOMateriaPrima().buscarTodos(txtBuscar.Text);
+            dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
+            dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
+            dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
         }
     }
 }

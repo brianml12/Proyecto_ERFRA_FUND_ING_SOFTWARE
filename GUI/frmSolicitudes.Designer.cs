@@ -34,17 +34,19 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.IdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +58,7 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(941, 62);
             this.panel1.TabIndex = 0;
@@ -81,7 +83,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::GUI.Properties.Resources._16;
             this.btnSalir.Location = new System.Drawing.Point(874, 0);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(67, 62);
             this.btnSalir.TabIndex = 0;
@@ -96,7 +98,7 @@
             this.txtBuscar.HintColor = System.Drawing.Color.Gray;
             this.txtBuscar.HintValue = "Buscar";
             this.txtBuscar.Location = new System.Drawing.Point(113, 94);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(385, 32);
             this.txtBuscar.TabIndex = 1;
@@ -110,12 +112,14 @@
             this.dgvSolicitudes.AllowUserToDeleteRows = false;
             this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Prenda,
-            this.PrecioUnitario,
-            this.Lote,
+            this.IdSolicitud,
+            this.NombreCliente,
+            this.NombreProducto,
             this.Descripcion,
-            this.Importe});
+            this.Lote,
+            this.PrecioUnitario,
+            this.Importe,
+            this.IdUsuario});
             this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvSolicitudes.Location = new System.Drawing.Point(113, 155);
             this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -126,48 +130,6 @@
             this.dgvSolicitudes.Size = new System.Drawing.Size(715, 245);
             this.dgvSolicitudes.TabIndex = 16;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Prenda
-            // 
-            this.Prenda.HeaderText = "Prenda";
-            this.Prenda.MinimumWidth = 6;
-            this.Prenda.Name = "Prenda";
-            this.Prenda.Width = 125;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio Unitario";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.Width = 70;
-            // 
-            // Lote
-            // 
-            this.Lote.HeaderText = "Lote";
-            this.Lote.MinimumWidth = 6;
-            this.Lote.Name = "Lote";
-            this.Lote.Width = 70;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 170;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.MinimumWidth = 6;
-            this.Importe.Name = "Importe";
-            this.Importe.Width = 70;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
@@ -176,7 +138,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.btnEliminar.Image = global::GUI.Properties.Resources.trash;
             this.btnEliminar.Location = new System.Drawing.Point(655, 442);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(173, 43);
             this.btnEliminar.TabIndex = 5;
@@ -194,7 +156,7 @@
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
             this.btnModificar.Image = global::GUI.Properties.Resources.edit;
             this.btnModificar.Location = new System.Drawing.Point(385, 442);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(173, 43);
             this.btnModificar.TabIndex = 4;
@@ -212,7 +174,7 @@
             this.btnInsertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnInsertar.Image = global::GUI.Properties.Resources.mas__1_;
             this.btnInsertar.Location = new System.Drawing.Point(113, 442);
-            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(173, 43);
             this.btnInsertar.TabIndex = 3;
@@ -228,7 +190,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::GUI.Properties.Resources.busqueda;
             this.btnBuscar.Location = new System.Drawing.Point(516, 94);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(43, 37);
             this.btnBuscar.TabIndex = 2;
@@ -240,12 +202,76 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
             this.btnAtras.Location = new System.Drawing.Point(36, 94);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(43, 37);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // IdSolicitud
+            // 
+            this.IdSolicitud.DataPropertyName = "IdSolicitud";
+            this.IdSolicitud.HeaderText = "IdSolicitud";
+            this.IdSolicitud.MinimumWidth = 6;
+            this.IdSolicitud.Name = "IdSolicitud";
+            this.IdSolicitud.Width = 50;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.DataPropertyName = "NombreCliente";
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 6;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.Width = 125;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.DataPropertyName = "NombreProducto";
+            this.NombreProducto.HeaderText = "NombreProducto";
+            this.NombreProducto.MinimumWidth = 6;
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.Width = 125;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 170;
+            // 
+            // Lote
+            // 
+            this.Lote.DataPropertyName = "Lote";
+            this.Lote.HeaderText = "Lote";
+            this.Lote.MinimumWidth = 6;
+            this.Lote.Name = "Lote";
+            this.Lote.Width = 70;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.PrecioUnitario.HeaderText = "PrecioUnitario";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.Width = 70;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 6;
+            this.Importe.Name = "Importe";
+            this.Importe.Width = 70;
+            // 
+            // IdUsuario
+            // 
+            this.IdUsuario.DataPropertyName = "IdUsuario";
+            this.IdUsuario.HeaderText = "IdUsuario";
+            this.IdUsuario.MinimumWidth = 6;
+            this.IdUsuario.Name = "IdUsuario";
+            this.IdUsuario.Width = 125;
             // 
             // frmSolicitudes
             // 
@@ -261,7 +287,7 @@
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSolicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSolicitudes";
@@ -282,15 +308,17 @@
         private System.Windows.Forms.Button btnInsertar;
         private Windows.Forms.HintTextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvSolicitudes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Modelos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace GUI {
     public partial class frmAgregarMaterial : Form {
         public frmAgregarMaterial() {
             InitializeComponent();
+            this.cargarProveedores();
+        }
+
+        public frmAgregarMaterial(List<Object> campos) : this()
+        {
+            this.cargarProveedores();
+            txtCodigoMaterial.Text = campos[0].ToString();
+            txtNombre.Text = campos[1].ToString();
+            txtColor.Text = campos[2].ToString();
+            txtCantidad.Text = campos[3].ToString();
+            txtTipoMaterial.Text = campos[4].ToString();
+            dateTimePicker1.Text = campos[5].ToString();
+            cboProveedor.SelectedValue = int.Parse(campos[6].ToString());
+        }
+
+        public void cargarProveedores() {
             cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
             cboProveedor.DisplayMember = "NombreProveedor";
             cboProveedor.ValueMember = "IdProveedor";
@@ -57,7 +74,7 @@ namespace GUI {
         }
 
         private void frmAgregarMaterial_Load(object sender, EventArgs e) {
-            txtUsuario.Text = VariablesGlobales.NombreUsuario;
+            txtUsuario.Text = VariablesGlobales.NombreUsuarioLogeado;
             // ANIMACIÓN BOTÓN SALIR
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);
@@ -121,7 +138,7 @@ namespace GUI {
                     objMaterial.TipoMaterial = txtTipoMaterial.Text;
                     objMaterial.FechaEntrada = dateTimePicker1.Text;
                     objMaterial.IdProveedor = int.Parse(cboProveedor.SelectedValue.ToString());
-                    objMaterial.IdUsuario = new DAOMateriaPrima().obtenerIDUsuario(VariablesGlobales.NombreUsuario);
+                    objMaterial.IdUsuario = VariablesGlobales.IdUsuarioLogeado;
                     if (new DAOMateriaPrima().agregar(objMaterial))
                     {
                         MessageBox.Show("Material registrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,7 +157,16 @@ namespace GUI {
         }
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e) {
-            frmAgregarProveedor frm = new frmAgregarProveedor();
+            List<Object> campos = new List<Object>();
+            campos.Add(txtCodigoMaterial.Text);
+            campos.Add(txtNombre.Text);
+            campos.Add(txtColor.Text);
+            campos.Add(txtCantidad.Text);
+            campos.Add(txtTipoMaterial.Text);
+            campos.Add(dateTimePicker1.Text);
+            campos.Add(int.Parse(cboProveedor.SelectedValue.ToString()));
+            frmAgregarProveedor frm = new frmAgregarProveedor(campos);
+            frm.Tag = "Agregar";
             frm.Show();
             this.Close();
         }
@@ -153,9 +179,7 @@ namespace GUI {
                 if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true)
                 {
                     MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmAgregarMaterial frm = new frmAgregarMaterial();
-                    frm.Show();
-                    this.Close();
+                    this.cargarProveedores();
                 }
                 else
                 {

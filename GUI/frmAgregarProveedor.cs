@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Modelos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ using System.Windows.Forms;
 
 namespace GUI {
     public partial class frmAgregarProveedor : Form {
-        public frmAgregarProveedor() {
+        List<Object> camposTexto;
+        public frmAgregarProveedor(List<Object> campos) {
             InitializeComponent();
-        
+            camposTexto = new List<Object>();
+            camposTexto.AddRange(campos);
         }
 
         protected override void OnPaint(PaintEventArgs e) {
@@ -49,9 +52,18 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            frmAgregarMaterial frm = new frmAgregarMaterial();
-            frm.Show();
-            this.Close();
+            if (this.Tag.ToString().Equals("Agregar"))
+            {
+                frmAgregarMaterial frm = new frmAgregarMaterial(camposTexto);
+                frm.Show();
+                this.Close();
+            }
+            else if(this.Tag.ToString().Equals("Modificar"))
+            {
+                frmModificarMaterial frm = new frmModificarMaterial(camposTexto);
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void frmAgregarProveedor_Load(object sender, EventArgs e) {

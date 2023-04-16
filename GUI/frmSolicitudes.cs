@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,15 @@ namespace GUI {
     public partial class frmSolicitudes : Form {
         public frmSolicitudes() {
             InitializeComponent();
+            cargarTabla();
         }
 
+        public void cargarTabla()
+        {
+            dgvSolicitudes.DataSource = new DAOSolicitudes().obtenerTodos();
+            dgvSolicitudes.Columns["IdSolicitud"].Visible = false;
+            dgvSolicitudes.Columns["IdUsuario"].Visible = false;
+        }
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
 
@@ -57,18 +65,46 @@ namespace GUI {
 
         private void btnInsertar_Click(object sender, EventArgs e) {
             frmAgregarSolicitudes frm = new frmAgregarSolicitudes();
-            frm.ShowDialog();
+            frm.Show();
+            this.Close();
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
-            frmModificarSolicitudes frm = new frmModificarSolicitudes();
-            frm.ShowDialog();
+            if (dgvSolicitudes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int id_s = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
+                frmModificarSolicitudes frm = new frmModificarSolicitudes(id_s);
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea eliminar la solicitud seleccionada?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(respuesta == DialogResult.Yes) {
-                // BORRAR SOLICITUD
+            if (dgvSolicitudes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int id_s = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar la solicitud seleccionada?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (ans == DialogResult.Yes)
+                {
+                    if (new DAOSolicitudes().eliminar(id_s))
+                    {
+                        MessageBox.Show("Solicitud eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarTabla();
+                        //btnSalir_Click(this, new EventArgs());
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo eliminar la Solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 

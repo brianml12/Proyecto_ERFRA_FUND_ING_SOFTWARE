@@ -34,11 +34,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvMateriaPrima = new System.Windows.Forms.DataGridView();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.IdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +45,12 @@
             this.DireccionProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TelefonoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriaPrima)).BeginInit();
             this.SuspendLayout();
@@ -98,11 +100,12 @@
             this.txtBuscar.HintValue = "Buscar";
             this.txtBuscar.Location = new System.Drawing.Point(85, 76);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(456, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(752, 27);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Value = "";
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // dgvMateriaPrima
             // 
@@ -110,6 +113,7 @@
             this.dgvMateriaPrima.AllowUserToDeleteRows = false;
             this.dgvMateriaPrima.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMateriaPrima.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdMaterial,
             this.CodigoMaterial,
             this.NombreMaterial,
             this.ColorMaterial,
@@ -119,7 +123,8 @@
             this.NombreProveedor,
             this.DireccionProveedor,
             this.TelefonoProveedor,
-            this.CorreoProveedor});
+            this.CorreoProveedor,
+            this.NombreUsuario});
             this.dgvMateriaPrima.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMateriaPrima.Location = new System.Drawing.Point(85, 126);
             this.dgvMateriaPrima.Margin = new System.Windows.Forms.Padding(2);
@@ -131,12 +136,96 @@
             this.dgvMateriaPrima.Size = new System.Drawing.Size(790, 260);
             this.dgvMateriaPrima.TabIndex = 16;
             // 
+            // IdMaterial
+            // 
+            this.IdMaterial.DataPropertyName = "IdMaterial";
+            this.IdMaterial.HeaderText = "IdMaterial";
+            this.IdMaterial.Name = "IdMaterial";
+            this.IdMaterial.ReadOnly = true;
+            // 
+            // CodigoMaterial
+            // 
+            this.CodigoMaterial.DataPropertyName = "CodigoMaterial";
+            this.CodigoMaterial.HeaderText = "CodigoMaterial";
+            this.CodigoMaterial.Name = "CodigoMaterial";
+            this.CodigoMaterial.ReadOnly = true;
+            // 
+            // NombreMaterial
+            // 
+            this.NombreMaterial.DataPropertyName = "NombreMaterial";
+            this.NombreMaterial.HeaderText = "NombreMaterial";
+            this.NombreMaterial.Name = "NombreMaterial";
+            this.NombreMaterial.ReadOnly = true;
+            // 
+            // ColorMaterial
+            // 
+            this.ColorMaterial.DataPropertyName = "ColorMaterial";
+            this.ColorMaterial.HeaderText = "ColorMaterial";
+            this.ColorMaterial.Name = "ColorMaterial";
+            this.ColorMaterial.ReadOnly = true;
+            // 
+            // CantidadMaterial
+            // 
+            this.CantidadMaterial.DataPropertyName = "CantidadMaterial";
+            this.CantidadMaterial.HeaderText = "CantidadMaterial";
+            this.CantidadMaterial.Name = "CantidadMaterial";
+            this.CantidadMaterial.ReadOnly = true;
+            // 
+            // TipoMaterial
+            // 
+            this.TipoMaterial.DataPropertyName = "TipoMaterial";
+            this.TipoMaterial.HeaderText = "TipoMaterial";
+            this.TipoMaterial.Name = "TipoMaterial";
+            this.TipoMaterial.ReadOnly = true;
+            // 
+            // FechaEntrada
+            // 
+            this.FechaEntrada.DataPropertyName = "FechaEntrada";
+            this.FechaEntrada.HeaderText = "FechaEntrada";
+            this.FechaEntrada.Name = "FechaEntrada";
+            this.FechaEntrada.ReadOnly = true;
+            // 
+            // NombreProveedor
+            // 
+            this.NombreProveedor.DataPropertyName = "NombreProveedor";
+            this.NombreProveedor.HeaderText = "NombreProveedor";
+            this.NombreProveedor.Name = "NombreProveedor";
+            this.NombreProveedor.ReadOnly = true;
+            // 
+            // DireccionProveedor
+            // 
+            this.DireccionProveedor.DataPropertyName = "DireccionProveedor";
+            this.DireccionProveedor.HeaderText = "DireccionProveedor";
+            this.DireccionProveedor.Name = "DireccionProveedor";
+            this.DireccionProveedor.ReadOnly = true;
+            // 
+            // TelefonoProveedor
+            // 
+            this.TelefonoProveedor.DataPropertyName = "TelefonoProveedor";
+            this.TelefonoProveedor.HeaderText = "TelefonoProveedor";
+            this.TelefonoProveedor.Name = "TelefonoProveedor";
+            this.TelefonoProveedor.ReadOnly = true;
+            // 
+            // CorreoProveedor
+            // 
+            this.CorreoProveedor.DataPropertyName = "CorreoProveedor";
+            this.CorreoProveedor.HeaderText = "CorreoProveedor";
+            this.CorreoProveedor.Name = "CorreoProveedor";
+            this.CorreoProveedor.ReadOnly = true;
+            // 
+            // NombreUsuario
+            // 
+            this.NombreUsuario.DataPropertyName = "NombreUsuario";
+            this.NombreUsuario.HeaderText = "NombreUsuario";
+            this.NombreUsuario.Name = "NombreUsuario";
+            this.NombreUsuario.ReadOnly = true;
+            // 
             // btnAtras
             // 
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(27, 76);
+            this.btnAtras.Location = new System.Drawing.Point(38, 73);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(32, 30);
             this.btnAtras.TabIndex = 0;
@@ -148,7 +237,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::GUI.Properties.Resources.busqueda;
-            this.btnBuscar.Location = new System.Drawing.Point(543, 75);
+            this.btnBuscar.Location = new System.Drawing.Point(843, 75);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(32, 30);
             this.btnBuscar.TabIndex = 2;
@@ -205,78 +294,6 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // CodigoMaterial
-            // 
-            this.CodigoMaterial.DataPropertyName = "CodigoMaterial";
-            this.CodigoMaterial.HeaderText = "Codigo del material";
-            this.CodigoMaterial.Name = "CodigoMaterial";
-            this.CodigoMaterial.ReadOnly = true;
-            this.CodigoMaterial.Width = 150;
-            // 
-            // NombreMaterial
-            // 
-            this.NombreMaterial.DataPropertyName = "NombreMaterial";
-            this.NombreMaterial.HeaderText = "Nombre Material";
-            this.NombreMaterial.Name = "NombreMaterial";
-            this.NombreMaterial.ReadOnly = true;
-            this.NombreMaterial.Width = 150;
-            // 
-            // ColorMaterial
-            // 
-            this.ColorMaterial.DataPropertyName = "ColorMaterial";
-            this.ColorMaterial.HeaderText = "Color Material";
-            this.ColorMaterial.Name = "ColorMaterial";
-            this.ColorMaterial.ReadOnly = true;
-            // 
-            // CantidadMaterial
-            // 
-            this.CantidadMaterial.DataPropertyName = "CantidadMaterial";
-            this.CantidadMaterial.HeaderText = "Cantidad Material";
-            this.CantidadMaterial.Name = "CantidadMaterial";
-            this.CantidadMaterial.ReadOnly = true;
-            // 
-            // TipoMaterial
-            // 
-            this.TipoMaterial.DataPropertyName = "TipoMaterial";
-            this.TipoMaterial.HeaderText = "Tipo Material";
-            this.TipoMaterial.Name = "TipoMaterial";
-            this.TipoMaterial.ReadOnly = true;
-            // 
-            // FechaEntrada
-            // 
-            this.FechaEntrada.DataPropertyName = "FechaEntrada";
-            this.FechaEntrada.HeaderText = "Fecha Entrada";
-            this.FechaEntrada.Name = "FechaEntrada";
-            this.FechaEntrada.ReadOnly = true;
-            // 
-            // NombreProveedor
-            // 
-            this.NombreProveedor.DataPropertyName = "NombreProveedor";
-            this.NombreProveedor.HeaderText = "Nombre Proveedor";
-            this.NombreProveedor.Name = "NombreProveedor";
-            this.NombreProveedor.ReadOnly = true;
-            // 
-            // DireccionProveedor
-            // 
-            this.DireccionProveedor.DataPropertyName = "DireccionProveedor";
-            this.DireccionProveedor.HeaderText = "Direccion Proveedor";
-            this.DireccionProveedor.Name = "DireccionProveedor";
-            this.DireccionProveedor.ReadOnly = true;
-            // 
-            // TelefonoProveedor
-            // 
-            this.TelefonoProveedor.DataPropertyName = "TelefonoProveedor";
-            this.TelefonoProveedor.HeaderText = "Telefono Proveedor";
-            this.TelefonoProveedor.Name = "TelefonoProveedor";
-            this.TelefonoProveedor.ReadOnly = true;
-            // 
-            // CorreoProveedor
-            // 
-            this.CorreoProveedor.DataPropertyName = "CorreoProveedor";
-            this.CorreoProveedor.HeaderText = "Correo Proveedor";
-            this.CorreoProveedor.Name = "CorreoProveedor";
-            this.CorreoProveedor.ReadOnly = true;
-            // 
             // frmMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +332,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorMaterial;
@@ -325,5 +343,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DireccionProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreUsuario;
     }
 }

@@ -11,15 +11,15 @@ namespace Datos
 {
     public class DAOEmpleado
     {
-        public String IniciarSesion(Empleado objEmpleado)
+        public String IniciarSesion(Empleado objUsuario)
         {
             try
             {
                 if (Conexion.conectar())
                 {
                     MySqlCommand comando = new MySqlCommand("SELECT NombreUsuario, Password, Rol from Usuario WHERE NombreUsuario=@NameUser and Password=sha1(@Password);");
-                    comando.Parameters.AddWithValue("@NameUser", objEmpleado.NombreUsuario);
-                    comando.Parameters.AddWithValue("@Password", objEmpleado.Password);
+                    comando.Parameters.AddWithValue("@NameUser", objUsuario.NombreUsuario);
+                    comando.Parameters.AddWithValue("@Password", objUsuario.Password);
                     comando.Connection = Conexion.conexion;
                     MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
                     DataTable resultado = new DataTable();
@@ -158,5 +158,23 @@ namespace Datos
                 Conexion.desconectar();
             }
         }
+
+        //public void NombreEmpleado(String nombre)
+        //{
+        //    MySqlConnection conexion = new MySqlConnection("Database=ERFRA; Data Source=localhost; Port= 3306; User Id=root; Password=root;");
+        //    conexion.Open();
+        //    String cadena = "SELECT Nombre FROM usuario WHERE NombreUsuario='"+nombre+"';";
+        //    MySqlCommand comando=new MySqlCommand(cadena,conexion);
+        //    MySqlDataReader registro=comando.ExecuteReader();
+        //    if (registro.Read())
+        //    {
+        //        Datos.VariablesGlobales.NombreEmpleado = registro["Nombre"].ToString();
+        //    }
+        //    else
+        //    {
+                
+        //    }
+        //    registro.Close();
+        //}
     }
 }

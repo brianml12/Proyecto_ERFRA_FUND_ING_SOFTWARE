@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +13,39 @@ using System.Windows.Forms;
 
 namespace GUI {
     public partial class frmModificarSolicitudes : Form {
+        int IDSolicitud;
         public frmModificarSolicitudes() {
             InitializeComponent();
+            cboPrenda.Items.Add("Playera");
+            cboPrenda.Items.Add("Sueter");
+            cboPrenda.Items.Add("Pantalon");
+            cboPrenda.Items.Add("Uniforme");
+            cboPrenda.Items.Add("Short");
+            cboPrenda.Items.Add("Falda");
         }
 
+        public frmModificarSolicitudes(List<Object> campos) : this()
+        {
+            IDSolicitud = int.Parse(campos[0].ToString());
+            cboPrenda.SelectedItem = int.Parse(campos[1].ToString());
+            txtCliente.Text = campos[2].ToString();
+            txtPrecioU.Text = campos[3].ToString();
+            txtLote.Text = campos[4].ToString();
+            txtDescripcion.Text = campos[5].ToString();
+            txtImporte.Text = campos[6].ToString();
+        }
+
+        public frmModificarSolicitudes(int id_solicitud) : this()
+        { 
+            IDSolicitud = id_solicitud;
+            Solicitudes objSolicitud = new DAOSolicitudes().obtenerUno(IDSolicitud);
+            cboPrenda.SelectedItem = objSolicitud.NombreProducto;
+            txtCliente.Text = objSolicitud.NombreCliente;
+            txtPrecioU.Text = objSolicitud.PrecioUnitario.ToString();
+            txtLote.Text = objSolicitud.Lote.ToString();
+            txtDescripcion.Text = objSolicitud.Descripcion;
+            txtImporte.Text = objSolicitud.Importe.ToString();
+        }
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
 
@@ -46,23 +77,115 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
+            frmSolicitudes frm = new frmSolicitudes();
+            frm.Show();
             this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) {
-            this.Close();
+            btnSalir_Click(this, new EventArgs());
         }
 
         private void btnRegresar_Click(object sender, EventArgs e) {
-            this.Close();
+            btnSalir_Click(this, new EventArgs());
         }
 
         private void btnModificar_Click(object sender, EventArgs e) {
-            DialogResult respuesta = MessageBox.Show("¿Desea guardar los cambios?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(respuesta == DialogResult.Yes) {
-                // MODIFICAR SOLICITUD
+            try
+            {
+                if (cboPrenda.SelectedIndex == 0)
+                {
+                    ErrorCampos.SetError(this.cboPrenda, "Selecciona una prenda");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.cboPrenda, "");
+                }
+
+                if (txtCliente.Text == txtCliente.HintValue)
+                {
+                    ErrorCampos.SetError(this.txtCliente, "El campo esta vacio");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.txtCliente, "");
+                }
+
+                if (!(new Validacion().esNumero(txtPrecioU.Text)))
+                {
+                    ErrorCampos.SetError(this.txtPrecioU, "Escribe un precio unitario valido");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.txtPrecioU, "");
+                }
+
+                if (!(new Validacion().esNumero(txtLote.Text)))
+                {
+                    ErrorCampos.SetError(this.txtLote, "Escribe un lote valido");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.txtLote, "");
+                }
+
+                if (txtDescripcion.Text == txtDescripcion.HintValue)
+                {
+                    ErrorCampos.SetError(this.txtDescripcion, "El campo esta vacio");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.txtDescripcion, "");
+                }
+
+                if (!(new Validacion().esNumero(txtImporte.Text)))
+                {
+                    ErrorCampos.SetError(this.txtImporte, "Escribe un importe valido");
+                }
+                else
+                {
+                    ErrorCampos.SetError(this.txtImporte, "");
+                }
+
+                if (cboPrenda.SelectedIndex != 0 && txtCliente.Text != txtCliente.HintValue && new Validacion().esNumero(txtPrecioU.Text)
+                    && new Validacion().esNumero(txtLote.Text) && txtDescripcion.Text != txtDescripcion.HintValue && new Validacion().esNumero(txtImporte.Text))
+                {
+                    Solicitudes objSolicitud = new Solicitudes();
+                    objSolicitud.IdSolicitud = IDSolicitud;
+                    objSolicitud.NombreCliente = txtCliente.Text;
+                    objSolicitud.NombreProducto = cboPrenda.SelectedItem.ToString();
+                    objSolicitud.Descripcion = txtDescripcion.Text;
+                    objSolicitud.Lote = int.Parse(txtLote.Text);
+                    objSolicitud.PrecioUnitario = int.Parse(txtPrecioU.Text);
+                    objSolicitud.Importe = int.Parse(txtImporte.Text);
+                    objSolicitud.IdUsuario = VariablesGlobales.IdUsuarioLogeado;
+                    if (new DAOSolicitudes().modificar(objSolicitud))
+                    {
+                        MessageBox.Show("Solicitud modificada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnSalir_Click(this, new EventArgs());
+
+                        
+                        //MODIFICAR COMPROBANTE (ARREGLALO XAVIS) 
+
+                        //PARTE DE VARIABLES GLOBALES (NO MOVER NI MODIFICAR).
+                        //DAOSolicitudes sol = new DAOSolicitudes();
+                        //sol.Asignacion(cboPrenda.Text, txtCliente.Text, txtLote.Text, txtDescripcion.Text, txtPrecioU.Text, Int32.Parse(txtPrecioU.Text) * Int32.Parse(txtLote.Text) + "", txtImporte.Text);
+                        //if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon"), Int16.Parse(txtLote.Text);
+                        //frmComprobante comp = new frmComprobante();
+                        //comp.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo modificar la solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en el ingreso de datos. Verifique de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+    }
 
         private void frmModificarSolicitudes_Load(object sender, EventArgs e) {
             // ANIMACIÓN BOTÓN SALIR

@@ -13,7 +13,7 @@ namespace Datos
         // Declaración de variables para establecer la conexión
         public static MySqlConnection conexion;
         static string usuario = "root";
-        static string password = "MG1234";
+        static string password = "root";
         static string bd = "ERFRA";
         static string servidor = "localhost";
         static string puerto = "3306";
