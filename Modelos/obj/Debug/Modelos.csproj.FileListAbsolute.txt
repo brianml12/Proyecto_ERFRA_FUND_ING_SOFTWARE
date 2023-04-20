@@ -1,0 +1,18 @@
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.dll
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.dll
+C:\Users\Mixer6151\Desktop\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.dll
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.dll
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.dll
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.dll
+C:\Users\Lenovo\Desktop\ITSUR\Trabajos de 6to Semestre\software erfra prototipo\software erfra prototipo\Proyecto_ERFRA_FUND_ING_SOFTWARE-prototipo-2\Modelos\obj\Debug\Modelos.pdb
