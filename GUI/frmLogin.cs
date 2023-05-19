@@ -86,42 +86,51 @@ namespace GUI {
             else return false;
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e) {
-            if (cajasVacias())
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            if (Conexion.conexionInternet() == true)
             {
-                MessageBox.Show("No se permiten campos vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else {
-                DAOEmpleado daoempleado = new DAOEmpleado();
-                Empleado objEmpleado = new Empleado(txtUser.Text, txtPassword.Text);
-                switch (daoempleado.IniciarSesion(objEmpleado))
+                if (cajasVacias())
                 {
-                    case "Administrador":
-                        objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
-                        VariablesGlobales.NombreUsuarioLogeado = objEmpleado.NombreUsuario;
-                        VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
-                        MessageBox.Show("Bienvenido usuario ADMINISTRADOR " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmAdministrador frmAdmin = new frmAdministrador();
-                        frmAdmin.Tag = "admin";
-                        frmAdmin.Show();
-                        this.Close();
-                        break;
-                    case "Empleado":
-                        objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
-                        VariablesGlobales.NombreUsuarioLogeado = objEmpleado.Nombre;
-                        VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
-                        MessageBox.Show("Bienvenido usuario EMPLEADO " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmVentas frm = new frmVentas();
-                        frm.Tag = "empleado";
-                        frm.Show();
-                        this.Close();
-                        break;
-                    case "DENEGADO":
-                        MessageBox.Show("Usuario y/o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    default:
-                        break;
+                    MessageBox.Show("No se permiten campos vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    DAOEmpleado daoempleado = new DAOEmpleado();
+                    Empleado objEmpleado = new Empleado(txtUser.Text, txtPassword.Text);
+                    switch (daoempleado.IniciarSesion(objEmpleado))
+                    {
+                        case "Administrador":
+                            objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
+                            VariablesGlobales.NombreUsuarioLogeado = objEmpleado.NombreUsuario;
+                            VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
+                            MessageBox.Show("Bienvenido usuario ADMINISTRADOR " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmAdministrador frmAdmin = new frmAdministrador();
+                            frmAdmin.Tag = "admin";
+                            frmAdmin.Show();
+                            this.Close();
+                            break;
+                        case "Empleado":
+                            objEmpleado = new DAOEmpleado().buscarPorUsuario(txtUser.Text);
+                            VariablesGlobales.NombreUsuarioLogeado = objEmpleado.Nombre;
+                            VariablesGlobales.IdUsuarioLogeado = objEmpleado.IDEmpleado;
+                            MessageBox.Show("Bienvenido usuario EMPLEADO " + objEmpleado.NombreUsuario, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmVentas frm = new frmVentas();
+                            frm.Tag = "empleado";
+                            frm.Show();
+                            this.Close();
+                            break;
+                        case "DENEGADO":
+                            MessageBox.Show("Usuario y/o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pudo establecer conexion a internet", "Verifique conexion a internet", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
