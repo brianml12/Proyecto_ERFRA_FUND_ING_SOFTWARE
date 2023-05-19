@@ -13,7 +13,7 @@ namespace Datos {
         /// <param name="input"></param>
         /// <returns>Retorna true si la entrada es número y false en caso contrario</returns>
         public bool esNumero(string input) {
-            Regex expresion = new Regex("^[0-9]+([.][0-9]+)?$");
+            Regex expresion = new Regex("^[0-9]{1,10}([.][0-9]{1,10})?$");
             if (expresion.IsMatch(input)) return true;
             else return false;
         }
@@ -24,7 +24,7 @@ namespace Datos {
         /// <param name="input"></param>
         /// <returns>Retorna true si la entrada es número entero y false en caso contrario</returns>
         public bool esNumeroEntero(string input) {
-            Regex expresion = new Regex(@"\A[0-9]+\Z");
+            Regex expresion = new Regex(@"\A[0-9]{1,10}\Z");
             if (expresion.IsMatch(input)) return true;
             else return false;
         }
@@ -35,7 +35,7 @@ namespace Datos {
         /// <param name="input"></param>
         /// <returns>Retorna true si la entrada es número decimal y false en caso contrario</returns>
         public bool esNumeroDecimal(string input) {
-            Regex expresion = new Regex(@"\A[0-9]+[.]*[0-9]+\Z");
+            Regex expresion = new Regex(@"\A[0-9]{1,10}[.]*[0-9]{1,10}\Z");
             if (expresion.IsMatch(input)) return true;
             else return false;
         }
@@ -142,6 +142,18 @@ namespace Datos {
             bool isNumeric = input.All(char.IsDigit);
             if (isNumeric==true) return true;
             else return false;
+        }
+
+        /// <summary>
+        /// Método para determinar que la cantidad de prendas es la establecida (20-500 prendas inclusive)
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>Retorna true en caso de que el valor sea valido y false en caso contrario</returns>
+        public bool cantidadPrendasValida(string value) {
+            int number;
+            int.TryParse(value, out number);
+            if (number >= 20 && number <= 500) return true;
+            return false;
         }
 
     }

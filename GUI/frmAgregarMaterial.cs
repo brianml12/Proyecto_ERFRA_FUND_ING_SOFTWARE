@@ -21,41 +21,46 @@ namespace GUI {
 
         public frmAgregarMaterial(List<Object> campos) : this()
         {
-            this.cargarProveedores();
-            txtCodigoMaterial.Text = campos[0].ToString();
-            txtNombre.Text = campos[1].ToString();
-            txtColor.Text = campos[2].ToString();
-            txtCantidad.Text = campos[3].ToString();
-            txtTipoMaterial.Text = campos[4].ToString();
-            dateTimePicker1.Text = campos[5].ToString();
-            if (campos.Count==7) {
-                cboProveedor.SelectedValue = int.Parse(campos[6].ToString());
+            try {
+                this.cargarProveedores();
+                txtCodigoMaterial.Text = campos[0].ToString();
+                txtNombre.Text = campos[1].ToString();
+                txtColor.Text = campos[2].ToString();
+                txtCantidad.Text = campos[3].ToString();
+                txtTipoMaterial.Text = campos[4].ToString();
+                dateTimePicker1.Text = campos[5].ToString();
+                if (campos.Count == 7)
+                {
+                    cboProveedor.SelectedValue = int.Parse(campos[6].ToString());
+                }
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public void cargarProveedores() {
-            cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
-            cboProveedor.DisplayMember = "NombreProveedor";
-            cboProveedor.ValueMember = "IdProveedor";
+            try {
+                cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
+                cboProveedor.DisplayMember = "NombreProveedor";
+                cboProveedor.ValueMember = "IdProveedor";
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-
-            // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 90, 90);
             borderPath.CloseAllFigures();
-
-            // Establece la propiedad Region del formulario en un nuevo objeto Region que contenga el borde.
             Region = new Region(borderPath);
-
-            // Dibuja el borde en el objeto Graphics del evento Paint.
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
@@ -119,6 +124,7 @@ namespace GUI {
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
+            try {
                 Validacion validacion = new Validacion();
                 bool ECM = validacion.esCodigoMaterial(txtCodigoMaterial.Text);
                 if (ECM == false) epError.SetError(txtCodigoMaterial, "Ingrese un codigo de material valido  (10 digitos).");
@@ -174,9 +180,13 @@ namespace GUI {
                     else {
                         epError.SetError(txtCodigoMaterial, "El codigo del material ya existe.");
                     }
-                    
+
                 }
             }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e) {
             List<Object> campos = new List<Object>();
@@ -195,29 +205,29 @@ namespace GUI {
             this.Close();
         }
 
-        private void btnEliminarProveedor_Click(object sender, EventArgs e)
-        {
-            if (cboProveedor.Items.Count==1)
-            {
-                MessageBox.Show("Debe haber minimo 1 proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (cboProveedor.SelectedValue == null)
-            {
-                MessageBox.Show("No hay ningun proveedor a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else {
-                DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (ans == DialogResult.Yes)
-                {
-                    if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true)
-                    {
-                        MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.cargarProveedores();
-                    }
-                    else
-                    {
-                        MessageBox.Show("NO se pudo eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void btnEliminarProveedor_Click(object sender, EventArgs e) {
+            try {
+                if (cboProveedor.Items.Count == 1) {
+                    MessageBox.Show("Debe haber minimo 1 proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (cboProveedor.SelectedValue == null) {
+                    MessageBox.Show("No hay ningun proveedor a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else {
+                    DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (ans == DialogResult.Yes) {
+                        if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true) {
+                            MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.cargarProveedores();
+                        }
+                        else {
+                            MessageBox.Show("NO se pudo eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

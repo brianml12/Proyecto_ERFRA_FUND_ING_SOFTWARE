@@ -37,36 +37,35 @@ namespace GUI {
         }
 
         public frmModificarSolicitudes(int id_solicitud) : this()
-        { 
-            IDSolicitud = id_solicitud;
-            Datos.VariablesGlobales.IdSolicitud = id_solicitud+"";
-            Solicitudes objSolicitud = new DAOSolicitudes().obtenerUno(IDSolicitud);
-            cboPrenda.SelectedItem = objSolicitud.NombreProducto;
-            txtCliente.Text = objSolicitud.NombreCliente;
-            txtPrecioU.Text = objSolicitud.PrecioUnitario.ToString();
-            txtLote.Text = objSolicitud.Lote.ToString();
-            txtDescripcion.Text = objSolicitud.Descripcion;
-            txtImporte.Text = objSolicitud.Importe.ToString();
-            cboEstado.SelectedItem = objSolicitud.Estado;
-            flag = true;
+        {
+            try {
+                IDSolicitud = id_solicitud;
+                Datos.VariablesGlobales.IdSolicitud = id_solicitud + "";
+                Solicitudes objSolicitud = new DAOSolicitudes().obtenerUno(IDSolicitud);
+                cboPrenda.SelectedItem = objSolicitud.NombreProducto;
+                txtCliente.Text = objSolicitud.NombreCliente;
+                txtPrecioU.Text = objSolicitud.PrecioUnitario.ToString();
+                txtLote.Text = objSolicitud.Lote.ToString();
+                txtDescripcion.Text = objSolicitud.Descripcion;
+                txtImporte.Text = objSolicitud.Importe.ToString();
+                cboEstado.SelectedItem = objSolicitud.Estado;
+                flag = true;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-
-            // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 90, 90);
             borderPath.CloseAllFigures();
-
-            // Establece la propiedad Region del formulario en un nuevo objeto Region que contenga el borde.
             Region = new Region(borderPath);
-
-            // Dibuja el borde en el objeto Graphics del evento Paint.
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
@@ -81,8 +80,6 @@ namespace GUI {
         }
 
         private void btnSalir_Click(object sender, EventArgs e) {
-            //frmVentas frm = new frmVentas();
-            //sfrm.Show();
             this.Close();
         }
 
@@ -97,11 +94,8 @@ namespace GUI {
         private void btnModificar_Click(object sender, EventArgs e) {
             if (flag == true)
             {
-
-
                 try
-                {
-                    /*
+                {  
                     if (cboPrenda.SelectedIndex == 0)
                     {
                         ErrorCampos.SetError(this.cboPrenda, "Selecciona una prenda");
@@ -109,7 +103,7 @@ namespace GUI {
                     else
                     {
                         ErrorCampos.SetError(this.cboPrenda, "");
-                    }*/
+                    }
 
                     if (txtCliente.Text == txtCliente.HintValue)
                     {
@@ -158,7 +152,8 @@ namespace GUI {
 
                     // cboPrenda.SelectedIndex != 0 
                     if (txtCliente.Text != txtCliente.HintValue && new Validacion().esNumero(txtPrecioU.Text)
-                        && new Validacion().esNumero(txtLote.Text) && txtDescripcion.Text != txtDescripcion.HintValue && new Validacion().esNumero(txtImporte.Text))
+                        && new Validacion().esNumero(txtLote.Text) && txtDescripcion.Text != txtDescripcion.HintValue && new Validacion().esNumero(txtImporte.Text)
+                        && cboPrenda.SelectedIndex!=0)
                     {
                         Solicitudes objSolicitud = new Solicitudes();
                         objSolicitud.IdSolicitud = IDSolicitud;
@@ -173,22 +168,6 @@ namespace GUI {
                         if (new DAOSolicitudes().modificar(objSolicitud))
                         {
                             MessageBox.Show("Solicitud modificada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //btnSalir_Click(this, new EventArgs());
-
-
-                            //MODIFICAR COMPROBANTE (ARREGLALO XAVIS
-
-                            //PARTE DE VARIABLES GLOBALES (NO MOVER NI MODIFICAR).
-                            //Asignar valor variables globales.
-                            /*
-                            DAOSolicitudes sol = new DAOSolicitudes();
-                            sol.Asignacion(cboPrenda.Text, txtCliente.Text, txtLote.Text, txtDescripcion.Text, txtPrecioU.Text, Int32.Parse(txtPrecioU.Text) * Int32.Parse(txtLote.Text) + "", txtImporte.Text);
-                            if (txtDescripcion.Text.ToLower().Equals("sin falda") || txtDescripcion.Text.ToLower().Equals("sin sueter") || txtDescripcion.Text.ToLower().Equals("sin playera") || txtDescripcion.Text.ToLower().Equals("sin pantalon")) proc.Eliminacion(txtDescripcion.Text.ToLower(), Int16.Parse(txtLote.Text));
-                            Mandar a comprobante
-                            frmComprobante comp = new frmComprobante();
-                            comp.Show();
-                            this.Hide();
-                            */
                             this.Close();
                             
                         }
@@ -198,13 +177,11 @@ namespace GUI {
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en el ingreso de datos. Verifique de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                catch {
+                    MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else MessageBox.Show("Debe calcular el importe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        else MessageBox.Show("Debe calcular el importe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
         private void frmModificarSolicitudes_Load(object sender, EventArgs e) {
@@ -258,6 +235,11 @@ namespace GUI {
         }
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

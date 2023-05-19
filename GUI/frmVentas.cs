@@ -16,31 +16,31 @@ namespace GUI {
             InitializeComponent();
             cargarTabla();
         }
-        DAOSolicitudes sol = new DAOSolicitudes();
+        DAOSolicitudes sol;
 
         public void cargarTabla() {
-            dgvSolicitudes.DataSource = new DAOSolicitudes().obtenerTodos();
-            dgvSolicitudes.Columns["IdUsuario"].Visible = false;
-            dgvSolicitudes.Columns["Total"].Visible = false;
+            try {
+                sol = new DAOSolicitudes();
+                dgvSolicitudes.DataSource = new DAOSolicitudes().obtenerTodos();
+                dgvSolicitudes.Columns["IdUsuario"].Visible = false;
+                dgvSolicitudes.Columns["Total"].Visible = false;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-
-            // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 90, 90);
             borderPath.CloseAllFigures();
-
-            // Establece la propiedad Region del formulario en un nuevo objeto Region que contenga el borde.
             Region = new Region(borderPath);
-
-            // Dibuja el borde en el objeto Graphics del evento Paint.
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; 
             using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
@@ -71,6 +71,7 @@ namespace GUI {
                 }
             }
             catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -93,18 +94,23 @@ namespace GUI {
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
-            if (dgvSolicitudes.SelectedRows.Count == 0) {
-                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else {
-                int id = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
-                if (new DAOSolicitudes().eliminar(id)) {
-                    MessageBox.Show("La venta ha sido borrada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try {
+                if (dgvSolicitudes.SelectedRows.Count == 0) {
+                    MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else {
-                    MessageBox.Show("No se pudo eliminar la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    int id = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
+                    if (new DAOSolicitudes().eliminar(id)) {
+                        MessageBox.Show("La venta ha sido borrada correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else {
+                        MessageBox.Show("No se pudo eliminar la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    cargarTabla();
                 }
-                cargarTabla();
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -144,18 +150,23 @@ namespace GUI {
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e) {
-            if (dgvSolicitudes.SelectedRows.Count == 0) {
-                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else {
-                int id = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
-                if (new DAOSolicitudes().finalizarVenta(id)) {
-                    MessageBox.Show("La venta ha sido finalizada y agregada al historial.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try {
+                if (dgvSolicitudes.SelectedRows.Count == 0) {
+                    MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else {
-                    MessageBox.Show("No se pudo finalizar la venta. El estado debe ser \"Terminada\"", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    int id = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
+                    if (new DAOSolicitudes().finalizarVenta(id)) {
+                        MessageBox.Show("La venta ha sido finalizada y agregada al historial.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else {
+                        MessageBox.Show("No se pudo finalizar la venta. El estado debe ser \"Terminada\"", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    cargarTabla();
                 }
-                cargarTabla();
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -165,12 +176,17 @@ namespace GUI {
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
-            frmAgregarSolicitudes frm = new frmAgregarSolicitudes();
-            int id = sol.obtenerMaxIDSolicitud();
-            Datos.VariablesGlobales.IdSolicitud = id+"";
-            frm.Tag = this.Tag;
-            frm.Show();
-            this.Close();
+            try {
+                frmAgregarSolicitudes frm = new frmAgregarSolicitudes();
+                int id = sol.obtenerMaxIDSolicitud();
+                Datos.VariablesGlobales.IdSolicitud = id+"";
+                frm.Tag = this.Tag;
+                frm.Show();
+                this.Close();
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

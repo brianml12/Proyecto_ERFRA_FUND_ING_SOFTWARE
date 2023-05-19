@@ -52,35 +52,34 @@ namespace GUI {
                 dateTimePicker1.Text = objMaterial.FechaEntrada;
                 cboProveedor.SelectedValue = objMaterial.IdProveedor;
             }
-            catch
-            {
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public void cargarProveedores()
         {
-            cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
-            cboProveedor.DisplayMember = "NombreProveedor";
-            cboProveedor.ValueMember = "IdProveedor";
+            try {
+                cboProveedor.DataSource = new DAOMateriaPrima().obtenerProveedores();
+                cboProveedor.DisplayMember = "NombreProveedor";
+                cboProveedor.ValueMember = "IdProveedor";
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-
-            // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 90, 90);
             borderPath.CloseAllFigures();
-
-            // Establece la propiedad Region del formulario en un nuevo objeto Region que contenga el borde.
             Region = new Region(borderPath);
-
-            // Dibuja el borde en el objeto Graphics del evento Paint.
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; 
             using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
@@ -139,31 +138,31 @@ namespace GUI {
             else return false;
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            Validacion validacion = new Validacion();
-            bool ECM = validacion.esCodigoMaterial(txtCodigoMaterial.Text);
-            if (ECM == false) epError.SetError(txtCodigoMaterial, "Ingrese un codigo de material valido.");
-            else epError.SetError(txtCodigoMaterial, null);
+        private void btnGuardar_Click(object sender, EventArgs e) {
+            try {
+                Validacion validacion = new Validacion();
+                bool ECM = validacion.esCodigoMaterial(txtCodigoMaterial.Text);
+                if (ECM == false) epError.SetError(txtCodigoMaterial, "Ingrese un codigo de material valido.");
+                else epError.SetError(txtCodigoMaterial, null);
 
-            bool ENM = validacion.validacionTexto(txtNombre.Text);
-            if (ENM == false) epError.SetError(txtNombre, "Ingrese un nombre de material valido.");
-            else epError.SetError(txtNombre, null);
+                bool ENM = validacion.validacionTexto(txtNombre.Text);
+                if (ENM == false) epError.SetError(txtNombre, "Ingrese un nombre de material valido.");
+                else epError.SetError(txtNombre, null);
 
-            bool EC = validacion.validacionTexto(txtColor.Text);
-            if (EC == false) epError.SetError(txtColor, "Ingrese un color del material valido.");
-            else epError.SetError(txtColor, null);
+                bool EC = validacion.validacionTexto(txtColor.Text);
+                if (EC == false) epError.SetError(txtColor, "Ingrese un color del material valido.");
+                else epError.SetError(txtColor, null);
 
-            bool ECMC = validacion.esCantidadMayorCero(txtCantidad.Text);
-            if (ECMC == false) epError.SetError(txtCantidad, "Ingrese una cantidad valida.");
-            else epError.SetError(txtCantidad, null);
+                bool ECMC = validacion.esCantidadMayorCero(txtCantidad.Text);
+                if (ECMC == false) epError.SetError(txtCantidad, "Ingrese una cantidad valida.");
+                else epError.SetError(txtCantidad, null);
 
-            bool ETM = validacion.validacionTexto(txtTipoMaterial.Text);
-            if (ETM == false) epError.SetError(txtTipoMaterial, "Ingrese una cantidad valida.");
-            else epError.SetError(txtTipoMaterial, null);
+                bool ETM = validacion.validacionTexto(txtTipoMaterial.Text);
+                if (ETM == false) epError.SetError(txtTipoMaterial, "Ingrese una cantidad valida.");
+                else epError.SetError(txtTipoMaterial, null);
 
-            if (camposValidos(ECM, ENM, EC, ECMC, ETM) == true)
-            {
+                if (camposValidos(ECM, ENM, EC, ECMC, ETM) == true)
+                {
                     if (cboProveedor.SelectedValue != null)
                     {
                         epError.SetError(cboProveedor, null);
@@ -192,6 +191,10 @@ namespace GUI {
                         epError.SetError(cboProveedor, "Seleccione o agregue un proveedor.");
                     }
                 }
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
             private void btnAgregarProveedor_Click(object sender, EventArgs e) {
             List<Object> campos = new List<Object>();
@@ -214,26 +217,32 @@ namespace GUI {
 
         private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
-            if (cboProveedor.SelectedValue == null)
+            try
             {
-                MessageBox.Show("No hay ningun proveedor a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else {
-                DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (ans == DialogResult.Yes)
+                if (cboProveedor.SelectedValue == null)
                 {
-                    if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true)
+                    MessageBox.Show("No hay ningun proveedor a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (ans == DialogResult.Yes)
                     {
-                        MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.cargarProveedores();
-                    }
-                    else
-                    {
-                        MessageBox.Show("NO se pudo eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (new DAOMateriaPrima().eliminarProveedor(int.Parse(cboProveedor.SelectedValue.ToString())) == true)
+                        {
+                            MessageBox.Show("Proveedor eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.cargarProveedores();
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO se pudo eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
-            
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -19,16 +19,21 @@ namespace GUI {
 
         public void cargarTabla()
         {
-            dgvMateriaPrima.DataSource = new DAOMateriaPrima().obtenerTodos();
-            dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
-            dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
-            dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
+            try {
+                dgvMateriaPrima.DataSource = new DAOMateriaPrima().obtenerTodos();
+                dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
+                dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
+                dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }         
         }
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
@@ -74,27 +79,32 @@ namespace GUI {
         }
 
         private void btnEliminar_Click(object sender, EventArgs e) {
-            if (dgvMateriaPrima.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                int id_m = int.Parse(dgvMateriaPrima.SelectedRows[0].Cells[0].Value.ToString());
-                DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (ans == DialogResult.Yes)
+                if (dgvMateriaPrima.SelectedRows.Count == 0)
                 {
-                    if (new DAOMateriaPrima().eliminar(id_m))
+                    MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    int id_m = int.Parse(dgvMateriaPrima.SelectedRows[0].Cells[0].Value.ToString());
+                    DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (ans == DialogResult.Yes)
                     {
-                        MessageBox.Show("Material eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cargarTabla();
-                        //btnSalir_Click(this, new EventArgs());
-                    }
-                    else
-                    {
-                        MessageBox.Show("NO se pudo eliminar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (new DAOMateriaPrima().eliminar(id_m))
+                        {
+                            MessageBox.Show("Material eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            cargarTabla();
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO se pudo eliminar el material", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -131,10 +141,15 @@ namespace GUI {
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
-            dgvMateriaPrima.DataSource = new DAOMateriaPrima().buscarTodos(txtBuscar.Text);
-            dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
-            dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
-            dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
+            try {
+                dgvMateriaPrima.DataSource = new DAOMateriaPrima().buscarTodos(txtBuscar.Text);
+                dgvMateriaPrima.Columns["IdMaterial"].Visible = false;
+                dgvMateriaPrima.Columns["IdProveedor"].Visible = false;
+                dgvMateriaPrima.Columns["IdUsuario"].Visible = false;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

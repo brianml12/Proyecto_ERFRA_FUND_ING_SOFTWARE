@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Net;
 
 namespace Datos
 {
@@ -53,10 +54,18 @@ namespace Datos
         /// Este metodo verifica si hay conexion a internet
         /// </summary>
         /// <returns>Regresa un booleano</returns>
-        public static bool conexionInternet()
-        {
-            bool conexion = System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
-            return conexion;
+        public static bool conexionInternet() {
+            try {
+                using (var usuario = new WebClient()) {
+                    using (var stream = usuario.OpenRead("http://www.google.com")) {
+                        return true;
+                    }
+                }
+            }
+            catch {
+                return false;
+            }
         }
+
     }
 }

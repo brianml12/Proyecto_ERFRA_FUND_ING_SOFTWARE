@@ -18,30 +18,29 @@ namespace GUI {
         }
 
         public void cargarTabla() {
-            dgvSolicitudes.DataSource = new DAOSolicitudes().obtenerHistorial();
-            dgvSolicitudes.Columns["Importe"].Visible = false;
-            dgvSolicitudes.Columns["IdUsuario"].Visible = false;
-            dgvSolicitudes.Columns["PrecioUnitario"].Visible = false;
-            dgvSolicitudes.Columns["Estado"].Visible = false;
+            try {
+                dgvSolicitudes.DataSource = new DAOSolicitudes().obtenerHistorial();
+                dgvSolicitudes.Columns["Importe"].Visible = false;
+                dgvSolicitudes.Columns["IdUsuario"].Visible = false;
+                dgvSolicitudes.Columns["PrecioUnitario"].Visible = false;
+                dgvSolicitudes.Columns["Estado"].Visible = false;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-
-            // Crea un nuevo objeto GraphicsPath que describa la forma del borde.
             GraphicsPath borderPath = new GraphicsPath();
-            int borderRadius = 25; // El radio de las esquinas redondeadas.
+            int borderRadius = 25; 
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Y, borderRadius, borderRadius, 180, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Y, borderRadius, borderRadius, 270, 90);
             borderPath.AddArc(ClientRectangle.Width - borderRadius, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 0, 90);
             borderPath.AddArc(ClientRectangle.X, ClientRectangle.Height - borderRadius, borderRadius, borderRadius, 90, 90);
             borderPath.CloseAllFigures();
-
-            // Establece la propiedad Region del formulario en un nuevo objeto Region que contenga el borde.
             Region = new Region(borderPath);
-
-            // Dibuja el borde en el objeto Graphics del evento Paint.
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Habilita el antialiasing para esquinas suaves.
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; 
             using (Pen borderPen = new Pen(Color.FromArgb(255, 64, 64, 64), 2)) {
                 e.Graphics.DrawPath(borderPen, borderPath);
             }
@@ -76,20 +75,19 @@ namespace GUI {
             btnAtras.MouseHover += new EventHandler(this.activarMano);
             btnAtras.MouseMove += new MouseEventHandler(this.activarMano);
             btnAtras.MouseLeave += new EventHandler(this.desactivarMano);
-            // ANIMACIÓN BOTÓN BUSCAR
-            //btnBuscar.MouseHover += new EventHandler(this.activarMano);
-            //btnBuscar.MouseMove += new MouseEventHandler(this.activarMano);
-            //btnBuscar.MouseLeave += new EventHandler(this.desactivarMano);
-            
         }
 
-        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
-        {
-            dgvSolicitudes.DataSource = new DAOSolicitudes().buscarTodosHistorial(txtBuscar.Text);
-            dgvSolicitudes.Columns["Importe"].Visible = false;
-            dgvSolicitudes.Columns["IdUsuario"].Visible = false;
-            dgvSolicitudes.Columns["PrecioUnitario"].Visible = false;
-            dgvSolicitudes.Columns["Estado"].Visible = false;
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e) {
+            try {
+                dgvSolicitudes.DataSource = new DAOSolicitudes().buscarTodosHistorial(txtBuscar.Text);
+                dgvSolicitudes.Columns["Importe"].Visible = false;
+                dgvSolicitudes.Columns["IdUsuario"].Visible = false;
+                dgvSolicitudes.Columns["PrecioUnitario"].Visible = false;
+                dgvSolicitudes.Columns["Estado"].Visible = false;
+            }
+            catch {
+                MessageBox.Show("Se ha perdido la conexión con la base de datos. Verifique su conexión al servidor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
