@@ -34,12 +34,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +43,12 @@
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             this.SuspendLayout();
@@ -128,105 +128,8 @@
             this.dgvSolicitudes.RowHeadersWidth = 51;
             this.dgvSolicitudes.RowTemplate.Height = 24;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(784, 260);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(789, 260);
             this.dgvSolicitudes.TabIndex = 16;
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(188)))), ((int)(((byte)(249)))));
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(16)))), ((int)(((byte)(172)))));
-            this.btnHistorial.Image = global::GUI.Properties.Resources.documento;
-            this.btnHistorial.Location = new System.Drawing.Point(694, 74);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(175, 35);
-            this.btnHistorial.TabIndex = 3;
-            this.btnHistorial.Text = "  Historial de ventas";
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(27, 76);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 0;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.btnCancelar.Image = global::GUI.Properties.Resources.trash;
-            this.btnCancelar.Location = new System.Drawing.Point(494, 421);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 35);
-            this.btnCancelar.TabIndex = 6;
-            this.btnCancelar.Text = "  Cancelar venta";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
-            this.btnModificar.Image = global::GUI.Properties.Resources.edit;
-            this.btnModificar.Location = new System.Drawing.Point(288, 421);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(150, 35);
-            this.btnModificar.TabIndex = 5;
-            this.btnModificar.Text = "  Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
-            this.btnFinalizar.Image = global::GUI.Properties.Resources.check;
-            this.btnFinalizar.Location = new System.Drawing.Point(85, 421);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(150, 35);
-            this.btnFinalizar.TabIndex = 4;
-            this.btnFinalizar.Text = "  Finalizar venta";
-            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFinalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
-            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(689, 421);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(180, 35);
-            this.btnAgregar.TabIndex = 17;
-            this.btnAgregar.Text = "  Agregar Solicitud";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // Folio
             // 
@@ -307,6 +210,103 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.Width = 125;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(188)))), ((int)(((byte)(249)))));
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(16)))), ((int)(((byte)(172)))));
+            this.btnHistorial.Image = global::GUI.Properties.Resources.documento;
+            this.btnHistorial.Location = new System.Drawing.Point(699, 74);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(175, 35);
+            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.Text = "  Historial de ventas";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
+            this.btnAtras.Location = new System.Drawing.Point(27, 76);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.TabIndex = 0;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.btnCancelar.Image = global::GUI.Properties.Resources.trash;
+            this.btnCancelar.Location = new System.Drawing.Point(494, 421);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(159, 35);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "  Eliminar solicitud";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
+            this.btnModificar.Image = global::GUI.Properties.Resources.edit;
+            this.btnModificar.Location = new System.Drawing.Point(288, 421);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(150, 35);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "  Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
+            this.btnFinalizar.Image = global::GUI.Properties.Resources.check;
+            this.btnFinalizar.Location = new System.Drawing.Point(85, 421);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(150, 35);
+            this.btnFinalizar.TabIndex = 4;
+            this.btnFinalizar.Text = "  Finalizar venta";
+            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
+            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
+            this.btnAgregar.Location = new System.Drawing.Point(694, 421);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(180, 35);
+            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.Text = "  Agregar Solicitud";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmVentas
             // 
