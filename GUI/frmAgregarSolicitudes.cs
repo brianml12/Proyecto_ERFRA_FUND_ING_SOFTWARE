@@ -240,5 +240,10 @@ namespace GUI
         {
 
         }
+
+        private void pbPorcentaje_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

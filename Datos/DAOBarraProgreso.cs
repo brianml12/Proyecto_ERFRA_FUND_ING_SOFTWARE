@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Datos {
     public class DAOBarraProgreso {
-        //Variables para la barra de progreso
+        /// <summary>
+        /// Variables para la barra de progreso
+        /// </summary>
         int total = 0;
         int campo1 = 0;
         int campo2 = 0;
@@ -21,6 +23,11 @@ namespace Datos {
         int Short = 80;
         int Falda = 150;
 
+        /// <summary>
+        /// Método usado para calcular el porcentaje de la ventana agregar solicitudes, enfocado al comboBox de prendas.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>Retorna un string: el porcentaje de la barra de progreso</returns>
         public String progresoPR(String texto) {
             if (texto.Equals("Prenda")) {
                 if (campo1 != 0) {
@@ -43,6 +50,11 @@ namespace Datos {
             }
         }
 
+        /// <summary>
+        /// Método usado para calcular el porcentaje de la ventana agregar solicitudes, enfocado al campo de Lote.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>Retorna un string: el porcentaje de la barra de progreso</returns>
         public String progresoL(String texto) {
             if (texto.Equals("")) {
                 if (campo3 != 0) {
@@ -65,6 +77,11 @@ namespace Datos {
             }
         }
 
+        /// <summary>
+        /// Método usado para calcular el porcentaje de la ventana agregar solicitudes, enfocado al campo de descripción.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>Retorna un string: el porcentaje de la barra de progreso</returns>
         public String progresoD(String texto) {
             if (texto.Equals("")) {
                 if (campo4 != 0) {
@@ -87,6 +104,11 @@ namespace Datos {
             }
         }
 
+        /// <summary>
+        /// Método usado para calcular el porcentaje de la ventana agregar solicitudes, enfocado al campo de importe.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>Retorna un string: el porcentaje de la barra de progreso</returns>
         public String progresoI(String texto) {
             if (texto.Equals("")) {
                 if (campo5 != 0) {
@@ -109,6 +131,11 @@ namespace Datos {
             }
         }
 
+        /// <summary>
+        /// Método usado para colocar el precio en el campo de Precio Unitario
+        /// </summary>
+        /// <param name="prenda"></param>
+        /// <returns>Retorna el precio unitario</returns>
         public String PrecioUnitario(String prenda) {
             if (prenda.Equals("Playera")) return Playera + "";
             else if (prenda.Equals("Sueter")) return Sueter + "";
@@ -119,6 +146,11 @@ namespace Datos {
             else return "Precio Unitario";
         }
 
+        /// <summary>
+        /// Método usado para calcular el porcentaje de la ventana agregar solicitudes, enfocado al campo de nombre del cliente.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>Retorna un string: el porcentaje de la barra de progreso</returns>
         public String progresoC(String texto) {
             if (texto.Equals("")) {
                 if (campo6 != 0) {
@@ -141,6 +173,12 @@ namespace Datos {
             }
         }
 
+        /// <summary>
+        /// Método para calcular el importe
+        /// </summary>
+        /// <param name="PU"></param>
+        /// <param name="cantidad"></param>
+        /// <returns>Devuelve un string que indica el importe</returns>
         public String Seguro(int PU, int cantidad) {
             return (PU * cantidad) / 2 + "";
         }

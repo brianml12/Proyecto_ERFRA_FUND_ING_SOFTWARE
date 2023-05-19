@@ -212,7 +212,7 @@
             this.cboPrenda.FormattingEnabled = true;
             this.cboPrenda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cboPrenda.Location = new System.Drawing.Point(132, 122);
-            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPrenda.Margin = new System.Windows.Forms.Padding(2);
             this.cboPrenda.Name = "cboPrenda";
             this.cboPrenda.Size = new System.Drawing.Size(270, 28);
             this.cboPrenda.TabIndex = 0;
@@ -220,19 +220,20 @@
             // 
             // pbPorcentaje
             // 
-            this.pbPorcentaje.Location = new System.Drawing.Point(131, 349);
-            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPorcentaje.Location = new System.Drawing.Point(132, 349);
+            this.pbPorcentaje.Margin = new System.Windows.Forms.Padding(2);
             this.pbPorcentaje.Name = "pbPorcentaje";
             this.pbPorcentaje.Size = new System.Drawing.Size(247, 19);
             this.pbPorcentaje.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbPorcentaje.TabIndex = 24;
+            this.pbPorcentaje.Click += new System.EventHandler(this.pbPorcentaje_Click);
             // 
             // lblPorcentaje
             // 
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.ForeColor = System.Drawing.Color.Black;
-            this.lblPorcentaje.Location = new System.Drawing.Point(325, 353);
+            this.lblPorcentaje.Location = new System.Drawing.Point(407, 350);
             this.lblPorcentaje.Name = "lblPorcentaje";
             this.lblPorcentaje.Size = new System.Drawing.Size(0, 18);
             this.lblPorcentaje.TabIndex = 25;
@@ -274,7 +275,7 @@
             // btnCalcular
             // 
             this.btnCalcular.Location = new System.Drawing.Point(410, 306);
-            this.btnCalcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(57, 30);
             this.btnCalcular.TabIndex = 6;
@@ -383,7 +384,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarSolicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAgregarSolicitudes";
+            this.Text = "|";
             this.Load += new System.EventHandler(this.frmAgregarSolicitudes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
