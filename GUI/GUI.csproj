@@ -257,6 +257,8 @@
     <Content Include="Resources\carrito-de-compras.png" />
     <Content Include="Resources\check.png" />
     <None Include="Resources\check1.png" />
+    <None Include="Resources\deshacer.png" />
+    <None Include="Resources\deshacer %281%29.png" />
     <Content Include="Resources\disco.png" />
     <None Include="Resources\disco1.png" />
     <Content Include="Resources\documento.png" />

@@ -99,7 +99,7 @@ namespace GUI {
                     MessageBox.Show("No hay ninguna fila seleccionada.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else {
-                    DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar la venta seleccionada?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult ans = MessageBox.Show("¿Está seguro que desea eliminar la solicitud seleccionada?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if(ans == DialogResult.Yes) { 
                         int id = int.Parse(dgvSolicitudes.SelectedRows[0].Cells[0].Value.ToString());
                         if (new DAOSolicitudes().eliminar(id)) {

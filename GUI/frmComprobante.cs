@@ -66,5 +66,16 @@ namespace GUI {
             sol.Show();
             this.Close();
         }
+
+        private void frmComprobante_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN INSERTAR
+            btnImprimir.MouseHover += new EventHandler(this.activarMano);
+            btnImprimir.MouseMove += new MouseEventHandler(this.activarMano);
+            btnImprimir.MouseLeave += new EventHandler(this.desactivarMano);
+            // ANIMACIÓN BOTÓN ELIMINAR
+            btnCancelar.MouseHover += new EventHandler(this.activarMano);
+            btnCancelar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnCancelar.MouseLeave += new EventHandler(this.desactivarMano);
+        }
     }
 }

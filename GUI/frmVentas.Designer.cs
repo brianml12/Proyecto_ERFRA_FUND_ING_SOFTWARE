@@ -124,11 +124,12 @@
             this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvSolicitudes.Location = new System.Drawing.Point(85, 126);
             this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSolicitudes.MultiSelect = false;
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.RowHeadersWidth = 51;
             this.dgvSolicitudes.RowTemplate.Height = 24;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(789, 260);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(805, 260);
             this.dgvSolicitudes.TabIndex = 16;
             // 
             // Folio
@@ -218,7 +219,7 @@
             this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(16)))), ((int)(((byte)(172)))));
             this.btnHistorial.Image = global::GUI.Properties.Resources.documento;
-            this.btnHistorial.Location = new System.Drawing.Point(699, 74);
+            this.btnHistorial.Location = new System.Drawing.Point(715, 74);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(175, 35);
             this.btnHistorial.TabIndex = 3;
@@ -249,7 +250,7 @@
             this.btnCancelar.Image = global::GUI.Properties.Resources.trash;
             this.btnCancelar.Location = new System.Drawing.Point(494, 421);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(159, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(174, 35);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "  Eliminar solicitud";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -298,7 +299,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
             this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(694, 421);
+            this.btnAgregar.Location = new System.Drawing.Point(710, 421);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(180, 35);
             this.btnAgregar.TabIndex = 17;

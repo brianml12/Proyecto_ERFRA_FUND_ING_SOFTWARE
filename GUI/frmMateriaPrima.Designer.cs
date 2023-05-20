@@ -34,10 +34,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtBuscar = new Windows.Forms.HintTextBox(this.components);
             this.dgvMateriaPrima = new System.Windows.Forms.DataGridView();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.IdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +46,10 @@
             this.TelefonoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriaPrima)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +127,7 @@
             this.dgvMateriaPrima.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMateriaPrima.Location = new System.Drawing.Point(85, 126);
             this.dgvMateriaPrima.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMateriaPrima.MultiSelect = false;
             this.dgvMateriaPrima.Name = "dgvMateriaPrima";
             this.dgvMateriaPrima.ReadOnly = true;
             this.dgvMateriaPrima.RowHeadersWidth = 51;
@@ -134,69 +135,6 @@
             this.dgvMateriaPrima.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMateriaPrima.Size = new System.Drawing.Size(790, 260);
             this.dgvMateriaPrima.TabIndex = 16;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
-            this.btnAtras.Location = new System.Drawing.Point(38, 73);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(32, 30);
-            this.btnAtras.TabIndex = 0;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.btnEliminar.Image = global::GUI.Properties.Resources.trash;
-            this.btnEliminar.Location = new System.Drawing.Point(627, 426);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "  Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
-            this.btnModificar.Image = global::GUI.Properties.Resources.edit;
-            this.btnModificar.Location = new System.Drawing.Point(391, 426);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(150, 35);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "  Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
-            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
-            this.btnAgregar.Location = new System.Drawing.Point(160, 426);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(150, 35);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "  Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // IdMaterial
             // 
@@ -284,6 +222,69 @@
             this.NombreUsuario.HeaderText = "Nombre Usuario";
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.ReadOnly = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::GUI.Properties.Resources.flecha_pequena_izquierda__1_;
+            this.btnAtras.Location = new System.Drawing.Point(38, 73);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(32, 30);
+            this.btnAtras.TabIndex = 0;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.btnEliminar.Image = global::GUI.Properties.Resources.trash;
+            this.btnEliminar.Location = new System.Drawing.Point(627, 426);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "  Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(237)))), ((int)(((byte)(152)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(147)))), ((int)(((byte)(23)))));
+            this.btnModificar.Image = global::GUI.Properties.Resources.edit;
+            this.btnModificar.Location = new System.Drawing.Point(391, 426);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(150, 35);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "  Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(216)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(159)))), ((int)(((byte)(130)))));
+            this.btnAgregar.Image = global::GUI.Properties.Resources.mas__1_;
+            this.btnAgregar.Location = new System.Drawing.Point(160, 426);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(150, 35);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "  Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmMateriaPrima
             // 
