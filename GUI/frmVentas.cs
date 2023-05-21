@@ -120,6 +120,10 @@ namespace GUI {
         }
 
         private void frmSolicitudes_Load(object sender, EventArgs e) {
+            // ANIMACIÓN BOTÓN INSERTAR
+            btnAgregar.MouseHover += new EventHandler(this.activarMano);
+            btnAgregar.MouseMove += new MouseEventHandler(this.activarMano);
+            btnAgregar.MouseLeave += new EventHandler(this.desactivarMano);
             // ANIMACIÓN BOTÓN SALIR
             btnSalir.MouseHover += new EventHandler(this.activarMano);
             btnSalir.MouseMove += new MouseEventHandler(this.activarMano);

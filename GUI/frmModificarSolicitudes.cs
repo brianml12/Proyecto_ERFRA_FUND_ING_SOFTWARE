@@ -16,6 +16,7 @@ namespace GUI {
         public int IDSolicitud;
         public frmModificarSolicitudes() {
             InitializeComponent();
+            cboPrenda.Items.Add("Prenda");
             cboPrenda.Items.Add("Playera");
             cboPrenda.Items.Add("Sueter");
             cboPrenda.Items.Add("Pantalon");
@@ -123,9 +124,10 @@ namespace GUI {
                         ErrorCampos.SetError(this.txtPrecioU, "");
                     }
 
-                    if (!(new Validacion().esNumero(txtLote.Text)))
+                    if (!(new Validacion().cantidadPrendasValida(txtLote.Text)))
                     {
-                        ErrorCampos.SetError(this.txtLote, "Escribe un lote valido");
+
+                        ErrorCampos.SetError(this.txtLote, "Ingresa un rango valido de prendas. (20 a 500 inclusive).");
                     }
                     else
                     {
@@ -153,6 +155,7 @@ namespace GUI {
                     // cboPrenda.SelectedIndex != 0 
                     if (txtCliente.Text != txtCliente.HintValue && new Validacion().esNumero(txtPrecioU.Text)
                         && new Validacion().esNumero(txtLote.Text) && txtDescripcion.Text != txtDescripcion.HintValue && new Validacion().esNumero(txtImporte.Text)
+                        && new Validacion().cantidadPrendasValida(txtLote.Text)
                         && cboPrenda.SelectedIndex!=0)
                     {
                         Solicitudes objSolicitud = new Solicitudes();
