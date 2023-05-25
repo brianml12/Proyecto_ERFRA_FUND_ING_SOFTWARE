@@ -80,8 +80,8 @@ namespace GUI
             btnSalir_Click(this, new EventArgs());
         }
 
-        public bool camposValidos(bool EN,bool EA, bool ECO,bool EU,bool EC, bool ECC, bool EP1, bool EP2) {
-            if (EN == true && EA == true && ECO == true && EU == true && EC == true && ECC==true && EP1 == true && EP2 == true) return true;
+        public bool camposValidos(bool EN,bool EA, bool ECO,bool EU,bool EC, bool ECC) {
+            if (EN == true && EA == true && ECO == true && EU == true && EC == true && ECC==true) return true;
             else return false;
         }
 
@@ -112,15 +112,7 @@ namespace GUI
                 if (EC == false) epError.SetError(txtConfirmacion, "Las contraseñas no coinciden.");
                 else epError.SetError(txtConfirmacion, null);
 
-                bool EP1 = validacion.validacionTexto(txtContraseña.Text);
-                if (EP1 == false) epError.SetError(txtContraseña, "No puede estar vacío el campo de contraseña.");
-                else epError.SetError(txtContraseña, null);
-
-                bool EP2 = validacion.validacionTexto(txtConfirmacion.Text);
-                if (EP2 == false) epError.SetError(txtConfirmacion, "No puede estar vacío el campo de confirmar contraseña.");
-                else epError.SetError(txtConfirmacion, null);
-
-                if (camposValidos(EN, EA, ECO, EU, EC, ECC, EP1, EP2) == true)
+                if (camposValidos(EN, EA, ECO, EU, EC, ECC) == true)
                 {
                     if (new DAOEmpleado().verificaUsuario(txtUsuario.Text) == false)
                     {
